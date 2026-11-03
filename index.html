@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#0b1b2e" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website"><meta property="og:title" content="PAGINAZ · Páginas web para negocios reales"><meta property="og:locale" content="es_AR">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#F7F4EE;--ink:#102A43;--accent:#4d6684;--esp:#102A43;--on:#F7F4EE;--line:rgba(16,42,67,.16);--muted:#51647c;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
@@ -17,7 +17,7 @@ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:en
 :root[data-theme="dark"]{--bg:#0b1b2e;--ink:#F7F4EE;--accent:#9bb0cb;--esp:#142e4b;--on:#102A43;--line:rgba(247,244,238,.2);--muted:#b4c0d0;color-scheme:dark}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "DM Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Plus Jakarta Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:50}
 h1,h2,h3{font-family:"DM Serif Display",Georgia,serif;font-weight:400;margin:0;line-height:1.08;letter-spacing:-.015em;text-wrap:balance}
 em{font-style:italic;color:var(--accent)}
@@ -59,7 +59,7 @@ header .w{display:flex;justify-content:space-between;align-items:center;height:5
 .go{display:inline-block;margin-top:16px;font-size:.9rem;font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:1px}
 .dev{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);max-width:720px;width:100%}
 .tog{display:flex;gap:6px;justify-content:flex-end;margin-bottom:10px}
-.tog button{font:700 .78rem "DM Sans",sans-serif;padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.tog button{font:700 .78rem "Plus Jakarta Sans",sans-serif;padding:7px 14px;border-radius:99px;border:1.5px solid var(--line);background:none;color:var(--ink);cursor:pointer}
 .tog button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .frame{margin:0 auto;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 30px 60px -34px rgba(16,42,67,.55),0 0 0 1px var(--line);transition:width .5s,border-radius .5s}
 .frame .tb{display:flex;align-items:center;gap:5px;padding:8px 12px;background:#ece9e2}
@@ -100,7 +100,7 @@ footer .lg{height:40px;margin:0 auto 10px}
 .fab{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);z-index:45;display:flex;align-items:center;gap:8px;padding:11px 18px;border-radius:99px;background:#1faa59;color:#fff;font-weight:700;font-size:.85rem;text-decoration:none;box-shadow:0 10px 26px -10px rgba(0,0,0,.5);opacity:0;transform:translateY(16px);pointer-events:none;transition:opacity .3s,transform .3s}
 .fab.v{opacity:1;transform:none;pointer-events:auto}
 .fab svg{width:18px;height:18px;fill:currentColor}
-@media(max-width:480px){.fab span{display:none}.fab{padding:14px}}
+
 .js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}.js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.sel .br{display:none}*{transition-duration:.01ms!important}}
 
@@ -152,7 +152,7 @@ header .w{gap:20px}
 .tl::before,.tl .f{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
 .tl .f{background:var(--ink);bottom:auto;height:0}
 .tl li{position:relative;padding:0 0 30px}.tl li:last-child{padding-bottom:0}
-.tl li::before{content:attr(data-n);position:absolute;left:-38px;top:0;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--line);display:grid;place-items:center;font:700 .7rem "DM Sans",sans-serif;color:var(--muted);transition:.4s}
+.tl li::before{content:attr(data-n);position:absolute;left:-38px;top:0;width:24px;height:24px;border-radius:50%;background:var(--bg);border:2px solid var(--line);display:grid;place-items:center;font:700 .7rem "Plus Jakarta Sans",sans-serif;color:var(--muted);transition:.4s}
 .tl li.on::before{background:var(--ink);border-color:var(--ink);color:var(--bg);transform:scale(1.15)}
 .tl h3{font-size:clamp(1.2rem,2.2vw,1.55rem)}.tl p{margin:6px 0 0;color:var(--muted);max-width:52ch;font-size:.95rem}
 .pr{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
@@ -171,7 +171,7 @@ header .w{gap:20px}
 .faq details{border-bottom:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;padding:18px 0;display:flex;justify-content:space-between;gap:16px;font:400 1.2rem/1.25 "DM Serif Display",serif}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font:300 1.6rem/1 "DM Sans",sans-serif;transition:transform .3s}
+.faq summary::after{content:"+";font:300 1.6rem/1 "Plus Jakarta Sans",sans-serif;transition:transform .3s}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq p{margin:0 0 18px;color:var(--muted);max-width:60ch;font-size:.95rem}
 .btn{position:relative;overflow:hidden}
@@ -207,7 +207,7 @@ header .w{gap:20px}
 .cg h2{margin:0 0 16px;font-size:clamp(1.9rem,4vw,3rem)}.cg p{color:#c5d1e0;margin:0 0 14px;max-width:38ch}
 .fm{background:var(--bg);color:var(--ink);border-radius:18px;padding:24px;display:grid;gap:12px}
 .fm label{font-size:.78rem;font-weight:700;display:grid;gap:5px}
-.fm input,.fm select,.fm textarea{font:400 .95rem "DM Sans",sans-serif;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);width:100%}
+.fm input,.fm select,.fm textarea{font:400 .95rem "Plus Jakarta Sans",sans-serif;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);width:100%}
 .fm input:focus,.fm select:focus,.fm textarea:focus{outline:2px solid var(--accent);border-color:transparent}
 .fm .btn{background:#1faa59;color:#fff;border:0;cursor:pointer;font-size:.95rem;padding:14px}
 .fm small{color:var(--muted);font-size:.75rem;text-align:center}
@@ -222,7 +222,7 @@ body{font-size:17px;line-height:1.65}
 main{counter-reset:sec}
 section{padding:clamp(72px,10vw,132px) 0}
 .alt{background:var(--alt)}
-section .lab{display:flex;align-items:center;gap:14px;font:700 .75rem "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;color:var(--accent)}
+section .lab{display:flex;align-items:center;gap:14px;font:700 .75rem "Plus Jakarta Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;color:var(--accent)}
 section .lab::before{counter-increment:sec;content:"0" counter(sec);font-weight:500}
 section .lab::after{content:"";height:1px;width:56px;background:currentColor;opacity:.45}
 section>.w>h2,.pr .sticky h2,.sb h2{margin-bottom:0}
@@ -230,8 +230,8 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 .pn,.bn,.cards,.rg{margin-top:52px}.vs{margin-top:52px}.faq,.tl{margin-top:44px}
 .pn,.bn,.cards,.rg{gap:22px}
 .stats{padding:52px 0 80px}
-.stats b{font:700 clamp(2rem,4vw,2.8rem)/1 "DM Sans",sans-serif;letter-spacing:-.03em}
-.sub-f,.cd h3,.sv h3,.pn b,.bn b,.tl h3,.faq summary,.sel .nm,.vs th{font-family:"DM Sans",sans-serif;font-weight:700;letter-spacing:-.015em}
+.stats b{font:700 clamp(2rem,4vw,2.8rem)/1 "Plus Jakarta Sans",sans-serif;letter-spacing:-.03em}
+.sub-f,.cd h3,.sv h3,.pn b,.bn b,.tl h3,.faq summary,.sel .nm,.vs th{font-family:"Plus Jakarta Sans",sans-serif;font-weight:700;letter-spacing:-.015em}
 .pn b{font-size:1.2rem;line-height:1.25}
 .bn b{font-size:1.08rem}
 .cd h3{font-size:1.3rem}
@@ -239,9 +239,9 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 .sel .nm{font-size:clamp(1.1rem,1.7vw,1.35rem)}
 .faq summary{font-size:1.08rem;line-height:1.35}
 .vs th{font-size:.95rem}
-.bn i,.cd small,.sel i,.tl li::before{font-family:"DM Sans",sans-serif;font-style:normal;font-weight:500;font-size:.8rem;letter-spacing:.08em}
-.rc .q{font:500 1.02rem/1.55 "DM Sans",sans-serif}
-.mq div{font:500 .82rem "DM Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em}
+.bn i,.cd small,.sel i,.tl li::before{font-family:"Plus Jakarta Sans",sans-serif;font-style:normal;font-weight:500;font-size:.8rem;letter-spacing:.08em}
+.rc .q{font:500 1.02rem/1.55 "Plus Jakarta Sans",sans-serif}
+.mq div{font:500 .82rem "Plus Jakarta Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em}
 .mq span::after{font-size:.7rem}
 .mq{padding:18px 0}
 .cd p,.pn p,.bn p,.tl p{line-height:1.6}
@@ -251,22 +251,43 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 .tl li{padding-bottom:40px}
 @media(max-width:860px){section{padding:64px 0}.pn,.bn,.cards,.rg,.vs{margin-top:36px}.stats{padding:40px 0 56px}}
 
-.fab{padding:7px 22px 7px 7px;gap:12px;background:linear-gradient(135deg,#25d366,#1a9f52);box-shadow:0 14px 30px -12px rgba(18,140,70,.7),0 0 0 1px rgba(255,255,255,.15) inset;font-size:.92rem;transition:opacity .3s,transform .3s,box-shadow .3s}
-.fab.v:hover{transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(18,140,70,.85)}
-.fab .fi{position:relative;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;flex:none;font-style:normal}
-.fab .fi::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.4s ease-out infinite}
-@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(1.75);opacity:0}}
-.fab .fi svg{width:21px;height:21px}
-.fab .ft{display:flex;flex-direction:column;line-height:1.2;font-weight:700;text-align:left}
-.fab .ft small{font-size:.7rem;font-weight:500;opacity:.92}
-@media(max-width:480px){.fab{padding:7px}.fab .ft{display:none}.fab .fi{width:46px;height:46px}}
-.up{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 84px);z-index:44;width:44px;height:44px;border-radius:50%;border:0;padding:0;background:var(--bg);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px -10px rgba(0,0,0,.5),0 0 0 1px var(--line);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s,bottom .35s}
+
+/* ===== tipografía v2 ===== */
+body{letter-spacing:-.005em;font-feature-settings:"ss01"}
+p,li{text-wrap:pretty}
+h1{letter-spacing:-.03em;line-height:1.02}
+h2{letter-spacing:-.025em}
+.hero p{font-size:1.1rem;line-height:1.65}
+.btn{font-weight:700;letter-spacing:0;font-size:.92rem}
+nav.nv a{font-weight:600;font-size:.86rem}.top{font-weight:700}
+section .lab{font-weight:700;font-size:.72rem;letter-spacing:.16em}
+.stats b{font-weight:800;letter-spacing:-.04em}.stats span{font-weight:500}
+.cd h3,.sv h3,.pn b,.bn b,.tl h3,.sel .nm,.faq summary{font-weight:700;letter-spacing:-.02em}
+.cd h3{font-size:1.35rem}.pn b{font-size:1.25rem}.bn b{font-size:1.1rem}
+.sel .tp,.cd .for{font-weight:600}
+.rc .q{font-weight:600;font-size:1rem;line-height:1.55;letter-spacing:-.01em}
+.mq div{font-weight:600;font-size:.76rem;letter-spacing:.18em}
+.vs th{font-weight:800}.vs td{font-weight:500}
+.fm label{font-weight:700}
+.fab .ft,.fm input,.fm select,.fm textarea{font-family:"Plus Jakarta Sans",sans-serif}
+/* ===== WhatsApp v2 ===== */
+.fab{position:fixed;right:18px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);z-index:45;display:flex;align-items:center;height:58px;padding:0;gap:0;border-radius:99px;background:#25D366;color:#fff;text-decoration:none;box-shadow:0 14px 30px -10px rgba(18,140,70,.8),0 2px 6px rgba(0,0,0,.15);opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity .35s,transform .35s,box-shadow .3s}
+.fab.v{opacity:1;transform:none;pointer-events:auto}
+.fab.v:hover{box-shadow:0 18px 36px -10px rgba(18,140,70,.9),0 2px 6px rgba(0,0,0,.15)}
+.fab .ft{max-width:0;overflow:hidden;white-space:nowrap;padding-left:0;font-weight:800;font-size:.95rem;letter-spacing:-.01em;transition:max-width .5s cubic-bezier(.2,.8,.2,1),padding .5s cubic-bezier(.2,.8,.2,1)}
+.fab:hover .ft,.fab:focus-visible .ft,.fab.open .ft{max-width:180px;padding-left:24px}
+.fab .ico{position:relative;width:58px;height:58px;flex:none;display:grid;place-items:center;font-style:normal}
+.fab .ico svg{width:30px;height:30px;fill:#fff}
+.fab .ico::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25D366;animation:ring 2.6s ease-out infinite;pointer-events:none}
+@keyframes ring{from{transform:scale(1);opacity:.85}to{transform:scale(1.55);opacity:0}}
+/* ===== subir v2 ===== */
+.up{position:fixed;right:25px;bottom:calc(env(safe-area-inset-bottom,0px) + 92px);z-index:44;width:44px;height:44px;border-radius:50%;border:0;padding:0;background:var(--ink);color:var(--bg);cursor:pointer;display:grid;place-items:center;box-shadow:0 12px 26px -10px rgba(0,0,0,.6);opacity:0;transform:translateY(14px) scale(.9);pointer-events:none;transition:opacity .35s,transform .35s,bottom .4s cubic-bezier(.2,.8,.2,1)}
 .up.v{opacity:1;transform:none;pointer-events:auto}
-.up.low{bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}
-.up:hover{transform:translateY(-3px)}
-.up svg{position:absolute;inset:0;width:44px;height:44px}.up .ar{inset:13px;width:18px;height:18px}
-@media(max-width:480px){.up{bottom:calc(env(safe-area-inset-bottom,0px) + 88px);right:18px}.up.low{bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}}
-@media(prefers-reduced-motion:reduce){.fab .fi::after{animation:none}}
+.up.low{bottom:calc(env(safe-area-inset-bottom,0px) + 25px)}
+.up .rn{position:absolute;left:-4px;top:-4px;width:52px;height:52px;color:var(--accent);pointer-events:none}
+.up .ar{width:22px;height:22px;transition:transform .25s}
+.up:hover .ar{transform:translateY(-3px)}
+@media(prefers-reduced-motion:reduce){.fab .ico::after{animation:none}.fab .ft,.up{transition:none}}
 </style>
 </head>
 <body>
@@ -390,8 +411,8 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 </div></section>
 </main>
 <footer><img class="lg" data-logo="sq" width="138" height="112" alt="PAGINAZ" hidden>© 2026 PAGINAZ</footer>
-<a class="fab" id="fab" data-wa href="#" aria-label="Escribinos por WhatsApp"><i class="fi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></i><div class="ft"><small>¿Tenés un proyecto?</small>Escribinos por WhatsApp</div></a>
-<button class="up" id="up" type="button" aria-label="Volver arriba"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="2"/><circle id="upc" cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="125.66" transform="rotate(-90 22 22)"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<a class="fab" id="fab" data-wa href="#" aria-label="Escribinos por WhatsApp"><b class="ft">Escribinos</b><i class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></i></a>
+<button class="up" id="up" type="button" aria-label="Volver arriba"><svg class="rn" viewBox="0 0 52 52" aria-hidden="true"><circle id="upc" cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" transform="rotate(-90 26 26)"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
 document.documentElement.classList.add("js");
@@ -484,7 +505,7 @@ document.getElementById("fm").addEventListener("submit",function(e){e.preventDef
  var m="Hola! Quiero una página web para mi negocio."+(v("n")?"\nMe llamo "+v("n")+".":"")+(v("b")?"\nMi negocio: "+v("b")+".":"")+"\nMe interesa: "+v("s")+"."+(v("m")?"\n"+v("m"):"");
  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank","noopener")});
 var up=$("up"),upc=$("upc");
-function upd(){var h=document.documentElement.scrollHeight-innerHeight,p=h>0?scrollY/h:0;up.classList.toggle("v",scrollY>600);up.classList.toggle("low",!fab.classList.contains("v"));upc.style.strokeDashoffset=125.66*(1-p)}
+var opened=false;function upd(){var h=document.documentElement.scrollHeight-innerHeight,p=h>0?scrollY/h:0;up.classList.toggle("v",scrollY>600);up.classList.toggle("low",!fab.classList.contains("v"));upc.style.strokeDashoffset=150.8*(1-p);if(fab.classList.contains("v")&&!opened){opened=true;fab.classList.add("open");setTimeout(function(){fab.classList.remove("open")},5500)}}
 addEventListener("scroll",upd,{passive:true});upd();
 up.addEventListener("click",function(){scrollTo({top:0,behavior:calm?"auto":"smooth"})});
 var E=document.querySelectorAll(".rv");
