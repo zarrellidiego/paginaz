@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PAGINAZ · Páginas web para negocios reales</title>
+<title>PAGINAZ · Páginas web a medida que te traen clientes</title>
 <meta name="description" content="Páginas web a medida para cafeterías, locales y emprendimientos. Hablás directo con quien la hace. Escribinos por WhatsApp.">
 <meta name="theme-color" content="#F7F4EE" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0b1b2e" media="(prefers-color-scheme: dark)">
@@ -181,6 +181,38 @@ header .w{gap:20px}
 .ct::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;left:calc(var(--cx,50%) - 260px);top:calc(var(--cy,50%) - 260px);background:radial-gradient(circle,rgba(155,176,203,.22),transparent 65%);pointer-events:none}
 .ct .w{position:relative}
 @media(prefers-reduced-motion:reduce){.fc,.blob,.mq div{animation:none}.wd>span{transform:none;transition:none}}
+
+.pn{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.pn div{border-top:2px solid var(--ink);padding-top:16px}
+.pn b{display:block;font:400 1.35rem/1.15 "DM Serif Display",serif;margin-bottom:8px}
+.pn p{margin:0;color:var(--muted);font-size:.95rem}
+.bn{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.bn div{padding:20px;border:1px solid var(--line);border-radius:14px;transition:transform .3s,background .3s}
+.bn div:hover{transform:translateY(-4px);background:color-mix(in srgb,var(--accent) 9%,var(--bg))}
+.bn i{font:italic 400 1.1rem "DM Serif Display",serif;color:var(--accent)}
+.bn b{display:block;font:400 1.2rem/1.2 "DM Serif Display",serif;margin:4px 0 6px}
+.bn p{margin:0;color:var(--muted);font-size:.9rem}
+.vs{width:100%;border-collapse:collapse;margin-top:28px;font-size:.95rem}
+.vs th,.vs td{padding:13px 10px;border-bottom:1px solid var(--line);text-align:center}
+.vs th:first-child,.vs td:first-child{text-align:left;width:52%}
+.vs th{font:400 1.15rem "DM Serif Display",serif}.vs th:last-child{color:var(--accent)}
+.vs td:last-child{font-weight:700;background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.vs .no{color:var(--muted);font-weight:400}
+@media(max-width:860px){.pn,.bn{grid-template-columns:1fr}}
+.tags{display:flex;flex-wrap:wrap;gap:8px 18px;margin:20px 0 0;padding:0;list-style:none;font-size:.85rem;color:var(--muted)}
+.tags li::before{content:"✓ ";color:var(--accent);font-weight:700}
+.cd{position:relative}.cd .bd{position:absolute;top:-11px;right:18px;background:#F7F4EE;color:#102A43;font-size:.72rem;font-weight:700;padding:3px 12px;border-radius:99px}
+.cd .for{font-size:.82rem;color:#9bb0cb;margin:10px 0 0}
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;text-align:left}
+.cg h2{margin:0 0 16px;font-size:clamp(1.9rem,4vw,3rem)}.cg p{color:#c5d1e0;margin:0 0 14px;max-width:38ch}
+.fm{background:var(--bg);color:var(--ink);border-radius:18px;padding:24px;display:grid;gap:12px}
+.fm label{font-size:.78rem;font-weight:700;display:grid;gap:5px}
+.fm input,.fm select,.fm textarea{font:400 .95rem "DM Sans",sans-serif;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);width:100%}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:2px solid var(--accent);border-color:transparent}
+.fm .btn{background:#1faa59;color:#fff;border:0;cursor:pointer;font-size:.95rem;padding:14px}
+.fm small{color:var(--muted);font-size:.75rem;text-align:center}
+.ct .cta2{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:860px){.cg{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -188,22 +220,32 @@ header .w{gap:20px}
 <div id="pg"></div>
 <header id="hd"><div class="w">
   <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><img class="lg" data-logo="wide" width="293" height="96" alt="" hidden><span data-wm>PAGINAZ</span></a>
-  <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a></nav>
+  <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#beneficios">Beneficios</a><a href="#servicios">Opciones</a><a href="#proceso">Proceso</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a></nav>
   <a class="top" data-wa href="#contacto">Escribinos</a>
 </div></header>
 <main id="top">
 <div class="w hero"><div class="hg">
   <div>
-    <h1 id="h1">Páginas web con <em>buena presencia</em> para negocios reales.</h1>
+    <h1 id="h1">Una página web que hace que tus clientes <em>te elijan</em>.</h1>
     <div class="row rv">
-      <p>Hacemos que tu negocio se vea como merece, transmita confianza y sea fácil de consultar.</p>
-      <div class="cta"><a class="btn" href="#trabajos">Ver nuestros trabajos</a><a class="btn o" data-wa href="#contacto">Hablemos de tu proyecto</a></div>
+      <p>Diseñamos páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, se adaptan al celular y te traen consultas directo a tu WhatsApp.</p>
+      <div class="cta"><a class="btn" href="#contacto">Pedí tu presupuesto</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
+      <ul class="tags"><li>A medida, sin plantillas</li><li>Pensada para el celular</li><li>Hablás directo con quien la hace</li></ul>
     </div>
   </div>
   <div class="stage" id="stage" aria-hidden="true"><div class="blob"></div></div>
 </div></div>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 <div class="w"><div class="stats rv"><div><b data-n="4">0</b><span>páginas en línea</span></div><div><b data-n="3">0</b><span>formatos de página</span></div><div><b data-n="5">0</b><span>pasos, sin vueltas</span></div></div></div>
+
+<section id="problema"><div class="w">
+  <span class="lab">¿Te suena?</span><h2 class="rv">Tu negocio es bueno. <em>Internet tiene que mostrarlo.</em></h2>
+  <div class="pn rv">
+    <div><b>Solo tenés Instagram</b><p>Las publicaciones se pierden y las redes cambian. Una página es tuya y siempre muestra lo importante.</p></div>
+    <div><b>Te preguntan lo mismo todo el día</b><p>Horarios, carta, precios, cómo llegar. Con tu página, la respuesta ya está a un toque.</p></div>
+    <div><b>Se ve mejor en persona que en internet</b><p>Una página cuidada transmite la misma confianza que tu local, antes de que lleguen.</p></div>
+  </div>
+</div></section>
 
 <section id="trabajos" style="padding-top:8px"><div class="w">
   <span class="lab">Trabajos</span>
@@ -219,13 +261,32 @@ header .w{gap:20px}
   </div>
 </div></section>
 
+<section class="dark" id="beneficios" style="background:var(--bg);color:var(--ink)"><div class="w">
+  <span class="lab" style="color:var(--accent)">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <em>en un solo lugar</em>.</h2>
+  <div class="bn rv">
+    <div><i>01</i><b>Se ve profesional</b><p>Diseño cuidado, con tu identidad y tus fotos.</p></div>
+    <div><i>02</i><b>Te escriben por WhatsApp</b><p>Botones directos para que consultar sea facilísimo.</p></div>
+    <div><i>03</i><b>Perfecta en el celular</b><p>Se diseña primero para el celular, donde te buscan.</p></div>
+    <div><i>04</i><b>Carta o catálogo a mano</b><p>Tus productos y servicios, siempre ordenados y claros.</p></div>
+    <div><i>05</i><b>Ubicación y horarios claros</b><p>Mapa, dirección y horarios sin que tengan que preguntar.</p></div>
+    <div><i>06</i><b>Lista para Google</b><p>Con SEO básico para que tu negocio pueda encontrarse.</p></div>
+  </div>
+  <table class="vs rv"><thead><tr><th></th><th>Solo redes</th><th>Con tu página</th></tr></thead><tbody>
+    <tr><td>Es tuya y no depende de un algoritmo</td><td class="no">✕</td><td>✓</td></tr>
+    <tr><td>Muestra carta, servicios y ubicación ordenados</td><td class="no">A veces</td><td>✓</td></tr>
+    <tr><td>Puede encontrarse en Google</td><td class="no">Poco</td><td>✓</td></tr>
+    <tr><td>Botón directo a WhatsApp, siempre visible</td><td class="no">✕</td><td>✓</td></tr>
+    <tr><td>Transmite confianza a quien no te conoce</td><td class="no">Depende</td><td>✓</td></tr>
+  </tbody></table>
+</div></section>
+
 <section class="dark" id="servicios"><div class="w">
-  <span class="lab">Servicios</span>
-  <h2 class="rv">Elegí por dónde empezar.</h2>
+  <span class="lab">Opciones</span>
+  <h2 class="rv">Elegí la que mejor le queda a tu negocio.</h2>
   <div class="cards rv">
-    <div class="cd"><small>01</small><h3>Página Esencial</h3><p>Tu negocio en internet, bien presentado y fácil de contactar.</p><ul><li>Quiénes son y qué ofrecen</li><li>Botón de WhatsApp</li><li>Mapa y horarios</li></ul><a class="btn" data-wa data-svc="Página Esencial" href="#">Consultar</a></div>
-    <div class="cd"><small>02</small><h3>Página Completa</h3><p>Más información, servicios, galerías y contenido para mostrar todo lo que hacés.</p><ul><li>Varias secciones a medida</li><li>Galería de fotos</li><li>Formulario de contacto</li></ul><a class="btn" data-wa data-svc="Página Completa" href="#">Consultar</a></div>
-    <div class="cd"><small>03</small><h3>Para Vender o Reservar</h3><p>Para que tus clientes miren, pidan, paguen o reserven sin vueltas.</p><ul><li>Catálogo o menú digital</li><li>Pedidos y pagos</li><li>Sistema de reservas</li></ul><a class="btn" data-wa data-svc="Página para Vender o Reservar" href="#">Consultar</a></div>
+    <div class="cd"><small>01</small><h3>Página Esencial</h3><p>Tu negocio en internet, bien presentado y fácil de contactar.</p><ul><li>Quiénes son y qué ofrecen</li><li>Botón de WhatsApp</li><li>Mapa y horarios</li></ul><div class="for">Ideal si recién arrancás o querés lo esencial.</div><a class="btn" data-wa data-svc="Página Esencial" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><span class="bd">Recomendada</span><small>02</small><h3>Página Completa</h3><p>Más información, servicios, galerías y contenido para mostrar todo lo que hacés.</p><ul><li>Varias secciones a medida</li><li>Galería de fotos</li><li>Formulario de contacto</li></ul><div class="for">Ideal si querés mostrar todo lo que hacés.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>03</small><h3>Para Vender o Reservar</h3><p>Para que tus clientes miren, pidan, paguen o reserven sin vueltas.</p><ul><li>Catálogo o menú digital</li><li>Pedidos y pagos</li><li>Sistema de reservas</li></ul><div class="for">Ideal si querés vender o recibir reservas online.</div><a class="btn" data-wa data-svc="Página para Vender o Reservar" href="#">Pedir presupuesto</a></div>
   </div>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
 </div></section>
@@ -253,16 +314,25 @@ header .w{gap:20px}
 <section id="faq" style="padding-top:0"><div class="w">
   <span class="lab">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2>
   <div class="faq rv">
+    <details><summary>¿Cuánto cuesta?</summary><p>Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
+    <details><summary>¿Cuánto tarda?</summary><p>Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
     <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
-    <details><summary>¿Mi página se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu.</p></details>
+    <details><summary>¿Se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu.</p></details>
     <details><summary>¿Puedo vender o recibir reservas?</summary><p>Sí. Con la opción "Para Vender o Reservar" podés mostrar un catálogo o menú, recibir pedidos, pagos y reservas.</p></details>
-    <details><summary>¿Cómo arrancamos?</summary><p>Escribinos por WhatsApp y contanos qué querés lograr. Desde ahí vemos juntos qué tipo de página te conviene.</p></details>
+    <details><summary>¿Con quién hablo?</summary><p>Directo con la persona que diseña tu página, sin intermediarios y por el medio que prefieras.</p></details>
   </div>
 </div></section>
 
-<section class="ct" id="contacto"><div class="w rv">
-  <h2>Tu negocio merece un buen lugar en internet.</h2>
-  <div class="cta"><a class="btn" data-wa href="#">Hablemos de tu proyecto</a><a class="btn o" data-ig href="#">Instagram</a></div>
+<section class="ct" id="contacto"><div class="w cg">
+  <div class="rv"><h2>Tu negocio merece un buen lugar en internet.</h2><p>Contanos qué tenés en mente y te respondemos por WhatsApp con ideas y un presupuesto sin compromiso.</p>
+    <div class="cta2"><a class="btn o" data-ig href="#">Instagram</a></div></div>
+  <form class="fm rv" id="fm" novalidate>
+    <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Diego"></label>
+    <label>Tu negocio<input name="b" placeholder="Nombre y rubro"></label>
+    <label>¿Qué necesitás?<select name="s"><option>Página Esencial</option><option>Página Completa</option><option>Página para Vender o Reservar</option><option>No sé todavía, quiero que me asesoren</option></select></label>
+    <label>Contanos más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
+    <button class="btn" type="submit">Enviar por WhatsApp</button><small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
+  </form>
 </div></section>
 </main>
 <footer><img class="lg" data-logo="sq" width="138" height="112" alt="PAGINAZ" hidden>© 2026 PAGINAZ</footer>
@@ -354,6 +424,10 @@ document.querySelectorAll(".cd").forEach(function(c){c.addEventListener("mousemo
 ct.addEventListener("mousemove",function(e){var r=ct.getBoundingClientRect();ct.style.setProperty("--cx",(e.clientX-r.left)+"px");ct.style.setProperty("--cy",(e.clientY-r.top)+"px")});
 document.querySelectorAll("[data-svc]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Me interesa la opción "+a.dataset.svc+" de PAGINAZ. ¿Podemos hablar?")});
 
+
+document.getElementById("fm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,v=function(k){return(f.elements[k].value||"").trim()};
+ var m="Hola! Quiero una página web para mi negocio."+(v("n")?"\nMe llamo "+v("n")+".":"")+(v("b")?"\nMi negocio: "+v("b")+".":"")+"\nMe interesa: "+v("s")+"."+(v("m")?"\n"+v("m"):"");
+ window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank","noopener")});
 var E=document.querySelectorAll(".rv");
 if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target)}})},{threshold:.1});E.forEach(function(e){o.observe(e)})}else{E.forEach(function(e){e.classList.add("in")})}
 </script>
