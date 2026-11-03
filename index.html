@@ -70,12 +70,12 @@ header .w{display:flex;justify-content:space-between;align-items:center;height:6
 .frame .tb b{width:9px;height:9px;border-radius:50%;background:#cbc7bd}
 .frame .u{margin-left:10px;flex:1;background:#fff;border-radius:99px;padding:3px 14px;font-size:.75rem;color:#5a5a5a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .scr{position:relative;overflow:hidden;background:#fff center top/cover no-repeat}
-.scr iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;background:#fff;opacity:0;transition:opacity .5s}
+.scr iframe{position:absolute;max-width:none;pointer-events:none;top:0;left:0;border:0;transform-origin:0 0;background:#fff;opacity:0;transition:opacity .5s}
 .scr iframe.ok{opacity:1}
 .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;transition:opacity .4s}
 .fb.hide{opacity:0;pointer-events:none}
 .fb b{font:400 clamp(1.8rem,5vw,3.6rem)/1 "DM Serif Display",serif}.fb a{font-weight:700}
-.frame.m{width:min(300px,100%);border:10px solid #102A43;border-radius:38px}.frame.m .tb{display:none}
+.frame.m{width:min(320px,100%);border:10px solid #102A43;border-radius:38px}.frame.m .tb{display:none}
 .frame.d{width:100%}
 @media(max-width:900px){.show{grid-template-columns:1fr}.dev{position:static;order:-1}}
 /* services */
@@ -190,7 +190,7 @@ var EVERY=9000;
 /* ===== LOGOS ===== */
 document.querySelectorAll("[data-logo]").forEach(function(i){var s=i.dataset.logo==="wide"?LOGO_WIDE:LOGO_SQ;if(s){i.src=s;i.hidden=false;if(i.dataset.logo==="wide"){i.alt="PAGINAZ";var wm=document.querySelector("[data-wm]");if(wm)wm.hidden=true}}});
 /* ===== MUESTRARIO ===== */
-var cur=0,mode="d",timer=null,hold=false,$=function(i){return document.getElementById(i)};
+var mode=matchMedia("(max-width:900px)").matches?"m":"d",cur=0,timer=null,hold=false,$=function(i){return document.getElementById(i)};
 var show=$("show"),sel=$("sel"),fr=$("frame"),scr=$("scr"),ifr=$("ifr"),fb=$("fb"),loadT=null;
 document.documentElement.style.setProperty("--t",EVERY+"ms");
 sel.innerHTML=P.map(function(p,i){return '<button role="tab" id="t'+i+'" data-i="'+i+'"><i aria-hidden="true">0'+(i+1)+'</i><span><span class="nm">'+p.n+'</span><span class="tp">'+p.t+'</span><span class="ds">'+p.d+'</span></span><span class="br" aria-hidden="true"></span></button>'}).join("");
@@ -214,6 +214,10 @@ show.addEventListener("mouseenter",function(){if(!hold){clearInterval(timer);sho
 show.addEventListener("mouseleave",function(){if(!hold){show.classList.remove("paused");load(cur);restart()}});
 document.querySelector(".tog").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;mode=b.dataset.m;
  [].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});fr.className="frame "+mode;load(cur)});
+fr.className="frame "+mode;
+[].forEach.call(document.querySelectorAll(".tog button"),function(x){x.setAttribute("aria-pressed",x.dataset.m===mode)});
+/* re-escala cada vez que cambia el ancho real (incluye la animación del marco) */
+if("ResizeObserver" in window)new ResizeObserver(fit).observe(scr);
 window.addEventListener("resize",fit);
 /* Carga y rotación solo cuando el muestrario está a la vista */
 var started=false;
