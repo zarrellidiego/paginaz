@@ -250,6 +250,23 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 .cd ul{margin:18px 0 24px}
 .tl li{padding-bottom:40px}
 @media(max-width:860px){section{padding:64px 0}.pn,.bn,.cards,.rg,.vs{margin-top:36px}.stats{padding:40px 0 56px}}
+
+.fab{padding:7px 22px 7px 7px;gap:12px;background:linear-gradient(135deg,#25d366,#1a9f52);box-shadow:0 14px 30px -12px rgba(18,140,70,.7),0 0 0 1px rgba(255,255,255,.15) inset;font-size:.92rem;transition:opacity .3s,transform .3s,box-shadow .3s}
+.fab.v:hover{transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(18,140,70,.85)}
+.fab .fi{position:relative;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;flex:none;font-style:normal}
+.fab .fi::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.4s ease-out infinite}
+@keyframes ring{from{transform:scale(1);opacity:.9}to{transform:scale(1.75);opacity:0}}
+.fab .fi svg{width:21px;height:21px}
+.fab .ft{display:flex;flex-direction:column;line-height:1.2;font-weight:700;text-align:left}
+.fab .ft small{font-size:.7rem;font-weight:500;opacity:.92}
+@media(max-width:480px){.fab{padding:7px}.fab .ft{display:none}.fab .fi{width:46px;height:46px}}
+.up{position:fixed;right:16px;bottom:calc(env(safe-area-inset-bottom,0px) + 84px);z-index:44;width:44px;height:44px;border-radius:50%;border:0;padding:0;background:var(--bg);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 8px 22px -10px rgba(0,0,0,.5),0 0 0 1px var(--line);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .3s,transform .3s,bottom .35s}
+.up.v{opacity:1;transform:none;pointer-events:auto}
+.up.low{bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}
+.up:hover{transform:translateY(-3px)}
+.up svg{position:absolute;inset:0;width:44px;height:44px}.up .ar{inset:13px;width:18px;height:18px}
+@media(max-width:480px){.up{bottom:calc(env(safe-area-inset-bottom,0px) + 88px);right:18px}.up.low{bottom:calc(env(safe-area-inset-bottom,0px) + 16px)}}
+@media(prefers-reduced-motion:reduce){.fab .fi::after{animation:none}}
 </style>
 </head>
 <body>
@@ -373,7 +390,8 @@ h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
 </div></section>
 </main>
 <footer><img class="lg" data-logo="sq" width="138" height="112" alt="PAGINAZ" hidden>© 2026 PAGINAZ</footer>
-<a class="fab" id="fab" data-wa href="#" aria-label="Escribinos por WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"/></svg><span>WhatsApp</span></a>
+<a class="fab" id="fab" data-wa href="#" aria-label="Escribinos por WhatsApp"><i class="fi"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></i><div class="ft"><small>¿Tenés un proyecto?</small>Escribinos por WhatsApp</div></a>
+<button class="up" id="up" type="button" aria-label="Volver arriba"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-opacity=".18" stroke-width="2"/><circle id="upc" cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="125.66" stroke-dashoffset="125.66" transform="rotate(-90 22 22)"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
 document.documentElement.classList.add("js");
@@ -465,6 +483,10 @@ document.querySelectorAll("[data-svc]").forEach(function(a){a.href="https://wa.m
 document.getElementById("fm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,v=function(k){return(f.elements[k].value||"").trim()};
  var m="Hola! Quiero una página web para mi negocio."+(v("n")?"\nMe llamo "+v("n")+".":"")+(v("b")?"\nMi negocio: "+v("b")+".":"")+"\nMe interesa: "+v("s")+"."+(v("m")?"\n"+v("m"):"");
  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank","noopener")});
+var up=$("up"),upc=$("upc");
+function upd(){var h=document.documentElement.scrollHeight-innerHeight,p=h>0?scrollY/h:0;up.classList.toggle("v",scrollY>600);up.classList.toggle("low",!fab.classList.contains("v"));upc.style.strokeDashoffset=125.66*(1-p)}
+addEventListener("scroll",upd,{passive:true});upd();
+up.addEventListener("click",function(){scrollTo({top:0,behavior:calm?"auto":"smooth"})});
 var E=document.querySelectorAll(".rv");
 if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target)}})},{threshold:.1});E.forEach(function(e){o.observe(e)})}else{E.forEach(function(e){e.classList.add("in")})}
 </script>
