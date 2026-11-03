@@ -58,7 +58,7 @@ header .w{display:flex;justify-content:space-between;align-items:center;height:6
 .sel .tp{display:block;font-size:.85rem;font-weight:700;color:var(--accent);margin-top:8px}
 .sel .br{position:absolute;left:0;bottom:-1px;height:2px;width:100%;background:var(--ink);transform:scaleX(0);transform-origin:0 50%}
 .sel .on .br{animation:fill var(--t,9s) linear forwards}
-.paused .sel .on .br{animation-play-state:paused}
+.paused .sel .on .br{animation:none;transform:scaleX(0)}
 @keyframes fill{to{transform:scaleX(1)}}
 .go{display:inline-block;margin-top:26px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
 .dev{position:sticky;top:calc(env(safe-area-inset-top,0px) + 84px)}
@@ -70,7 +70,7 @@ header .w{display:flex;justify-content:space-between;align-items:center;height:6
 .frame .tb b{width:9px;height:9px;border-radius:50%;background:#cbc7bd}
 .frame .u{margin-left:10px;flex:1;background:#fff;border-radius:99px;padding:3px 14px;font-size:.75rem;color:#5a5a5a;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .scr{position:relative;overflow:hidden;background:#fff center top/cover no-repeat}
-.scr iframe{position:absolute;max-width:none;pointer-events:none;top:0;left:0;border:0;transform-origin:0 0;background:#fff;opacity:0;transition:opacity .5s}
+.scr iframe{position:absolute;max-width:none;top:0;left:0;border:0;transform-origin:0 0;background:#fff;opacity:0;transition:opacity .5s}
 .scr iframe.ok{opacity:1}
 .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:24px;transition:opacity .4s}
 .fb.hide{opacity:0;pointer-events:none}
@@ -136,7 +136,7 @@ footer .lg{height:44px;margin:0 auto 12px}
     <div class="dev">
       <div class="tog" role="group" aria-label="Tipo de pantalla"><button data-m="d" aria-pressed="true">Compu</button><button data-m="m" aria-pressed="false">Celular</button></div>
       <div class="frame d" id="frame"><div class="tb" aria-hidden="true"><b></b><b></b><b></b><span class="u" id="url"></span></div>
-        <div class="scr" id="scr"><iframe id="ifr" title="Vista previa del proyecto" tabindex="-1" aria-hidden="true"></iframe><div class="fb" id="fb"></div></div></div>
+        <div class="scr" id="scr"><iframe id="ifr" title="Vista previa del proyecto"></iframe><div class="fb" id="fb"></div></div></div>
       <a class="go" id="go" target="_blank" rel="noopener" href="#">Visitar página →</a>
     </div>
   </div>
@@ -210,8 +210,10 @@ function restart(){clearInterval(timer);if(!hold&&!matchMedia("(prefers-reduced-
 var vis=false;
 sel.addEventListener("click",function(e){var b=e.target.closest("button");if(b){hold=true;show.classList.add("paused");clearInterval(timer);load(+b.dataset.i)}});
 sel.addEventListener("keydown",function(e){var d={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(!d)return;e.preventDefault();hold=true;clearInterval(timer);show.classList.add("paused");load((cur+d+P.length)%P.length);sel.children[cur].focus()});
-show.addEventListener("mouseenter",function(){if(!hold){clearInterval(timer);show.classList.add("paused")}});
-show.addEventListener("mouseleave",function(){if(!hold){show.classList.remove("paused");load(cur);restart()}});
+/* si la persona toca o pasa el mouse por la vista previa, se frena la rotación para que pueda usarla sin que se recargue */
+function stopAuto(){hold=true;clearInterval(timer);show.classList.add("paused")}
+var dev=document.querySelector(".dev");
+dev.addEventListener("mouseenter",stopAuto);dev.addEventListener("touchstart",stopAuto,{passive:true});dev.addEventListener("focusin",stopAuto);
 document.querySelector(".tog").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;mode=b.dataset.m;
  [].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});fr.className="frame "+mode;load(cur)});
 fr.className="frame "+mode;
