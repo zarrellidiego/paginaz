@@ -213,6 +213,43 @@ header .w{gap:20px}
 .fm small{color:var(--muted);font-size:.75rem;text-align:center}
 .ct .cta2{margin-top:6px;display:flex;gap:10px;flex-wrap:wrap}
 @media(max-width:860px){.cg{grid-template-columns:1fr}}
+
+/* ===== v-aire: secciones separadas + tipografía ===== */
+:root{--alt:#EFEBE2}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--alt:#10243b}}
+:root[data-theme="dark"]{--alt:#10243b}
+body{font-size:17px;line-height:1.65}
+main{counter-reset:sec}
+section{padding:clamp(72px,10vw,132px) 0}
+.alt{background:var(--alt)}
+section .lab{display:flex;align-items:center;gap:14px;font:700 .75rem "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:22px;color:var(--accent)}
+section .lab::before{counter-increment:sec;content:"0" counter(sec);font-weight:500}
+section .lab::after{content:"";height:1px;width:56px;background:currentColor;opacity:.45}
+section>.w>h2,.pr .sticky h2,.sb h2{margin-bottom:0}
+h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1}
+.pn,.bn,.cards,.rg{margin-top:52px}.vs{margin-top:52px}.faq,.tl{margin-top:44px}
+.pn,.bn,.cards,.rg{gap:22px}
+.stats{padding:52px 0 80px}
+.stats b{font:700 clamp(2rem,4vw,2.8rem)/1 "DM Sans",sans-serif;letter-spacing:-.03em}
+.sub-f,.cd h3,.sv h3,.pn b,.bn b,.tl h3,.faq summary,.sel .nm,.vs th{font-family:"DM Sans",sans-serif;font-weight:700;letter-spacing:-.015em}
+.pn b{font-size:1.2rem;line-height:1.25}
+.bn b{font-size:1.08rem}
+.cd h3{font-size:1.3rem}
+.tl h3{font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.25}
+.sel .nm{font-size:clamp(1.1rem,1.7vw,1.35rem)}
+.faq summary{font-size:1.08rem;line-height:1.35}
+.vs th{font-size:.95rem}
+.bn i,.cd small,.sel i,.tl li::before{font-family:"DM Sans",sans-serif;font-style:normal;font-weight:500;font-size:.8rem;letter-spacing:.08em}
+.rc .q{font:500 1.02rem/1.55 "DM Sans",sans-serif}
+.mq div{font:500 .82rem "DM Sans",sans-serif;text-transform:uppercase;letter-spacing:.14em}
+.mq span::after{font-size:.7rem}
+.mq{padding:18px 0}
+.cd p,.pn p,.bn p,.tl p{line-height:1.6}
+.cd,.bn div,.rc{padding:28px 26px}
+.pn div{padding-top:22px}
+.cd ul{margin:18px 0 24px}
+.tl li{padding-bottom:40px}
+@media(max-width:860px){section{padding:64px 0}.pn,.bn,.cards,.rg,.vs{margin-top:36px}.stats{padding:40px 0 56px}}
 </style>
 </head>
 <body>
@@ -238,7 +275,7 @@ header .w{gap:20px}
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
 <div class="w"><div class="stats rv"><div><b data-n="4">0</b><span>páginas en línea</span></div><div><b data-n="3">0</b><span>formatos de página</span></div><div><b data-n="5">0</b><span>pasos, sin vueltas</span></div></div></div>
 
-<section id="problema"><div class="w">
+<section id="problema" class="alt"><div class="w">
   <span class="lab">¿Te suena?</span><h2 class="rv">Tu negocio es bueno. <em>Internet tiene que mostrarlo.</em></h2>
   <div class="pn rv">
     <div><b>Solo tenés Instagram</b><p>Las publicaciones se pierden y las redes cambian. Una página es tuya y siempre muestra lo importante.</p></div>
@@ -247,7 +284,7 @@ header .w{gap:20px}
   </div>
 </div></section>
 
-<section id="trabajos" style="padding-top:8px"><div class="w">
+<section id="trabajos"><div class="w">
   <span class="lab">Trabajos</span>
   <h2 class="rv" style="margin-bottom:28px">Mirá cómo se ven <em>de verdad</em>.</h2>
   <div class="show" id="show">
@@ -261,8 +298,8 @@ header .w{gap:20px}
   </div>
 </div></section>
 
-<section class="dark" id="beneficios" style="background:var(--bg);color:var(--ink)"><div class="w">
-  <span class="lab" style="color:var(--accent)">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <em>en un solo lugar</em>.</h2>
+<section class="alt" id="beneficios"><div class="w">
+  <span class="lab">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <em>en un solo lugar</em>.</h2>
   <div class="bn rv">
     <div><i>01</i><b>Se ve profesional</b><p>Diseño cuidado, con tu identidad y tus fotos.</p></div>
     <div><i>02</i><b>Te escriben por WhatsApp</b><p>Botones directos para que consultar sea facilísimo.</p></div>
@@ -302,16 +339,16 @@ header .w{gap:20px}
   </ol>
 </div></section>
 
-<section style="padding-top:0"><div class="w sb">
+<section class="alt"><div class="w sb">
   <div><span class="lab">Sobre PAGINAZ</span><h2 class="rv">Cada negocio tiene su <em>identidad</em>.</h2></div>
   <p class="rv">Nada de plantillas en serie: escuchamos qué necesita tu negocio y diseñamos tu página a medida. Hablás directo con quien la hace, con trato cercano de principio a fin.</p>
 </div></section>
 
-<section id="resenas" style="padding-top:0"><div class="w">
+<section id="resenas"><div class="w">
   <span class="lab">Reseñas</span><h2 class="rv">Lo que dicen quienes ya <em>trabajaron con nosotros</em>.</h2>
   <div class="rg" id="rg"></div>
 </div></section>
-<section id="faq" style="padding-top:0"><div class="w">
+<section id="faq" class="alt"><div class="w">
   <span class="lab">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2>
   <div class="faq rv">
     <details><summary>¿Cuánto cuesta?</summary><p>Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
