@@ -342,6 +342,32 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 .tl li{padding-bottom:52px}
 .tl li:last-child{padding-bottom:0}
 @media(max-width:860px){section{padding:72px 0}.pn,.bn,.cards,.rg,.vs{margin-top:40px}.faq,.tl{margin-top:36px}}
+
+/* ===== secciones claras + reseñas v2 ===== */
+.sd{margin:18px 0 0;max-width:52ch;color:var(--muted);font-size:1.05rem;line-height:1.6}
+.dark .sd{color:#e0d7cd}
+.sd+.show{margin-top:52px}
+.rv2{display:grid;grid-template-columns:1.4fr .8fr;gap:clamp(24px,4vw,56px);margin-top:64px;align-items:stretch}
+.rq{position:relative;overflow:hidden;background:var(--esp);color:#F7F4EE;border-radius:22px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:28px;min-height:340px}
+.rq::before{content:"“";position:absolute;right:22px;top:-34px;font:400 12rem/1 "DM Serif Display",Georgia,serif;color:rgba(247,244,238,.08);pointer-events:none}
+.rq .st5{color:#e7b49f;letter-spacing:4px;font-size:1rem}
+.rq .big{font:400 clamp(1.35rem,2.6vw,1.9rem)/1.32 "DM Serif Display",Georgia,serif;margin:14px 0 0;transition:opacity .35s;position:relative}
+.rq .who{display:flex;align-items:center;gap:14px;transition:opacity .35s;position:relative}
+.rq .who b{display:block;font-weight:700}.rq .who small{opacity:.75;font-size:.88rem}
+.rq .ej{display:inline-block;margin-left:8px;padding:2px 9px;border:1px dashed rgba(247,244,238,.5);border-radius:99px;font-size:.7rem;opacity:.85}
+.rq.sw .big,.rq.sw .who{opacity:0}
+.av{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;font:800 .85rem "Plus Jakarta Sans",sans-serif;flex:none}
+.rl{display:grid;gap:10px;align-content:start}
+.rl button{position:relative;display:flex;align-items:center;gap:14px;text-align:left;width:100%;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#FBF8F2;color:var(--ink);font:inherit;cursor:pointer;overflow:hidden;opacity:.7;transition:opacity .3s,transform .3s,border-color .3s}
+.rl button.on,.rl button:hover{opacity:1;border-color:#B85F43}
+.rl button.on{transform:translateX(6px)}
+.rl b{display:block;font-weight:700;font-size:.95rem}.rl small{font-size:.8rem;color:var(--muted)}
+.rl .pb{position:absolute;left:0;bottom:0;height:3px;width:100%;background:#B85F43;transform:scaleX(0);transform-origin:0 50%}
+.rl .on .pb{animation:fill 7s linear forwards}
+.rv2.paused2 .rl .on .pb{animation:none}
+.rnote{margin:18px 0 0;font-size:.8rem;color:var(--muted)}
+@media(max-width:860px){.rv2{grid-template-columns:1fr;margin-top:40px}.rl{grid-auto-flow:column;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.rl button{scroll-snap-align:start}.rl button.on{transform:none}.rq{min-height:300px}}
+@media(prefers-reduced-motion:reduce){.rl .on .pb{animation:none}}
 </style>
 </head>
 <body>
@@ -368,7 +394,7 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 <div class="w"><div class="stats rv"><div><b data-n="4">0</b><span>páginas en línea</span></div><div><b data-n="3">0</b><span>formatos de página</span></div><div><b data-n="5">0</b><span>pasos, sin vueltas</span></div></div></div>
 
 <section id="problema" class="alt"><div class="w">
-  <span class="lab">¿Te suena?</span><h2 class="rv">Tu negocio es bueno. <em>Internet tiene que mostrarlo.</em></h2>
+  <span class="lab">¿Te suena?</span><h2 class="rv">Tu negocio es bueno. <em>Internet tiene que mostrarlo.</em></h2><p class="sd rv">Si alguno de estos puntos te suena, una página propia lo resuelve.</p>
   <div class="pn rv">
     <div><b>Solo tenés Instagram</b><p>Las publicaciones se pierden y las redes cambian. Una página es tuya y siempre muestra lo importante.</p></div>
     <div><b>Te preguntan lo mismo todo el día</b><p>Horarios, carta, precios, cómo llegar. Con tu página, la respuesta ya está a un toque.</p></div>
@@ -378,7 +404,7 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 
 <section id="trabajos"><div class="w">
   <span class="lab">Trabajos</span>
-  <h2 class="rv" style="margin-bottom:28px">Mirá cómo se ven <em>de verdad</em>.</h2>
+  <h2 class="rv">Mirá cómo se ven <em>de verdad</em>.</h2><p class="sd rv">Elegí un proyecto de la lista y mirá cómo queda en compu o en celular.</p>
   <div class="show" id="show">
     <div class="sel" id="sel" role="tablist" aria-label="Proyectos"><noscript><p><a href="https://asdasdd2.vercel.app/">Alfonsina y el Mar</a> · <a href="https://maquetagianno.vercel.app/">Gianno Cafetería</a> · <a href="https://pauliscafe.vercel.app/">Paulis</a> · <a href="https://acevedo-cafetin.vercel.app/">Acevedo Cafetín</a></p></noscript></div>
     <div class="dev">
@@ -391,7 +417,7 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 </div></section>
 
 <section class="alt" id="beneficios"><div class="w">
-  <span class="lab">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <em>en un solo lugar</em>.</h2>
+  <span class="lab">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <em>en un solo lugar</em>.</h2><p class="sd rv">Lo que ganás al tener tu propia página, comparado con tener solo redes.</p>
   <div class="bn rv">
     <div><i>01</i><b>Se ve profesional</b><p>Diseño cuidado, con tu identidad y tus fotos.</p></div>
     <div><i>02</i><b>Te escriben por WhatsApp</b><p>Botones directos para que consultar sea facilísimo.</p></div>
@@ -411,7 +437,7 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 
 <section class="dark" id="servicios"><div class="w">
   <span class="lab">Opciones</span>
-  <h2 class="rv">Elegí la que mejor le queda a tu negocio.</h2>
+  <h2 class="rv">Elegí la que mejor le queda a tu negocio.</h2><p class="sd rv">Tres opciones según lo que necesites. Todas se hacen a medida y después se pueden ampliar.</p>
   <div class="cards rv">
     <div class="cd"><small>01</small><h3>Página Esencial</h3><p>Tu negocio en internet, bien presentado y fácil de contactar.</p><ul><li>Quiénes son y qué ofrecen</li><li>Botón de WhatsApp</li><li>Mapa y horarios</li></ul><div class="for">Ideal si recién arrancás o querés lo esencial.</div><a class="btn" data-wa data-svc="Página Esencial" href="#">Pedir presupuesto</a></div>
     <div class="cd"><span class="bd">Recomendada</span><small>02</small><h3>Página Completa</h3><p>Más información, servicios, galerías y contenido para mostrar todo lo que hacés.</p><ul><li>Varias secciones a medida</li><li>Galería de fotos</li><li>Formulario de contacto</li></ul><div class="for">Ideal si querés mostrar todo lo que hacés.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
@@ -421,7 +447,7 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 </div></section>
 
 <section id="proceso"><div class="w pr">
-  <div class="sticky"><span class="lab">Cómo trabajamos</span><h2 class="rv">Cinco pasos, sin vueltas.</h2></div>
+  <div class="sticky"><span class="lab">Cómo trabajamos</span><h2 class="rv">Cinco pasos, sin vueltas.</h2><p class="sd rv">Así trabajamos, desde la primera charla hasta que tu página está en línea.</p></div>
   <ol class="tl" id="tl"><span class="f" id="tlf"></span>
     <li data-n="1"><h3>Nos contás sobre tu negocio</h3><p>Una charla corta por WhatsApp: qué hacés, a quién le vendés y qué querés lograr.</p></li>
     <li data-n="2"><h3>Definimos qué necesita tu página</h3><p>Elegimos secciones, contenido y la opción que mejor te sirve.</p></li>
@@ -437,11 +463,11 @@ section .lab::before{font:400 2rem/1 "DM Serif Display",Georgia,serif;color:var(
 </div></section>
 
 <section id="resenas"><div class="w">
-  <span class="lab">Reseñas</span><h2 class="rv">Lo que dicen quienes ya <em>trabajaron con nosotros</em>.</h2>
+  <span class="lab">Reseñas</span><h2 class="rv">Lo que dicen quienes ya <em>trabajaron con nosotros</em>.</h2><p class="sd rv">Lo que cuentan los negocios que ya tienen su página.</p>
   <div class="rg" id="rg"></div>
 </div></section>
 <section id="faq" class="alt"><div class="w">
-  <span class="lab">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2>
+  <span class="lab">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2><p class="sd rv">Las dudas más comunes, resueltas antes de que las tengas.</p>
   <div class="faq rv">
     <details><summary>¿Cuánto cuesta?</summary><p>Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
     <details><summary>¿Cuánto tarda?</summary><p>Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
@@ -526,7 +552,27 @@ var REVIEWS=[
 {t:"Necesitábamos que se vieran los laminados y la pastelería como en la vitrina. La página quedó prolija, cálida y fácil de usar.",n:"Paulis",r:" · Pastelería y café",s:5,d:1},
 {t:"Ahora la gente ve la carta y cómo llegar sin tener que preguntarnos. Se ve muy cuidada y representa bien al cafetín.",n:"Acevedo Cafetín",r:" · Liniers",s:5,d:1}
 ];
-$("rg")&&($("rg").innerHTML=REVIEWS.length?REVIEWS.map(function(r){return '<figure class="rc rv" style="margin:0"><div class="st5" aria-label="'+(r.s||5)+' de 5">'+"★".repeat(r.s||5)+'</div><blockquote class="q" style="margin:0">“'+r.t+'”</blockquote><figcaption class="who"><b>'+r.n+'</b>'+(r.r||"")+(r.d?' <span class="ej">Reseña de ejemplo</span>':'')+'</figcaption></figure>'}).join(""):[1,2,3].map(function(){return '<div class="rc slot rv"><div class="q">Acá va la reseña de tu cliente.</div><div class="who">Nombre · Negocio</div></div>'}).join(""));
+(function(){var box=$("rg");if(!box)return;
+ if(!REVIEWS.length){box.className="rg";box.innerHTML=[1,2,3].map(function(){return '<div class="rc slot rv"><div class="q">Acá va la reseña de tu cliente.</div><div class="who">Nombre · Negocio</div></div>'}).join("");return}
+ var cur=0,timer=null,paused=false,vis=false;
+ function ini(n){var a=n.replace(/[^A-Za-zÁÉÍÓÚÑáéíóúñ ]/g,"").split(" ").filter(function(w){return w.length>2});return a.slice(0,2).map(function(w){return w[0]}).join("").toUpperCase()||"★"}
+ function av(i){var p=P[i%P.length];return '<span class="av" style="background:'+p.bg+';color:'+p.fg+'" aria-hidden="true">'+ini(REVIEWS[i].n)+'</span>'}
+ box.className="rv2 rv";
+ box.innerHTML='<figure class="rq" id="rq" style="margin:0"></figure><div class="rl" id="rl" role="tablist" aria-label="Reseñas">'+REVIEWS.map(function(r,i){return '<button role="tab" data-i="'+i+'">'+av(i)+'<span><b>'+r.n+'</b><small>'+(r.r||"").replace(/^\s*·\s*/,"")+'</small></span><span class="pb" aria-hidden="true"></span></button>'}).join("")+'</div>';
+ var rq=$("rq"),rl=$("rl"),any=REVIEWS.some(function(r){return r.d});
+ if(any){var nt=document.createElement("p");nt.className="rnote";nt.textContent="Reseñas de ejemplo: reemplazalas por las reales de tus clientes.";box.parentNode.appendChild(nt)}
+ function show(i,fast){cur=i;var r=REVIEWS[i];
+  function paint(){rq.innerHTML='<div><div class="st5" aria-label="'+(r.s||5)+' de 5">'+"★".repeat(r.s||5)+'</div><blockquote class="big" style="margin:14px 0 0">“'+r.t+'”</blockquote></div><figcaption class="who">'+av(i)+'<div><b>'+r.n+(r.d?'<span class="ej">Reseña de ejemplo</span>':'')+'</b><small>'+(r.r||"").replace(/^\s*·\s*/,"")+'</small></div></figcaption>';rq.classList.remove("sw")}
+  [].forEach.call(rl.children,function(b,k){b.classList.remove("on");b.setAttribute("aria-selected",k===i);if(k===i){void b.offsetWidth;b.classList.add("on")}});
+  if(fast){paint()}else{rq.classList.add("sw");setTimeout(paint,300)}}
+ function go(){clearInterval(timer);if(!paused&&vis&&!matchMedia("(prefers-reduced-motion:reduce)").matches)timer=setInterval(function(){show((cur+1)%REVIEWS.length)},7000)}
+ function stop(){paused=true;clearInterval(timer);box.classList.add("paused2")}
+ rl.addEventListener("click",function(e){var b=e.target.closest("button");if(b){stop();show(+b.dataset.i)}});
+ rl.addEventListener("keydown",function(e){var d={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];if(!d)return;e.preventDefault();stop();show((cur+d+REVIEWS.length)%REVIEWS.length);rl.children[cur].focus()});
+ box.addEventListener("mouseenter",stop);box.addEventListener("touchstart",stop,{passive:true});
+ show(0,true);
+ new IntersectionObserver(function(x){vis=x[0].isIntersecting;go()},{threshold:.3}).observe(box);
+ document.addEventListener("visibilitychange",function(){if(document.hidden)clearInterval(timer);else go()})})();
 /* ===== EXTRA: marquesina ===== */
 var MQ=["Menús digitales","Catálogos de productos","Botones de WhatsApp","Formularios de contacto","Mapas y ubicaciones","Reservas","Pedidos y ventas","Galerías de imágenes"];
 var mqh=MQ.map(function(x){return "<span>"+x+"</span>"}).join("");$("mq").innerHTML=mqh+mqh;
