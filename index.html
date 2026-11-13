@@ -10,9 +10,16 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"PAGINAZ","description":"Páginas web a medida para cafeterías, comercios y emprendimientos.","areaServed":"AR","availableLanguage":"es","sameAs":["https://instagram.com/paginaz_"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="twitter:title" content="PAGINAZ · Páginas web a medida que te traen clientes">
+<meta name="twitter:description" content="Páginas web a medida para cafeterías, locales y emprendimientos.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Cuánto cuesta?","acceptedAnswer":{"@type":"Answer","text":"Depende de lo que necesite tu negocio. Te pasamos un presupuesto claro, sin compromiso."}},
+{"@type":"Question","name":"¿Se ve bien en el celular?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu."}},
+{"@type":"Question","name":"¿Puedo vender o recibir turnos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Con la Página con Ventas recibís pedidos y pagos online; con la Página Total sumás turnos o reservas."}},
+{"@type":"Question","name":"¿Con quién hablo?","acceptedAnswer":{"@type":"Answer","text":"Directo con la persona que diseña tu página, sin intermediarios."}}]}</script>
 <style>
 /* Azul de la marca: tocá --ac y --ac2. Fondos oscuros: --n0 / --n1 / --n2 */
-:root{--n0:#060C1F;--n1:#0B1533;--n2:#14224D;--ac:#3D6BFF;--ac2:#7C9BFF;--cy:#7CE3FF;--bg:#F4F6FC;--card:#fff;--ink:#0A1230;--mut:#5B6685;--line:rgba(10,18,48,.12);--ld:rgba(255,255,255,.14);--f1:"Bricolage Grotesque",system-ui,sans-serif;--f2:"Plus Jakarta Sans",system-ui,sans-serif;--ez:cubic-bezier(.2,.8,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+:root{--n0:#060C1F;--n1:#0B1533;--n2:#14224D;--ac:#2F5BEF;--ac2:#7C9BFF;--cy:#7CE3FF;--bg:#F4F6FC;--card:#fff;--ink:#0A1230;--mut:#5B6685;--line:rgba(10,18,48,.12);--ld:rgba(255,255,255,.14);--f1:"Bricolage Grotesque",system-ui,sans-serif;--f2:"Plus Jakarta Sans",system-ui,sans-serif;--ez:cubic-bezier(.2,.8,.2,1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
 *,*::before,*::after{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);-webkit-text-size-adjust:100%;background:var(--n0)}
@@ -234,6 +241,21 @@ footer::before{content:"";position:absolute;left:0;right:0;top:0;height:1px;back
 main:focus{outline:0}
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ez),transform .8s var(--ez)}.js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.fc,.au,.mq div,.pill i::after,.fab .ico::after,.sel .br,.wml *{animation:none!important}.wd>span{transform:none;transition:none}*{transition-duration:.01ms!important}}
+/* --- mejoras --- */
+.sel button:focus-visible{outline:3px solid var(--cy);outline-offset:-3px;border-radius:8px}
+.pz-pause{display:inline-flex;align-items:center;gap:8px;margin:0 auto 0 0;padding:8px 16px;border-radius:99px;border:1.5px solid var(--ld);background:transparent;color:#fff;font:700 .8rem var(--f2);cursor:pointer}
+.pz-pause:hover{border-color:#fff}
+.tog{align-items:center}
+.js .rv[data-st],.js .bento>.bt.rv,.js .cards>.cd{transition-delay:calc(var(--k,0)*90ms)}
+.btn:active{transform:translateY(0) scale(.98)}
+.faq summary:hover{color:var(--ac)}
+.faq details{scroll-margin-top:100px}
+.hero h1 .g{background-size:200% 100%;animation:shine 6s ease-in-out infinite alternate}
+@keyframes shine{from{background-position:0 0}to{background-position:100% 0}}
+.fm input:user-invalid,.fm textarea:user-invalid{border-color:#b3261e}
+@media(max-width:560px){.hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}.cd{padding:30px 22px}}
+@media print{header,.fab,.up,#pg,.mq,.au{display:none!important}body{background:#fff}}
+@media(prefers-reduced-motion:reduce){.hero h1 .g{animation:none}}
 </style>
 </head>
 <body>
@@ -477,6 +499,35 @@ up.addEventListener("click",function(){scrollTo({top:0,behavior:calm?"auto":"smo
 new IntersectionObserver(function(x){x.forEach(function(e){e.target.classList.toggle("off",!e.isIntersecting);document.querySelectorAll(".au").forEach(function(a){a.classList.toggle("off",!e.isIntersecting)})})}).observe(st);
 var E=document.querySelectorAll(".rv");
 if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");o.unobserve(e.target)}})},{threshold:.1});E.forEach(function(e){o.observe(e)})}else{E.forEach(function(e){e.classList.add("in")})}
+/* --- mejoras --- */
+(function(){
+ var tabs=[].slice.call(sel.querySelectorAll("button"));
+ function rov(){tabs.forEach(function(b,k){b.tabIndex=k===cur?0:-1})}
+ var _l=load;load=function(i){_l(i);rov()};rov();
+ sel.addEventListener("keydown",function(e){
+  var n=null;
+  if(e.key==="ArrowDown"||e.key==="ArrowRight")n=(cur+1)%tabs.length;
+  else if(e.key==="ArrowUp"||e.key==="ArrowLeft")n=(cur-1+tabs.length)%tabs.length;
+  else if(e.key==="Home")n=0;else if(e.key==="End")n=tabs.length-1;
+  if(n===null)return;e.preventDefault();stopAuto();load(n);tabs[n].focus()});
+})();
+(function(){
+ if(calm)return;
+ var t=document.querySelector(".dev .tog"),b=document.createElement("button");
+ b.type="button";b.className="pz-pause";b.textContent="⏸ Pausar";
+ b.addEventListener("click",function(){
+  if(hold){hold=false;show.classList.remove("paused");load(cur);restart();b.textContent="⏸ Pausar"}
+  else{stopAuto();b.textContent="▶ Reanudar"}});
+ t.insertBefore(b,t.firstChild);
+ function paused(){b.textContent="▶ Reanudar"}
+ sel.addEventListener("click",paused);dev.addEventListener("mouseenter",paused);dev.addEventListener("touchstart",paused,{passive:true});
+})();
+document.querySelectorAll(".bento,.cards,.chips").forEach(function(g){
+ [].forEach.call(g.children,function(c,k){c.style.setProperty("--k",k)});
+});
+$("fm").addEventListener("input",function(e){e.target.classList.remove("bad");$("er").hidden=true});
+if(navigator.connection&&navigator.connection.saveData){calm=true;clearInterval(timer)}
+if(/Android|iPhone/i.test(navigator.userAgent)){document.querySelectorAll("[data-wa]").forEach(function(a){a.removeAttribute("target")})}
 </script>
 </body>
 </html>
