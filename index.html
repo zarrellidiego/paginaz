@@ -256,6 +256,16 @@ main:focus{outline:0}
 @media(max-width:560px){.hero h1{font-size:clamp(2.4rem,11vw,3.2rem)}.cd{padding:30px 22px}}
 @media print{header,.fab,.up,#pg,.mq,.au{display:none!important}body{background:#fff}}
 @media(prefers-reduced-motion:reduce){.hero h1 .g{animation:none}}
+/* --- rendimiento (sin quitar animaciones) --- */
+.au{filter:none;will-change:transform;transform:translateZ(0);opacity:.6}
+.au.a{background:radial-gradient(circle,rgba(47,91,239,.9) 0%,rgba(47,91,239,.45) 35%,transparent 70%)}
+.au.b{background:radial-gradient(circle,rgba(42,166,255,.8) 0%,rgba(42,166,255,.4) 35%,transparent 70%);opacity:.4}
+header{-webkit-backdrop-filter:none;backdrop-filter:none}
+.pill{-webkit-backdrop-filter:none;backdrop-filter:none}
+#problema,#beneficios,#servicios,#proceso,#sobre,#faq{content-visibility:auto;contain-intrinsic-size:auto 900px}
+.fc,.mq div{will-change:transform}
+.js .rv{will-change:opacity,transform}
+.js .rv.in{will-change:auto}
 </style>
 </head>
 <body>
@@ -276,7 +286,7 @@ main:focus{outline:0}
 <div class="hero"><div class="au a"></div><div class="au b"></div><div class="w hg">
   <div>
     <span class="pill rv"><i></i>Diseño web para negocios reales</span>
-    <h1 id="h1">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
+    <h1 id="h1" aria-label="Tu negocio, con una página que trae clientes.">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
     <div class="rv">
       <p class="lead">Diseñamos páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
       <div class="cta"><a class="btn" href="#contacto">Pedí tu presupuesto</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
@@ -311,7 +321,7 @@ main:focus{outline:0}
     <div class="dev">
       <div class="tog" role="group" aria-label="Tipo de pantalla"><button data-m="d" aria-pressed="true">Compu</button><button data-m="m" aria-pressed="false">Celular</button></div>
       <div class="frame d" id="frame"><div class="tb" aria-hidden="true"><b></b><b></b><b></b><span class="u" id="url"></span></div>
-        <div class="scr" id="scr" role="tabpanel" aria-label="Vista previa del proyecto"><iframe id="ifr" title="Vista previa del proyecto" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe><div class="fb" id="fb"></div></div></div>
+        <div class="scr" id="scr" role="tabpanel" aria-label="Vista previa del proyecto"><iframe id="ifr" loading="lazy" title="Vista previa del proyecto" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe><div class="fb" id="fb"></div></div></div>
       <a class="go" id="go" target="_blank" rel="noopener" href="#">Visitar página →</a>
     </div>
   </div>
@@ -516,7 +526,7 @@ if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){
  var t=document.querySelector(".dev .tog"),b=document.createElement("button");
  b.type="button";b.className="pz-pause";b.textContent="⏸ Pausar";
  b.addEventListener("click",function(){
-  if(hold){hold=false;show.classList.remove("paused");load(cur);restart();b.textContent="⏸ Pausar"}
+  if(hold){hold=false;show.classList.remove("paused");restart();b.textContent="⏸ Pausar"}
   else{stopAuto();b.textContent="▶ Reanudar"}});
  t.insertBefore(b,t.firstChild);
  function paused(){b.textContent="▶ Reanudar"}
@@ -528,6 +538,14 @@ document.querySelectorAll(".bento,.cards,.chips").forEach(function(g){
 $("fm").addEventListener("input",function(e){e.target.classList.remove("bad");$("er").hidden=true});
 if(navigator.connection&&navigator.connection.saveData){calm=true;clearInterval(timer)}
 if(/Android|iPhone/i.test(navigator.userAgent)){document.querySelectorAll("[data-wa]").forEach(function(a){a.removeAttribute("target")})}
+/* pausa lo que no se ve (no quita nada, solo ahorra CPU/GPU) */
+(function(){
+ var mq=document.querySelector(".mq"),h1g=document.querySelector(".hero h1 .g");
+ function pausar(el,sel){if(!el)return;new IntersectionObserver(function(x){
+  var v=x[0].isIntersecting;(sel?el.querySelectorAll(sel):[el]).forEach(function(n){n.style.animationPlayState=v?"running":"paused"})
+ }).observe(el)}
+ pausar(mq,"div");pausar(h1g);
+})();
 </script>
 </body>
 </html>
