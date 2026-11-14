@@ -266,6 +266,12 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .fc,.mq div{will-change:transform}
 .js .rv{will-change:opacity,transform}
 .js .rv.in{will-change:auto}
+/* --- título fluido: el degradé va en cada palabra (no en el contenedor) --- */
+.hero h1 .g{background:none;color:inherit;animation:none}
+.hero h1 .g .wd>span{background:linear-gradient(100deg,var(--ac2),var(--cy));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s ease-in-out infinite alternate}
+.wd>span{will-change:transform}
+.in .wd>span{will-change:auto}
+@media(prefers-reduced-motion:reduce){.hero h1 .g .wd>span{animation:none}}
 </style>
 </head>
 <body>
