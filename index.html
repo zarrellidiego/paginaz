@@ -327,6 +327,19 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .sc{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:26px;border-top:1px dashed var(--ld)}
 .sc div{padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.05);font-size:.9rem;color:#C9D3EE}.sc b{display:block;margin-bottom:3px;font:700 .98rem var(--f1);color:var(--cy)}
 @media(max-width:860px){.care{grid-template-columns:1fr}.sc{grid-template-columns:1fr}}
+/* --- que se note que se pueden ver los trabajos --- */
+.sel button{opacity:.8}
+.sel button>span:nth-child(2){padding-right:104px}
+.sel button::after{content:"Ver →";position:absolute;right:0;top:22px;font:700 .8rem var(--f2);color:var(--cy);transition:transform .25s}
+.sel button:hover::after{transform:translateX(4px)}
+.sel button.on::after{content:"Viendo ahora";top:20px;padding:4px 11px;border-radius:99px;background:rgba(124,155,255,.22);color:#fff}
+.sel button:not(.on):hover{background:rgba(255,255,255,.04)}
+.pn{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px}
+.pn .arr{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--ld);background:transparent;color:#fff;font-size:1.15rem;cursor:pointer;transition:background .25s,color .25s,transform .25s}
+.pn .arr:hover{background:#fff;color:var(--n0);transform:scale(1.08)}
+.dots{display:flex;gap:8px}.dots button{width:10px;height:10px;padding:0;border:0;border-radius:99px;background:rgba(255,255,255,.3);cursor:pointer;transition:width .35s var(--ez),background .3s}.dots button.on{width:30px;background:var(--cy)}
+.pn .ctr{min-width:3.4ch;font:700 .85rem var(--f2);color:#AEB9DA;text-align:center}
+@media(max-width:860px){.sel button>span:nth-child(2){padding-right:96px}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -377,13 +390,14 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 </div></section>
 
 <section id="trabajos" class="dk2"><div class="w">
-  <div class="sh"><span class="eb">Trabajos</span><h2 class="rv">Mirá cómo se ven <span class="g">de verdad</span>.</h2><p class="sd rv">Elegí un proyecto de la lista y mirá cómo queda en compu o en celular.</p></div>
+  <div class="sh"><span class="eb">Trabajos</span><h2 class="rv">Mirá cómo se ven <span class="g">de verdad</span>.</h2><p class="sd rv"><b>Tocá cualquiera de los 4 proyectos</b> para verlo en vivo, en compu o en celular. ¡Podés recorrerlos todos!</p></div>
   <div class="show" id="show">
     <div class="sel" id="sel" role="tablist" aria-label="Proyectos"><noscript><p><a href="https://asdasdd2.vercel.app/">Alfonsina y el Mar</a> · <a href="https://maquetagianno.vercel.app/">Gianno Cafetería</a> · <a href="https://pauliscafe.vercel.app/">Paulis</a> · <a href="https://acevedo-cafetin.vercel.app/">Acevedo Cafetín</a></p></noscript></div>
     <div class="dev">
       <div class="tog" role="group" aria-label="Tipo de pantalla"><button data-m="d" aria-pressed="true">Compu</button><button data-m="m" aria-pressed="false">Celular</button></div>
       <div class="frame d" id="frame"><div class="tb" aria-hidden="true"><b></b><b></b><b></b><span class="u" id="url"></span></div>
         <div class="scr" id="scr" role="tabpanel" aria-label="Vista previa del proyecto"><iframe id="ifr" loading="lazy" title="Vista previa del proyecto" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe><div class="fb" id="fb"></div></div></div>
+      <div class="pn"><button type="button" class="arr" id="prv" aria-label="Proyecto anterior">←</button><div class="dots" id="dots"></div><span class="ctr" id="ct"></span><button type="button" class="arr" id="nxt" aria-label="Proyecto siguiente">→</button></div>
       <a class="go" id="go" target="_blank" rel="noopener" href="#">Visitar página →</a>
     </div>
   </div>
@@ -659,6 +673,13 @@ if(FOTO){var av=$("av"),im=new Image();im.alt="Diego, de PAGINAZ";im.onload=func
 (function(){var sec=$("resenas");
  if(TESTI.length){var r=$("rs");TESTI.forEach(function(x){var c=document.createElement("div");c.className="rc";var p=document.createElement("p");p.textContent="“"+x.t+"”";var b=document.createElement("b");b.textContent=x.n;var s=document.createElement("small");s.textContent=x.r;c.appendChild(p);c.appendChild(b);c.appendChild(s);r.appendChild(c)})}
  else{sec.remove();var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n})}})();
+/* navegación de trabajos */
+(function(){var d=$("dots"),n=P.length;
+ P.forEach(function(p,i){var b=document.createElement("button");b.type="button";b.setAttribute("aria-label","Ver "+p.n);b.addEventListener("click",function(){stopAuto();load(i)});d.appendChild(b)});
+ function mark(){[].forEach.call(d.children,function(b,k){b.classList.toggle("on",k===cur)});$("ct").textContent=(cur+1)+" / "+n}
+ var l2=load;load=function(i){l2(i);mark()};mark();
+ $("prv").addEventListener("click",function(){stopAuto();load((cur-1+n)%n)});
+ $("nxt").addEventListener("click",function(){stopAuto();load((cur+1)%n)})})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
