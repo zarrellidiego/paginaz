@@ -312,6 +312,21 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .up.fly .ar{animation:arfly .65s var(--ez)}
 @keyframes arfly{0%{transform:translateY(0);opacity:1}45%{transform:translateY(-28px);opacity:0}46%{transform:translateY(28px);opacity:0}100%{transform:translateY(0);opacity:1}}
 @media(prefers-reduced-motion:reduce){.ring,.fl,.up .ar,.up.v,.up.fly .ar{animation:none!important}}
+/* --- cuidado mensual y etiquetas --- */
+.tg{display:block;width:max-content;max-width:100%;margin:10px 0 0;padding:5px 12px;border-radius:99px;background:rgba(124,155,255,.16);color:#BFD0FF;font:700 .72rem var(--f2)}.cd.f .tg{background:rgba(255,255,255,.22);color:#fff}
+.care{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,52px);margin-top:20px;padding:clamp(26px,4vw,48px);border:1px solid var(--ld);border-radius:28px;background:radial-gradient(520px circle at 0% 0%,rgba(47,91,239,.28),transparent 60%),rgba(255,255,255,.04)}
+.ck{font:700 .74rem var(--f2);letter-spacing:.16em;text-transform:uppercase;color:var(--ac2)}
+.care h3{margin:10px 0 12px;font-size:clamp(1.55rem,3vw,2.2rem);line-height:1.1}
+.care p{margin:0 0 22px;color:#B9C4E4}
+.cp{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin-bottom:24px}.cp strong{font:800 3rem/1 var(--f1);letter-spacing:-.04em}.cp span{color:#AEB9DA;font-size:.85rem}
+.care .btn{background:#fff;color:var(--ac);box-shadow:none}
+.cl2{list-style:none;margin:0;padding:0;display:grid;gap:16px;align-content:start}
+.cl2 li{display:grid;grid-template-columns:28px 1fr;gap:2px 14px}
+.cl2 li::before{content:"✓";grid-row:span 2;display:grid;place-items:center;width:26px;height:26px;margin-top:2px;border-radius:50%;background:var(--ac);color:#fff;font-size:.75rem;font-weight:800}
+.cl2 b{font:700 1.02rem var(--f1)}.cl2 span{color:#AEB9DA;font-size:.88rem;line-height:1.45}
+.sc{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:26px;border-top:1px dashed var(--ld)}
+.sc div{padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.05);font-size:.9rem;color:#C9D3EE}.sc b{display:block;margin-bottom:3px;font:700 .98rem var(--f1);color:var(--cy)}
+@media(max-width:860px){.care{grid-template-columns:1fr}.sc{grid-template-columns:1fr}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -396,13 +411,30 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 <section id="servicios" class="dk"><div class="w">
   <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">le queda a tu negocio</span>.</h2><p class="sd rv">Tres opciones, cada una incluye todo lo de la anterior. Todas se hacen a medida y se pueden ampliar después.</p></div>
   <div class="cards rv">
-    <div class="cd"><small>01</small><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ideal para cafeterías, locales y servicios que quieren una presencia profesional.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
-    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ideal para quienes quieren vender online con su propia tienda.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
-    <div class="cd"><small>03</small><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ideal para negocios que venden y también atienden con turno o reserva.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>01</small><span class="tg">Ideal para cafeterías y locales</span><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ejemplos: cafeterías, panaderías, restaurantes, locales y comercios de barrio.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
+    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><span class="tg">Ideal para tiendas y emprendimientos</span><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ejemplos: tiendas de ropa, deco, accesorios y pastelerías que reciben pedidos.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>03</small><span class="tg">Ideal para servicios con turno</span><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ejemplos: peluquerías, estudios, consultorios, canchas y talleres.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
   <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
-  <div class="plan rv"><div><b>Plan de cuidado mensual <span id="plan-p"></span></b><span>Cambios de textos y fotos, soporte por WhatsApp y revisión mensual para que tu página siempre ande perfecta.</span></div><a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Consultar el plan</a></div>
+  <div class="care rv">
+    <div>
+      <span class="ck">Cuidado mensual</span>
+      <h3>Tu página siempre al día, sin que tengas que pensar en ella.</h3>
+      <p>Un negocio cambia todos los meses: precios, horarios, carta, promos. Con el plan me escribís por WhatsApp y yo me ocupo de todo. Cuesta menos que un café por día.</p>
+      <div class="cp"><strong id="plan-p"></strong><span>/mes · sin permanencia, cancelás cuando quieras</span></div>
+      <a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Quiero el cuidado mensual</a>
+    </div>
+    <ul class="cl2">
+      <li><b>Cambios incluidos</b><span>Precios, textos, fotos, horarios y promos: hasta 3 cambios por mes.</span></li>
+      <li><b>Carta o catálogo siempre actual</b><span>Cuando cambian tus productos o precios, tu página cambia con ellos.</span></li>
+      <li><b>Soporte por WhatsApp</b><span>Hablás directo conmigo, sin tickets ni esperar a un equipo.</span></li>
+      <li><b>Hosting y publicación</b><span>Tu página online, rápida y segura, sin pagar nada aparte.</span></li>
+      <li><b>Revisión mensual</b><span>Controlo velocidad, celular, links y botones de WhatsApp.</span></li>
+      <li><b>Mejoras sin costo extra</b><span>Ajustes chicos de diseño para que siempre se vea actual.</span></li>
+    </ul>
+    <div class="sc"><div><b>¿Subió el café?</b>Actualizo la carta con los nuevos precios.</div><div><b>¿Cierran por feriado?</b>Cambio los horarios para que nadie llegue y encuentre cerrado.</div><div><b>¿Nueva promo de temporada?</b>La subo con foto y botón de WhatsApp.</div></div>
+  </div>
 </div></section>
 
 <section id="proceso" class="lt"><div class="w">
@@ -443,7 +475,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
     <details><summary>¿Se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu.</p></details>
     <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
     <details><summary>¿Y si después quiero cambiar algo?</summary><p>Se puede. Lo hablamos antes de empezar para que sepas cómo trabajamos los cambios una vez publicada.</p></details>
-    <details><summary>¿Qué incluye el plan de cuidado mensual?</summary><p id="fq-plan">Cambios de textos y fotos, soporte por WhatsApp y una revisión mensual. Es opcional.</p></details>
+    <details><summary>¿Qué incluye el plan de cuidado mensual?</summary><p id="fq-plan">Hasta 3 cambios por mes (precios, textos, fotos, horarios o promos), soporte directo por WhatsApp, hosting incluido y una revisión mensual de velocidad y funcionamiento. Es opcional y sin permanencia: si un mes no lo necesitás, lo cancelás.</p></details>
     <details><summary>¿Con quién hablo?</summary><p>Directo con la persona que diseña tu página, sin intermediarios y por el medio que prefieras.</p></details>
   </div>
 </div></section>
@@ -480,7 +512,7 @@ document.documentElement.classList.add("js");
 /* ===== EDITÁ ACÁ ===== */
 var WA="5491135679728",MSG="Hola! Vi PAGINAZ y quiero hablar de mi proyecto de página web.",IG_USER="paginaz_";
 /* Precios en pesos: cambialos acá cuando quieras */
-var PR={completa:"$120.000",ventas:"$250.000",total:"$400.000"},PLAN="desde $15.000/mes",FOTO="";  /* FOTO: link o archivo de tu foto, ej: "diego.jpg" */
+var PR={completa:"$100.000",ventas:"$220.000",total:"$350.000"},PLAN="$12.000",FOTO="";  /* FOTO: link o archivo de tu foto, ej: "diego.jpg" */
 var PRECIO="Las páginas arrancan desde "+PR.completa+" (Página Completa). El precio final depende de lo que necesite tu negocio y te lo paso antes de empezar, sin compromiso.";
 var PLAZO="La Página Completa suele estar lista en 1 semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
 var PIXEL="";  /* ID de tu Pixel de Meta (solo números). Vacío = desactivado */
