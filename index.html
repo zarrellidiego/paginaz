@@ -279,6 +279,39 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .mc{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px;padding:0;list-style:none}.mc li{padding:8px 16px;border:1.5px solid var(--line);border-radius:99px;font-size:.88rem;font-weight:600}
 .rs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.rc{padding:28px;background:var(--card);border:1px solid var(--line);border-radius:22px}.rc p{margin:0 0 18px;font-size:1.02rem}.rc b{display:block}.rc small{color:var(--mut)}
 @media(max-width:700px){.me{grid-template-columns:1fr;justify-items:start}.plan{padding:22px}}
+/* --- Quién soy, precios y flecha --- */
+.mec{position:relative;display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,64px);align-items:center;padding:clamp(28px,5vw,56px);background:linear-gradient(135deg,var(--n1),var(--n2));color:#fff;border-radius:32px;overflow:hidden;box-shadow:0 50px 80px -44px rgba(10,18,48,.8)}
+.mec::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(47,91,239,.55),transparent 65%);pointer-events:none}
+.mec>*{position:relative}
+.mec h2{color:#fff;font-size:clamp(2rem,4.2vw,3rem)}
+.mec .g{background:linear-gradient(100deg,var(--ac2),var(--cy));-webkit-background-clip:text;background-clip:text}
+.mec .eb{color:var(--ac2)}
+.mec p{margin:16px 0 26px;max-width:54ch;color:#B9C4E4;font-size:1.05rem}
+.mav{position:relative;margin:14px 36px}
+.mav .av{width:clamp(150px,22vw,220px);position:relative}
+.ring{position:absolute;inset:-9px;border-radius:50%;background:conic-gradient(var(--ac),var(--cy),transparent 62%,var(--ac));-webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));mask:radial-gradient(farthest-side,transparent calc(100% - 3px),#000 calc(100% - 3px));animation:mspin 7s linear infinite}
+@keyframes mspin{to{transform:rotate(360deg)}}
+.fl{position:absolute;z-index:2;padding:7px 14px;border-radius:99px;background:rgba(255,255,255,.12);border:1px solid var(--ld);font:700 .75rem var(--f2);white-space:nowrap;animation:mfl 3.4s ease-in-out infinite alternate}
+.fl.f1{left:-34px;top:8%}.fl.f2{right:-40px;top:44%;animation-delay:-1.2s}.fl.f3{left:-18px;bottom:4%;animation-delay:-2.2s}
+@keyframes mfl{to{transform:translateY(-9px)}}
+.ms{display:flex;flex-wrap:wrap;gap:16px 34px;margin:0 0 28px}
+.ms b{display:block;font:800 1.9rem/1 var(--f1);letter-spacing:-.03em}.ms span{display:block;margin-top:5px;max-width:15ch;font-size:.78rem;line-height:1.35;color:#8FA0D0}
+.mec .btn.o{color:#fff;box-shadow:inset 0 0 0 1.5px var(--ld)}.mec .btn.o:hover{box-shadow:inset 0 0 0 1.5px #fff}
+@media(max-width:760px){.mec{grid-template-columns:1fr;justify-items:start;border-radius:26px}.mav{margin:10px 40px 10px 34px}.ms{gap:14px 24px}}
+.cd .pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 8px;margin:6px 0 16px;padding-bottom:16px;border-bottom:1px dashed var(--ld);font:inherit}
+.pr strong{font:800 2.5rem/1 var(--f1);letter-spacing:-.04em;background:linear-gradient(100deg,#fff,var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cd.f .pr strong{background:none;color:#fff}
+.pr span{margin:0}.pr em{margin:0}
+.pnote{margin:30px 0 0;text-align:center;color:#8FA0D0;font-size:.85rem}
+.up .ar{animation:arb 1.8s ease-in-out infinite}
+@keyframes arb{0%,100%{transform:translateY(3px)}50%{transform:translateY(-3px)}}
+.up.v{animation:uppop .55s cubic-bezier(.3,1.7,.5,1)}
+@keyframes uppop{from{transform:scale(.4);opacity:0}}
+.up.v:hover{transform:translateY(-3px) scale(1.1);box-shadow:0 16px 30px -10px rgba(0,0,0,.7)}
+.up:hover .ar{animation-duration:.7s}
+.up.fly .ar{animation:arfly .65s var(--ez)}
+@keyframes arfly{0%{transform:translateY(0);opacity:1}45%{transform:translateY(-28px);opacity:0}46%{transform:translateY(28px);opacity:0}100%{transform:translateY(0);opacity:1}}
+@media(prefers-reduced-motion:reduce){.ring,.fl,.up .ar,.up.v,.up.fly .ar{animation:none!important}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -367,6 +400,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
     <div class="cd f"><span class="bd">Recomendada</span><small>02</small><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ideal para quienes quieren vender online con su propia tienda.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
     <div class="cd"><small>03</small><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ideal para negocios que venden y también atienden con turno o reserva.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
+  <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
   <div class="plan rv"><div><b>Plan de cuidado mensual <span id="plan-p"></span></b><span>Cambios de textos y fotos, soporte por WhatsApp y revisión mensual para que tu página siempre ande perfecta.</span></div><a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Consultar el plan</a></div>
 </div></section>
@@ -387,12 +421,14 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
   <ul class="ok rv"><li>Diseño a medida, con tu logo, colores y fotos</li><li>Versión celular y compu</li><li>Publicación en línea, lista para compartir</li><li>Ajustes hasta que te guste el resultado</li><li>Trato directo con quien la hace</li></ul>
 </div></section>
 
-<section id="quien" class="lt" style="padding-top:0"><div class="w me">
-  <div class="av rv" id="av" aria-hidden="true">D</div>
-  <div><span class="eb">Quién la hace</span><h2 class="rv">Soy Diego y la hago <span class="g">yo</span>.</h2>
-  <p class="rv">Vivo en Villa Luro y hago páginas web para cafeterías, locales y emprendimientos. Sin intermediarios ni equipos de por medio: me contás tu idea, la diseño, la publico y te acompaño después. Además manejo e-commerce y Meta Ads, así que pienso la página para que te traiga clientes, no solo para que se vea linda.</p>
-  <ul class="mc rv"><li>4 negocios ya tienen su página</li><li>Trato directo por WhatsApp</li><li>Desde Villa Luro, CABA</li></ul>
-  <a class="btn" data-wa data-demo href="#">Quiero ver mi maqueta</a></div>
+<section id="quien" class="lt" style="padding-top:0"><div class="w">
+  <div class="mec rv">
+    <div class="mav"><div class="ring"></div><div class="av" id="av" aria-hidden="true">D</div><span class="fl f1">Páginas web</span><span class="fl f2">E-commerce</span><span class="fl f3">Meta Ads</span></div>
+    <div class="mtx"><span class="eb">Quién la hace</span><h2>Soy Diego y la hago <span class="g">yo</span>.</h2>
+    <p>Vivo en Villa Luro y hago páginas web para cafeterías, locales y emprendimientos. Sin intermediarios ni equipos de por medio: me contás tu idea, la diseño, la publico y te acompaño después. Como también manejo e-commerce y Meta Ads, pienso tu página para que te traiga clientes, no solo para que se vea linda.</p>
+    <div class="ms"><div><b>4</b><span>negocios con su página</span></div><div><b>1 a 1</b><span>trato directo, sin intermediarios</span></div><div><b>CABA</b><span>desde Villa Luro</span></div></div>
+    <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver mi maqueta</a><a class="btn o" data-wa href="#">Escribime directo</a></div></div>
+  </div>
 </div></section>
 
 <section id="resenas" class="lt" style="padding-top:0"><div class="w"><span class="eb">Lo que dicen</span><h2 class="rv">Negocios que ya <span class="g">tienen su página</span>.</h2><div class="rs rv" id="rs" style="margin-top:44px"></div></div></section>
@@ -582,7 +618,10 @@ if(/Android|iPhone/i.test(navigator.userAgent)){document.querySelectorAll("[data
 })();
 /* --- confianza y medición --- */
 document.querySelectorAll("[data-demo]").forEach(function(a){a.href=wUrl.split("?text=")[0]+"?text="+encodeURIComponent("Hola! Quiero ver cómo quedaría mi página (la maqueta sin costo). Mi negocio es: ")});
-document.querySelectorAll("[data-pr]").forEach(function(e){var v=PR[e.dataset.pr];if(v)e.innerHTML="<span>Desde</span>"+v+"<em>pago único</em>"});
+document.querySelectorAll("[data-pr]").forEach(function(e){var v=PR[e.dataset.pr];if(!v)return;var num=+v.replace(/\D/g,""),pre=v.replace(/[\d.,]/g,"");e.innerHTML="<span>Desde</span><strong>"+v+"</strong><em>pago único</em>";var st=e.querySelector("strong");
+ if(calm||!num||!("IntersectionObserver" in window))return;
+ new IntersectionObserver(function(x,o){if(!x[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/900),q=1-Math.pow(1-k,3);st.textContent=pre+Math.round(num*q).toLocaleString("es-AR");if(k<1)requestAnimationFrame(f)})(t0)},{threshold:.6}).observe(e)});
+up.addEventListener("click",function(){up.classList.remove("fly");void up.offsetWidth;up.classList.add("fly")});
 $("plan-p").textContent=PLAN;
 if(FOTO){var av=$("av"),im=new Image();im.alt="Diego, de PAGINAZ";im.onload=function(){av.textContent="";av.appendChild(im)};im.src=FOTO}
 (function(){var sec=$("resenas");
