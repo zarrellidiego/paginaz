@@ -270,7 +270,17 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .hero h1 .g{background:none;color:inherit;animation:none}
 .hero h1 .g .wd>span{background:linear-gradient(100deg,var(--ac2),var(--cy));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wup .75s var(--ez) both,shine 6s ease-in-out infinite alternate;animation-delay:calc(var(--i)*45ms + .1s),0s}
 @media(prefers-reduced-motion:reduce){.hero h1 .g .wd>span{animation:none}}
+/* --- confianza: precios, plan, quién soy, reseñas --- */
+.pr{margin:2px 0 12px;font:800 1.9rem/1 var(--f1);letter-spacing:-.03em}.pr span{margin-right:4px;font:700 .72rem var(--f2);letter-spacing:.14em;text-transform:uppercase;color:var(--ac2)}.pr em{margin-left:4px;font:600 .8rem var(--f2);font-style:normal;color:#8FA0D0}.cd.f .pr span,.cd.f .pr em{color:#DCE6FF}
+.plan{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 28px;margin-top:20px;padding:26px 30px;border:1px solid var(--ld);border-radius:22px;background:rgba(255,255,255,.04)}.plan b{display:block;margin-bottom:4px;font:700 1.3rem var(--f1);letter-spacing:-.02em}.plan b span{color:var(--cy)}.plan>div>span{color:#AEB9DA;font-size:.95rem;max-width:56ch;display:block}.plan .btn{background:#fff;color:var(--ac);box-shadow:none}
+.me{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,56px);align-items:center}
+.av{display:grid;place-items:center;width:clamp(140px,22vw,220px);aspect-ratio:1;border-radius:50%;background:linear-gradient(140deg,var(--ac),var(--cy));color:#fff;font:800 clamp(3.5rem,9vw,6rem) var(--f1);overflow:hidden}.av img{width:100%;height:100%;object-fit:cover}
+.me p{margin:16px 0 22px;max-width:54ch;color:var(--mut);font-size:1.08rem}
+.mc{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 26px;padding:0;list-style:none}.mc li{padding:8px 16px;border:1.5px solid var(--line);border-radius:99px;font-size:.88rem;font-weight:600}
+.rs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.rc{padding:28px;background:var(--card);border:1px solid var(--line);border-radius:22px}.rc p{margin:0 0 18px;font-size:1.02rem}.rc b{display:block}.rc small{color:var(--mut)}
+@media(max-width:700px){.me{grid-template-columns:1fr;justify-items:start}.plan{padding:22px}}
 </style>
+<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -282,18 +292,18 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 <div id="pg"></div>
 <header id="hd"><div class="w">
   <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g><g class="d2"><use class="tr2" href="#pz-zd"/></g></svg></a>
-  <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#beneficios">Beneficios</a><a href="#servicios">Opciones</a><a href="#proceso">Proceso</a><a href="#faq">Preguntas</a></nav>
+  <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#beneficios">Beneficios</a><a href="#servicios">Opciones</a><a href="#proceso">Proceso</a><a href="#quien">Quién soy</a><a href="#faq">Preguntas</a></nav>
   <a class="btn sm" data-wa href="#">Escribinos</a>
   <button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú">☰</button>
 </div><nav class="mnav" id="mnav" aria-label="Menú móvil"></nav></header>
 <main id="top" tabindex="-1">
 <div class="hero"><div class="au a"></div><div class="au b"></div><div class="w hg">
   <div>
-    <span class="pill rv"><i></i>Diseño web para negocios reales</span>
+    <span class="pill rv"><i></i>Páginas web para cafeterías y negocios de barrio</span>
     <h1 id="h1" aria-label="Tu negocio, con una página que trae clientes.">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
     <div class="rv">
       <p class="lead">Diseñamos páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
-      <div class="cta"><a class="btn" href="#contacto">Pedí tu presupuesto</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
+      <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver cómo quedaría mi página</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
       <ul class="tags"><li>A medida, sin plantillas</li><li>Pensada para el celular</li><li>Hablás directo con quien la hace</li></ul>
     </div>
   </div>
@@ -353,11 +363,12 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 <section id="servicios" class="dk"><div class="w">
   <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">le queda a tu negocio</span>.</h2><p class="sd rv">Tres opciones, cada una incluye todo lo de la anterior. Todas se hacen a medida y se pueden ampliar después.</p></div>
   <div class="cards rv">
-    <div class="cd"><small>01</small><h3>Página Completa</h3><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ideal para cafeterías, locales y servicios que quieren una presencia profesional.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
-    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><h3>Página con Ventas</h3><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ideal para quienes quieren vender online con su propia tienda.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
-    <div class="cd"><small>03</small><h3>Página Total</h3><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ideal para negocios que venden y también atienden con turno o reserva.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>01</small><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ideal para cafeterías, locales y servicios que quieren una presencia profesional.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
+    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ideal para quienes quieren vender online con su propia tienda.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>03</small><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ideal para negocios que venden y también atienden con turno o reserva.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
+  <div class="plan rv"><div><b>Plan de cuidado mensual <span id="plan-p"></span></b><span>Cambios de textos y fotos, soporte por WhatsApp y revisión mensual para que tu página siempre ande perfecta.</span></div><a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Consultar el plan</a></div>
 </div></section>
 
 <section id="proceso" class="lt"><div class="w">
@@ -376,15 +387,27 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
   <ul class="ok rv"><li>Diseño a medida, con tu logo, colores y fotos</li><li>Versión celular y compu</li><li>Publicación en línea, lista para compartir</li><li>Ajustes hasta que te guste el resultado</li><li>Trato directo con quien la hace</li></ul>
 </div></section>
 
+<section id="quien" class="lt" style="padding-top:0"><div class="w me">
+  <div class="av rv" id="av" aria-hidden="true">D</div>
+  <div><span class="eb">Quién la hace</span><h2 class="rv">Soy Diego y la hago <span class="g">yo</span>.</h2>
+  <p class="rv">Vivo en Villa Luro y hago páginas web para cafeterías, locales y emprendimientos. Sin intermediarios ni equipos de por medio: me contás tu idea, la diseño, la publico y te acompaño después. Además manejo e-commerce y Meta Ads, así que pienso la página para que te traiga clientes, no solo para que se vea linda.</p>
+  <ul class="mc rv"><li>4 negocios ya tienen su página</li><li>Trato directo por WhatsApp</li><li>Desde Villa Luro, CABA</li></ul>
+  <a class="btn" data-wa data-demo href="#">Quiero ver mi maqueta</a></div>
+</div></section>
+
+<section id="resenas" class="lt" style="padding-top:0"><div class="w"><span class="eb">Lo que dicen</span><h2 class="rv">Negocios que ya <span class="g">tienen su página</span>.</h2><div class="rs rv" id="rs" style="margin-top:44px"></div></div></section>
+
 <section id="faq" class="lt" style="padding-top:0"><div class="w fq">
   <div class="stk"><span class="eb">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2><p class="sd rv">Las dudas más comunes, resueltas antes de que las tengas.</p><a class="btn o" data-wa href="#">¿Otra duda? Escribinos</a></div>
   <div class="faq rv">
     <details><summary>¿Cuánto cuesta?</summary><p id="fq-precio">Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
+    <details><summary>¿Qué es la maqueta sin costo?</summary><p>Antes de que decidas nada, te muestro cómo quedaría tu página con tu nombre, tus colores y tu información. Si te gusta, seguimos; si no, no pagás nada.</p></details>
     <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
     <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
     <details><summary>¿Se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu.</p></details>
     <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
     <details><summary>¿Y si después quiero cambiar algo?</summary><p>Se puede. Lo hablamos antes de empezar para que sepas cómo trabajamos los cambios una vez publicada.</p></details>
+    <details><summary>¿Qué incluye el plan de cuidado mensual?</summary><p id="fq-plan">Cambios de textos y fotos, soporte por WhatsApp y una revisión mensual. Es opcional.</p></details>
     <details><summary>¿Con quién hablo?</summary><p>Directo con la persona que diseña tu página, sin intermediarios y por el medio que prefieras.</p></details>
   </div>
 </div></section>
@@ -396,7 +419,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
     <h3>Contanos tu proyecto</h3>
     <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Diego"></label>
     <label>Tu negocio<input name="b" placeholder="Nombre y rubro"></label>
-    <label>¿Qué necesitás?<select name="s"><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
+    <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
     <label>Contanos más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
     <p class="er" id="er" role="alert" hidden></p><button class="btn" type="submit">Enviar por WhatsApp</button><small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
   </form>
@@ -420,7 +443,14 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 document.documentElement.classList.add("js");
 /* ===== EDITÁ ACÁ ===== */
 var WA="5491135679728",MSG="Hola! Vi PAGINAZ y quiero hablar de mi proyecto de página web.",IG_USER="paginaz_";
-var PRECIO="",PLAZO="";  /* Ej: PRECIO="Las páginas arrancan desde $X." PLAZO="Entre 1 y 3 semanas." */
+/* Precios en pesos: cambialos acá cuando quieras */
+var PR={completa:"$120.000",ventas:"$250.000",total:"$400.000"},PLAN="desde $15.000/mes",FOTO="";  /* FOTO: link o archivo de tu foto, ej: "diego.jpg" */
+var PRECIO="Las páginas arrancan desde "+PR.completa+" (Página Completa). El precio final depende de lo que necesite tu negocio y te lo paso antes de empezar, sin compromiso.";
+var PLAZO="La Página Completa suele estar lista en 1 semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
+var PIXEL="";  /* ID de tu Pixel de Meta (solo números). Vacío = desactivado */
+/* Reseñas REALES de tus clientes. Mientras esté vacío, la sección no se muestra.
+   Ej: {t:"Desde que tenemos la página nos escriben más por WhatsApp.",n:"Nombre",r:"Acevedo Cafetín"} */
+var TESTI=[];
 var EVERY=9000;
 var P=[
 {n:"Alfonsina y el Mar",t:"Café y libros",u:"https://asdasdd2.vercel.app/",d:"Café de especialidad, pastelería y libros. Carta por categorías, reseñas y cómo llegar.",bg:"#f6ead3",fg:"#3a2b25"},
@@ -550,6 +580,17 @@ if(/Android|iPhone/i.test(navigator.userAgent)){document.querySelectorAll("[data
  }).observe(el)}
  pausar(mq,"div");pausar(h1g);
 })();
+/* --- confianza y medición --- */
+document.querySelectorAll("[data-demo]").forEach(function(a){a.href=wUrl.split("?text=")[0]+"?text="+encodeURIComponent("Hola! Quiero ver cómo quedaría mi página (la maqueta sin costo). Mi negocio es: ")});
+document.querySelectorAll("[data-pr]").forEach(function(e){var v=PR[e.dataset.pr];if(v)e.innerHTML="<span>Desde</span>"+v+"<em>pago único</em>"});
+$("plan-p").textContent=PLAN;
+if(FOTO){var av=$("av"),im=new Image();im.alt="Diego, de PAGINAZ";im.onload=function(){av.textContent="";av.appendChild(im)};im.src=FOTO}
+(function(){var sec=$("resenas");
+ if(TESTI.length){var r=$("rs");TESTI.forEach(function(x){var c=document.createElement("div");c.className="rc";var p=document.createElement("p");p.textContent="“"+x.t+"”";var b=document.createElement("b");b.textContent=x.n;var s=document.createElement("small");s.textContent=x.r;c.appendChild(p);c.appendChild(b);c.appendChild(s);r.appendChild(c)})}
+ else{sec.remove();var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n})}})();
+if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
+ document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
+ $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
 </script>
 </body>
 </html>
