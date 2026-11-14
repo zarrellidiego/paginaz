@@ -92,7 +92,7 @@ nav.nv a:hover,nav.nv a.act{color:#fff}nav.nv a:hover::after,nav.nv a.act::after
 .tags{display:flex;flex-wrap:wrap;gap:10px 22px;margin:34px 0 0;padding:0;list-style:none;font-size:.9rem;font-weight:600;color:#C9D3EE}
 .tags li::before{content:"✓";margin-right:8px;color:var(--cy);font-weight:800}
 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .16em 0;margin:0 -.1em -.16em 0}
-.wd>span{display:inline-block;transform:translateY(110%);transition:transform .9s var(--ez);transition-delay:calc(var(--i)*70ms)}.in .wd>span{transform:none}
+.wd>span{display:inline-block;transform:translateY(110%);transition:transform .6s var(--ez);transition-delay:calc(var(--i)*35ms)}.in .wd>span{transform:none}
 .stage{position:relative;aspect-ratio:1/1.05;max-width:500px;margin-left:auto;width:100%}
 .fc{position:absolute;width:60%;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 40px 70px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12);transform:translate3d(calc(var(--px,0)*var(--d)*1px),calc(var(--py,0)*var(--d)*1px),0) rotate(var(--r));transition:transform .25s ease-out;animation:bob var(--s) ease-in-out infinite alternate;will-change:transform}
 @keyframes bob{to{translate:0 -14px}}
@@ -463,7 +463,7 @@ P.forEach(function(p,i){var d=document.createElement("div");d.className="fc";var
 var ph=document.createElement("div");ph.className="fc ph";ph.style.cssText="right:2%;top:2%;--r:5deg;--d:40;--s:5.5s;z-index:6";ph.innerHTML='<div class="s" style="background:'+P[2].bg+';color:'+P[2].fg+'"><b>'+P[2].n+'</b><u></u><u></u><s></s></div>';st.appendChild(ph);
 if(!calm){var mx=0,my=0,mt=false;hero.addEventListener("mousemove",function(e){mx=e.clientX;my=e.clientY;if(mt)return;mt=true;requestAnimationFrame(function(){mt=false;var r=hero.getBoundingClientRect();st.style.setProperty("--px",((mx-r.left)/r.width-.5)*2);st.style.setProperty("--py",((my-r.top)/r.height-.5)*2)})},{passive:true})}
 (function(){var n=0;function sp(el){[].slice.call(el.childNodes).forEach(function(c){if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w))f.appendChild(document.createTextNode(" "));else{var a=document.createElement("span");a.className="wd";a.innerHTML='<span style="--i:'+(n++)+'">'+w+'</span>';f.appendChild(a)}});el.replaceChild(f,c)}else sp(c)})}
- var h=$("h1");sp(h);requestAnimationFrame(function(){requestAnimationFrame(function(){h.classList.add("in")})})})();
+ var h=$("h1");sp(h);requestAnimationFrame(function(){h.classList.add("in")})})();
 /* luces que siguen al mouse */
 function trk(el,a,b){var x=0,y=0,q=false;el.addEventListener("mousemove",function(e){x=e.clientX;y=e.clientY;if(q)return;q=true;requestAnimationFrame(function(){q=false;var r=el.getBoundingClientRect();el.style.setProperty(a,(x-r.left)+"px");el.style.setProperty(b,(y-r.top)+"px")})},{passive:true})}
 var ct=$("contacto");document.querySelectorAll(".cd").forEach(function(c){trk(c,"--mx","--my")});document.querySelectorAll(".bt").forEach(function(c){trk(c,"--mx","--my")});trk(ct,"--cx","--cy");
