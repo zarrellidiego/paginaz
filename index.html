@@ -560,8 +560,8 @@ function restart(){clearInterval(timer);if(!hold&&!calm&&vis)timer=setInterval(f
 function stopAuto(){hold=true;clearInterval(timer);show.classList.add("paused")}
 document.addEventListener("securitypolicyviolation",function(){clearTimeout(loadT);ifr.classList.remove("ok");card(P[cur])});
 sel.addEventListener("click",function(e){var b=e.target.closest("button");if(b){stopAuto();load(+b.dataset.i)}});
-var dev=document.querySelector(".dev");dev.addEventListener("mouseenter",stopAuto);dev.addEventListener("touchstart",stopAuto,{passive:true});
-document.querySelector(".tog").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;mode=b.dataset.m;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});fr.className="frame "+mode;load(cur)});
+var dev=document.querySelector(".dev");dev.addEventListener("mouseenter",function(){clearInterval(timer)});dev.addEventListener("mouseleave",restart);dev.addEventListener("touchstart",function(e){if(!e.target.closest(".pz-pause"))stopAuto()},{passive:true});
+document.querySelector(".tog").addEventListener("click",function(e){var b=e.target.closest("button[data-m]");if(!b)return;mode=b.dataset.m;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});fr.className="frame "+mode;load(cur)});
 fr.className="frame "+mode;[].forEach.call(document.querySelectorAll(".tog button"),function(x){x.setAttribute("aria-pressed",x.dataset.m===mode)});
 if("ResizeObserver" in window)new ResizeObserver(fit).observe(scr);
 new IntersectionObserver(function(x){vis=x[0].isIntersecting;if(vis&&!started){started=true;load(0)}if(vis)restart();else clearInterval(timer)},{threshold:.15}).observe(show);
@@ -638,8 +638,7 @@ if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){
   if(hold){hold=false;show.classList.remove("paused");restart();b.textContent="⏸ Pausar"}
   else{stopAuto();b.textContent="▶ Reanudar"}});
  t.insertBefore(b,t.firstChild);
- function paused(){b.textContent="▶ Reanudar"}
- sel.addEventListener("click",paused);dev.addEventListener("mouseenter",paused);dev.addEventListener("touchstart",paused,{passive:true});
+ var _s=stopAuto;stopAuto=function(){_s();b.textContent="▶ Reanudar"};
 })();
 document.querySelectorAll(".bento,.cards,.chips").forEach(function(g){
  [].forEach.call(g.children,function(c,k){c.style.setProperty("--k",k)});
