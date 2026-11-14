@@ -243,8 +243,6 @@ main:focus{outline:0}
 @media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.fc,.au,.mq div,.pill i::after,.fab .ico::after,.sel .br,.wml *{animation:none!important}.wd>span{animation:none!important;transform:none}*{transition-duration:.01ms!important}}
 /* --- mejoras --- */
 .sel button:focus-visible{outline:3px solid var(--cy);outline-offset:-3px;border-radius:8px}
-.pz-pause{display:inline-flex;align-items:center;gap:8px;margin:0 auto 0 0;padding:8px 16px;border-radius:99px;border:1.5px solid var(--ld);background:transparent;color:#fff;font:700 .8rem var(--f2);cursor:pointer}
-.pz-pause:hover{border-color:#fff}
 .tog{align-items:center}
 .js .rv[data-st],.js .bento>.bt.rv,.js .cards>.cd{transition-delay:calc(var(--k,0)*90ms)}
 .btn:active{transform:translateY(0) scale(.98)}
@@ -560,7 +558,7 @@ function restart(){clearInterval(timer);if(!hold&&!calm&&vis)timer=setInterval(f
 function stopAuto(){hold=true;clearInterval(timer);show.classList.add("paused")}
 document.addEventListener("securitypolicyviolation",function(){clearTimeout(loadT);ifr.classList.remove("ok");card(P[cur])});
 sel.addEventListener("click",function(e){var b=e.target.closest("button");if(b){stopAuto();load(+b.dataset.i)}});
-var dev=document.querySelector(".dev");dev.addEventListener("mouseenter",function(){clearInterval(timer)});dev.addEventListener("mouseleave",restart);dev.addEventListener("touchstart",function(e){if(!e.target.closest(".pz-pause"))stopAuto()},{passive:true});
+var dev=document.querySelector(".dev");dev.addEventListener("mouseenter",function(){clearInterval(timer)});dev.addEventListener("mouseleave",restart);dev.addEventListener("touchstart",stopAuto,{passive:true});
 document.querySelector(".tog").addEventListener("click",function(e){var b=e.target.closest("button[data-m]");if(!b)return;mode=b.dataset.m;[].forEach.call(this.children,function(x){x.setAttribute("aria-pressed",x===b)});fr.className="frame "+mode;load(cur)});
 fr.className="frame "+mode;[].forEach.call(document.querySelectorAll(".tog button"),function(x){x.setAttribute("aria-pressed",x.dataset.m===mode)});
 if("ResizeObserver" in window)new ResizeObserver(fit).observe(scr);
@@ -629,16 +627,6 @@ if("IntersectionObserver" in window){var o=new IntersectionObserver(function(x){
   else if(e.key==="ArrowUp"||e.key==="ArrowLeft")n=(cur-1+tabs.length)%tabs.length;
   else if(e.key==="Home")n=0;else if(e.key==="End")n=tabs.length-1;
   if(n===null)return;e.preventDefault();stopAuto();load(n);tabs[n].focus()});
-})();
-(function(){
- if(calm)return;
- var t=document.querySelector(".dev .tog"),b=document.createElement("button");
- b.type="button";b.className="pz-pause";b.textContent="⏸ Pausar";
- b.addEventListener("click",function(){
-  if(hold){hold=false;show.classList.remove("paused");restart();b.textContent="⏸ Pausar"}
-  else{stopAuto();b.textContent="▶ Reanudar"}});
- t.insertBefore(b,t.firstChild);
- var _s=stopAuto;stopAuto=function(){_s();b.textContent="▶ Reanudar"};
 })();
 document.querySelectorAll(".bento,.cards,.chips").forEach(function(g){
  [].forEach.call(g.children,function(c,k){c.style.setProperty("--k",k)});
