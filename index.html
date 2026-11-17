@@ -370,22 +370,6 @@ header.s{background:rgba(6,12,31,.985)}
 .hero .tags{justify-content:center}
 .dev>.tog{justify-content:center}
 }
-/* --- test guiado --- */
-.qs{margin-top:26px;padding:28px 30px;border:1px solid var(--ld);border-radius:26px;background:radial-gradient(420px circle at 100% 0,rgba(47,91,239,.25),transparent 60%),rgba(255,255,255,.04)}
-.qtop{display:flex;justify-content:space-between;align-items:center;gap:12px}.qtop b{font:700 1.35rem var(--f1)}.qtop span{font-size:.8rem;font-weight:600;color:#AEB9DA}
-.qbar{height:4px;margin:14px 0 22px;border-radius:4px;background:rgba(255,255,255,.12);overflow:hidden}.qbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ac),var(--cy));transition:width .5s var(--ez)}
-.qbody.go{animation:qin .4s var(--ez)}@keyframes qin{from{opacity:0;transform:translateY(10px)}}
-.qt{margin:0 0 14px;font:700 1.15rem var(--f1)}
-.qopts{display:flex;flex-wrap:wrap;gap:10px}.qopts button{padding:13px 22px;border:1.5px solid var(--ld);border-radius:99px;background:transparent;color:#fff;font:700 .92rem var(--f2);cursor:pointer;transition:background .2s,color .2s,transform .2s}.qopts button:hover{background:#fff;color:var(--n0);transform:translateY(-2px)}
-.qbk{margin-top:16px;padding:0;border:0;background:none;color:#AEB9DA;font:600 .85rem var(--f2);cursor:pointer;text-decoration:underline}
-.qres{display:grid;gap:10px}.qk{font:700 .72rem var(--f2);letter-spacing:.14em;text-transform:uppercase;color:var(--cy)}.qres h3{font-size:clamp(1.6rem,3.4vw,2.2rem)}
-.qpr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}.qpr strong{font:800 2.2rem/1 var(--f1);letter-spacing:-.04em}.qpr span{color:#AEB9DA;font-size:.85rem}
-.qres p{margin:0;max-width:62ch;color:#B9C4E4}
-.qres ul{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:8px;font-size:.94rem}.qres li::before{content:"✓ ";color:var(--cy);font-weight:800}
-.qc{display:flex;align-items:center;gap:10px;margin-top:6px;padding:14px 16px;border:1.5px dashed var(--ld);border-radius:14px;font-size:.92rem;cursor:pointer}.qc input{width:18px;height:18px;accent-color:var(--ac)}.qc b{color:var(--cy)}
-.qa{display:flex;flex-wrap:wrap;align-items:center;gap:12px 18px;margin-top:8px}.qa .btn{background:#fff;color:var(--ac);box-shadow:none}.qa .qbk{margin:0}
-@media(max-width:600px){.qs{padding:22px 20px}.qopts button{flex:1 1 calc(50% - 10px)}.qa .btn{width:100%}}
-@media(prefers-reduced-motion:reduce){.qbody.go{animation:none}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -477,7 +461,10 @@ header.s{background:rgba(6,12,31,.985)}
     <div class="cd"><small>03</small><span class="tg">Ideal para servicios con turno</span><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ejemplos: peluquerías, estudios, consultorios, canchas y talleres.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
   <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
-  <div class="qs rv" id="qs"><div class="qtop"><b>¿Cuál me conviene?</b><span id="qp">Paso 1 de 3</span></div><div class="qbar"><i id="qb"></i></div><div class="qbody" id="qbody"></div></div>
+  <div class="qz rv" id="qz"><div class="qh"><b>¿Cuál me conviene?</b><span>Respondé 2 preguntas y te digo qué opción te sirve.</span></div>
+    <div class="qq"><p>¿Querés vender tus productos online?</p><div class="qo" data-q="v"><button type="button" data-v="1">Sí</button><button type="button" data-v="0">No</button></div></div>
+    <div class="qq"><p>¿Tus clientes reservan o sacan turno?</p><div class="qo" data-q="t"><button type="button" data-v="1">Sí</button><button type="button" data-v="0">No</button></div></div>
+    <div class="qr" id="qr" hidden></div></div>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
   <div class="care rv">
     <div>
@@ -711,29 +698,12 @@ if(FOTO){var av=$("av"),im=new Image();im.alt="Diego, de PAGINAZ";im.onload=func
  if(TESTI.length){var r=$("rs");TESTI.forEach(function(x){var c=document.createElement("div");c.className="rc";var p=document.createElement("p");p.textContent="“"+x.t+"”";var b=document.createElement("b");b.textContent=x.n;var s=document.createElement("small");s.textContent=x.r;c.appendChild(p);c.appendChild(b);c.appendChild(s);r.appendChild(c)})}
  else{sec.remove();var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n})}})();
 $("nx").addEventListener("click",function(){stopAuto();load((cur+1)%P.length)});
-/* test: ¿cuál me conviene? */
-(function(){var body=$("qbody"),bar=$("qb"),pt=$("qp"),A={},step=0;
- var Q=[{k:"r",t:"¿Qué tipo de negocio tenés?",o:["Cafetería o gastronomía","Tienda o productos","Servicios con turno","Otro rubro"]},{k:"v",t:"¿Querés vender tus productos online?",o:["Sí","No"]},{k:"t",t:"¿Tus clientes reservan o sacan turno?",o:["Sí","No"]}];
- var NM={completa:"Página Completa",ventas:"Página con Ventas",total:"Página Total"};
- var WHY={completa:"Muestra tu negocio con carta o servicios, ubicación, horarios y WhatsApp a un toque. No necesitás carrito ni reservas.",ventas:"Querés vender online: sumás catálogo, carrito y cobro, además de todo lo de la Página Completa.",total:"Atendés con turnos o reservas: sumás reservas online y gestión, además de todo lo de la Página con Ventas."};
- var INC={completa:["Diseño a medida con tu identidad","Carta o servicios, ubicación y horarios","WhatsApp e Instagram a un toque"],ventas:["Todo lo de la Página Completa","Catálogo con carrito y cobro online","Pedidos también por WhatsApp"],total:["Todo lo de la Página con Ventas","Turnos o reservas online","Gestión de pedidos y turnos"]};
- function anim(){body.classList.remove("go");void body.offsetWidth;body.classList.add("go")}
- function render(){body.innerHTML="";bar.style.width=Math.min(step,3)/3*100+"%";anim();
-  if(step<3){var q=Q[step];pt.textContent="Paso "+(step+1)+" de 3";
-   var h=document.createElement("p");h.className="qt";h.textContent=q.t;body.appendChild(h);
-   var g=document.createElement("div");g.className="qopts";
-   q.o.forEach(function(x){var b=document.createElement("button");b.type="button";b.textContent=x;b.addEventListener("click",function(){A[q.k]=x;step++;render()});g.appendChild(b)});
-   body.appendChild(g);
-   if(step>0){var bk=document.createElement("button");bk.type="button";bk.className="qbk";bk.textContent="← Volver";bk.addEventListener("click",function(){step--;render()});body.appendChild(bk)}
-   return}
-  pt.textContent="¡Listo!";
-  var k=A.t==="Sí"?"total":A.v==="Sí"?"ventas":"completa";
-  body.innerHTML='<div class="qres"><span class="qk">Tu mejor opción</span><h3>'+NM[k]+'</h3><div class="qpr"><strong>'+PR[k]+'</strong><span id="qex">pago único, desde</span></div><p>Para tu negocio ('+A.r.toLowerCase()+'): '+WHY[k]+'</p><ul>'+INC[k].map(function(x){return "<li>"+x+"</li>"}).join("")+'</ul><label class="qc"><input type="checkbox" id="qcare"> Sumar cuidado mensual <b>+'+PLAN+'/mes</b></label><div class="qa"><a class="btn" data-wa id="qgo" target="_blank" rel="noopener" href="#">Pedir esta opción</a><button type="button" class="qbk" id="qre">Cambiar respuestas</button></div></div>';
-  function upd(){var c=$("qcare").checked;$("qex").textContent=c?"pago único + "+PLAN+"/mes de cuidado":"pago único, desde";
-   $("qgo").href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Hice el test de PAGINAZ y me recomendó la "+NM[k]+" (desde "+PR[k]+"). Mi rubro: "+A.r+". Vender online: "+A.v+". Turnos o reservas: "+A.t+"."+(c?" Quiero sumar el cuidado mensual.":"")+" ¿Podemos hablar?")}
-  $("qcare").addEventListener("change",upd);upd();
-  $("qre").addEventListener("click",function(){A={};step=0;render()})}
- render()})();
+/* selector de plan */
+(function(){var qz=$("qz"),a={},nm={completa:"Página Completa",ventas:"Página con Ventas",total:"Página Total"};
+ qz.addEventListener("click",function(e){var b=e.target.closest(".qo button");if(!b)return;var g=b.parentNode;[].forEach.call(g.children,function(x){x.classList.toggle("on",x===b)});a[g.dataset.q]=b.dataset.v;
+  if(a.v===undefined||a.t===undefined)return;
+  var k=a.t==="1"?"total":a.v==="1"?"ventas":"completa",r=$("qr");r.hidden=false;
+  r.innerHTML='<p>Te conviene la <b>'+nm[k]+'</b> · desde <strong>'+PR[k]+'</strong></p><a class="btn" data-wa target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent("Hola! Me interesa la opción "+nm[k]+" de PAGINAZ. ¿Podemos hablar?")+'">Pedir esta opción</a>'})})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
