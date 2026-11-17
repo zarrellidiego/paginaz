@@ -356,6 +356,20 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .qr{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-radius:16px;background:rgba(47,91,239,.28)}
 .qr p{margin:0}.qr strong{font:800 1.3rem var(--f1)}.qr .btn{background:#fff;color:var(--ac);box-shadow:none}
 @media(max-width:860px){.qz{grid-template-columns:1fr}}
+/* --- celular: hero centrado, visor centrado, header sólido --- */
+header.s{background:rgba(6,12,31,.985)}
+.pill{white-space:nowrap}
+.dev{display:flex;flex-direction:column;align-items:center}
+.dev>.tog,.dev>.acts,.dev>.frame.d{align-self:stretch}
+@media(max-width:860px){
+.hg>div:first-child{text-align:center}
+.hero h1{margin-left:auto;margin-right:auto}
+.hero .lead{margin-left:auto;margin-right:auto}
+.hero .cta{flex-direction:column;align-items:stretch;max-width:380px;margin:0 auto}
+.hero .cta .btn{width:100%}
+.hero .tags{justify-content:center}
+.dev>.tog{justify-content:center}
+}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -376,7 +390,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 <main id="top" tabindex="-1">
 <div class="hero"><div class="au a"></div><div class="au b"></div><div class="w hg">
   <div>
-    <span class="pill rv"><i></i>Páginas web para cafeterías y negocios de barrio</span>
+    <span class="pill rv"><i></i>Primero la ves, después decidís</span>
     <h1 id="h1" aria-label="Tu negocio, con una página que trae clientes.">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
     <div class="rv">
       <p class="lead">Diseñamos páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
