@@ -6,15 +6,17 @@
 <title>PAGINAZ · Páginas web a medida que te traen clientes</title>
 <meta name="description" content="Páginas web a medida para cafeterías, locales y emprendimientos. Hablás directo con quien la hace. Presupuesto sin compromiso por WhatsApp.">
 <meta name="theme-color" content="#060C1F">
-<meta property="og:type" content="website"><meta property="og:title" content="PAGINAZ · Páginas web a medida que te traen clientes"><meta property="og:locale" content="es_AR"><meta property="og:description" content="Páginas web a medida para cafeterías, locales y emprendimientos."><meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"PAGINAZ","description":"Páginas web a medida para cafeterías, comercios y emprendimientos.","areaServed":"AR","availableLanguage":"es","sameAs":["https://instagram.com/paginaz_"]}</script>
+<meta property="og:type" content="website"><meta property="og:title" content="PAGINAZ · Páginas web a medida que te traen clientes"><meta property="og:locale" content="es_AR"><meta property="og:description" content="Páginas web a medida para cafeterías, locales y emprendimientos."><meta name="twitter:card" content="summary_large_image"><meta name="author" content="Diego · PAGINAZ">
+<!-- IMPORTANTE: cambiá TU-LINK por tu dominio real (ej: paginaz.vercel.app) y subí og.png junto al index.html -->
+<meta property="og:image" content="https://TU-LINK/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://TU-LINK/og.png">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"PAGINAZ","description":"Páginas web a medida para cafeterías, comercios y emprendimientos.","areaServed":"AR","availableLanguage":"es","sameAs":["https://instagram.com/paginaz_"],"address":{"@type":"PostalAddress","addressLocality":"Villa Luro, Buenos Aires","addressCountry":"AR"},"priceRange":"$100.000 - $350.000"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <meta name="twitter:title" content="PAGINAZ · Páginas web a medida que te traen clientes">
 <meta name="twitter:description" content="Páginas web a medida para cafeterías, locales y emprendimientos.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"¿Cuánto cuesta?","acceptedAnswer":{"@type":"Answer","text":"Depende de lo que necesite tu negocio. Te paso un presupuesto claro, sin compromiso."}},
-{"@type":"Question","name":"¿Se ve bien en el celular?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la computadora."}},
+{"@type":"Question","name":"¿Cuánto cuesta?","acceptedAnswer":{"@type":"Answer","text":"Depende de lo que necesite tu negocio. Te pasamos un presupuesto claro, sin compromiso."}},
+{"@type":"Question","name":"¿Se ve bien en el celular?","acceptedAnswer":{"@type":"Answer","text":"Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu."}},
 {"@type":"Question","name":"¿Puedo vender o recibir turnos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Con la Página con Ventas recibís pedidos y pagos online; con la Página Total sumás turnos o reservas."}},
 {"@type":"Question","name":"¿Con quién hablo?","acceptedAnswer":{"@type":"Answer","text":"Directo con la persona que diseña tu página, sin intermediarios."}}]}</script>
 <style>
@@ -340,21 +342,35 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .acts .go:hover{transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(47,91,239,1)}
 @media(max-width:560px){.acts>*{flex:1 1 100%;justify-content:center}}
 @media(prefers-reduced-motion:reduce){.acts .nx i{animation:none}}
+/* --- confianza rápida y selector de plan --- */
+.trust{background:var(--bg);border-bottom:1px solid var(--line)}
+.trust ul{list-style:none;margin:0;padding:24px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.trust li{display:flex;flex-direction:column;padding-left:14px;border-left:3px solid var(--ac)}
+.trust b{font:700 .98rem var(--f1)}.trust span{color:var(--mut);font-size:.82rem;line-height:1.4}
+@media(max-width:760px){.trust ul{grid-template-columns:1fr 1fr;gap:16px 14px}}
+.qz{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:18px 28px;align-items:center;margin-top:26px;padding:26px 30px;border:1px solid var(--ld);border-radius:24px;background:rgba(255,255,255,.04)}
+.qh b{display:block;font:700 1.3rem var(--f1)}.qh span{color:#AEB9DA;font-size:.9rem}
+.qq p{margin:0 0 8px;font-size:.9rem;font-weight:600}
+.qo{display:flex;gap:8px}.qo button{flex:1;padding:10px 0;border:1.5px solid var(--ld);border-radius:99px;background:transparent;color:#fff;font:700 .88rem var(--f2);cursor:pointer;transition:background .2s,color .2s}
+.qo button.on{background:#fff;color:var(--n0);border-color:#fff}
+.qr{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;padding:18px 22px;border-radius:16px;background:rgba(47,91,239,.28)}
+.qr p{margin:0}.qr strong{font:800 1.3rem var(--f1)}.qr .btn{background:#fff;color:var(--ac);box-shadow:none}
+@media(max-width:860px){.qz{grid-template-columns:1fr}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
-<path id="pz-p" fill="currentColor" fill-rule="evenodd" d="M65.9 629.9C64.9 628.9 64.9 422.3 65.9 421.4C66.5 420.8 66.5 420.8 85.1 420.8C107.3 420.8 104.8 420.2 105.0 424.9C105.2 429.8 105.4 429.9 109.8 426.9C126.7 415.5 149.3 414.7 169.5 424.8C174.6 427.3 175.9 428.1 180.4 431.3C188.9 437.4 198.4 449.5 202.9 459.9C211.8 480.6 211.7 502.6 202.6 523.0C201.6 525.4 201.0 526.4 198.3 531.5C194.4 538.7 184.2 549.2 176.0 554.6C155.1 568.2 125.3 569.3 110.3 557.0C107.0 554.3 105.7 553.9 105.2 555.5C105.1 555.9 105.0 572.6 105.0 592.7C105.0 629.3 105.0 629.3 104.4 629.9C103.4 630.9 66.8 630.9 65.9 629.9ZM142.6 525.6C176.6 518.6 178.5 468.2 145.1 458.6C127.3 453.5 109.2 463.7 104.8 481.2C98.1 507.9 117.6 530.8 142.6 525.6Z"/><path id="pz-a1" fill="currentColor" fill-rule="evenodd" d="M276.6 565.5C235.5 562.1 206.2 521.9 213.4 478.9C221.6 429.7 275.0 401.9 312.5 427.2C316.4 429.8 316.5 429.7 316.7 425.0C316.9 420.3 314.4 420.9 336.5 420.8C355.3 420.7 355.3 420.7 355.9 421.4C356.9 422.3 356.9 560.9 355.9 561.9C355.3 562.5 320.2 562.9 318.1 562.3C317.1 562.1 316.8 561.0 316.8 558.5C316.8 553.4 316.2 553.2 312.3 556.5C309.0 559.2 301.9 562.4 295.2 564.1C290.6 565.3 282.2 565.9 276.6 565.5ZM292.6 525.6C299.4 524.2 307.0 519.8 310.3 515.3C310.8 514.7 311.6 513.6 312.2 513.0C316.3 507.9 318.9 497.3 318.2 488.7C314.8 446.1 255.0 447.4 252.6 490.1C251.3 512.7 270.9 530.1 292.6 525.6Z"/><path id="pz-g" fill="currentColor" fill-rule="evenodd" d="M435.4 633.6C435.2 633.6 433.2 633.4 430.9 633.3C418.3 632.5 402.1 626.5 393.4 619.2C392.7 618.6 391.6 617.7 391.0 617.3C389.3 616.1 381.0 607.7 379.0 605.0C376.4 601.6 376.5 601.3 381.2 598.0C382.5 597.1 384.5 595.7 385.6 594.9C386.7 594.1 388.6 592.7 389.8 591.9C391.0 591.1 392.7 589.8 393.6 589.1C396.9 586.7 400.5 584.1 402.7 582.5C404.0 581.6 405.5 580.5 406.2 580.1C408.1 578.7 408.8 578.9 410.9 581.8C428.0 604.5 465.8 594.7 469.4 566.6C470.6 557.1 469.4 551.9 466.7 555.2C461.7 561.3 443.6 566.5 430.5 565.5C383.8 562.0 353.9 513.8 369.2 466.9C370.6 462.5 375.7 452.1 377.9 449.1C378.7 448.0 379.9 446.3 380.6 445.4C387.3 436.3 399.4 426.8 409.1 422.9C414.1 421.0 414.9 420.7 417.8 420.0C434.8 415.5 451.9 418.1 465.4 427.1C469.4 429.8 469.5 429.8 469.7 425.0C469.9 422.4 470.0 421.7 470.3 421.3C471.0 420.6 508.0 420.6 508.7 421.3C509.4 422.0 509.4 564.8 508.7 570.1C507.9 575.7 506.6 581.6 505.2 585.2C503.0 590.9 500.9 595.5 499.8 596.9C499.5 597.4 498.7 598.6 498.2 599.6C493.8 607.5 483.7 617.5 474.8 622.9C473.4 623.7 472.1 624.5 471.8 624.7C470.8 625.4 464.0 628.4 460.5 629.7C454.0 632.0 438.1 634.5 435.4 633.6ZM445.6 525.6C481.3 518.2 478.8 461.8 442.6 457.6C432.3 456.4 420.0 460.9 414.4 467.8C414.0 468.3 413.3 469.2 412.9 469.7C406.5 477.2 403.8 489.7 406.3 500.2C410.4 518.2 427.6 529.4 445.6 525.6Z"/><path id="pz-i" fill="currentColor" fill-rule="evenodd" d="M524.9 562.3C523.7 561.8 523.7 564.3 523.8 491.2C523.9 424.9 523.9 421.7 524.3 421.3C525.0 420.6 562.0 420.6 562.7 421.3C563.5 422.2 563.5 561.1 562.6 561.9C562.0 562.5 526.4 562.9 524.9 562.3Z"/><path id="pz-n" fill="currentColor" fill-rule="evenodd" d="M578.6 561.9C577.8 561.1 577.7 422.2 578.6 421.3C579.0 420.9 580.1 420.9 597.6 420.8C619.6 420.7 617.5 420.3 617.5 424.4C617.5 427.2 617.9 428.6 618.6 428.7C619.1 428.8 619.6 428.5 623.0 426.1C635.6 417.4 664.0 414.9 676.9 421.5C677.5 421.7 678.7 422.2 679.7 422.6C687.3 425.3 698.2 433.6 703.9 440.9C709.8 448.4 715.0 458.4 717.1 466.1C718.5 471.0 719.2 474.1 719.6 476.6C719.8 478.0 720.2 480.3 720.4 481.8C721.2 486.8 721.2 561.0 720.4 561.9C719.7 562.5 684.6 562.9 682.9 562.3C681.7 561.8 681.8 562.7 681.7 525.0C681.5 478.8 681.3 477.2 674.9 468.6C672.9 466.0 671.9 465.0 668.3 462.2C655.2 451.9 630.8 458.1 622.0 473.9C617.5 481.9 617.5 482.4 617.5 526.6C617.5 561.3 617.5 561.3 616.9 561.9C615.9 562.9 579.6 562.9 578.6 561.9Z"/><path id="pz-a2" fill="currentColor" fill-rule="evenodd" d="M791.5 565.5C786.6 565.1 777.3 562.9 773.8 561.4C772.7 560.9 771.4 560.4 770.9 560.3C768.4 559.4 763.1 556.3 756.8 551.9C749.1 546.5 738.9 533.8 735.3 525.2C734.9 524.5 734.3 523.1 733.8 522.1C723.9 502.5 726.6 469.8 739.6 450.4C749.0 436.5 760.6 427.0 774.6 421.8C783.4 418.5 795.5 416.9 802.7 418.0C813.3 419.6 823.0 423.3 828.5 427.7C831.4 430.1 832.2 429.3 832.2 424.4C832.3 420.4 830.1 420.8 852.0 420.8C870.5 420.8 870.5 420.8 871.1 421.4C872.1 422.3 872.1 560.9 871.1 561.9C870.5 562.5 870.5 562.5 852.0 562.5C830.0 562.5 832.4 563.0 832.2 558.4C832.0 553.7 831.7 553.6 827.9 556.3C824.6 558.8 822.2 560.2 820.6 560.8C819.9 561.0 818.5 561.5 817.6 562.0C811.3 564.7 800.3 566.2 791.5 565.5ZM808.2 525.6C825.1 521.6 834.8 507.6 833.6 489.1C832.8 478.2 827.4 467.8 820.1 463.2C809.3 456.3 797.5 455.5 786.6 460.7C759.6 473.9 762.6 515.9 791.2 524.7C796.0 526.2 803.9 526.7 808.2 525.6Z"/><path id="pz-z" fill="currentColor" fill-rule="evenodd" d="M876.2 562.2C875.5 561.9 875.7 561.0 876.5 559.7C876.9 559.0 877.5 557.9 877.9 557.2C878.2 556.5 878.9 555.4 879.4 554.8C879.8 554.2 880.5 553.0 880.9 552.3C881.2 551.6 881.9 550.4 882.4 549.8C882.8 549.2 883.5 548.0 883.9 547.3C884.2 546.6 884.9 545.4 885.4 544.8C885.8 544.2 886.5 543.0 886.9 542.3C887.2 541.6 887.9 540.4 888.4 539.8C888.8 539.2 889.4 538.1 889.7 537.5C890.1 536.9 890.8 535.6 891.4 534.8C892.4 533.2 893.0 532.2 896.0 527.1C898.1 523.5 899.6 521.1 900.5 519.6C901.4 518.1 902.9 515.7 905.0 512.1C907.1 508.6 908.6 506.2 909.5 504.6C910.0 503.8 911.1 502.1 911.9 500.8C912.7 499.4 913.7 497.7 914.3 496.9C915.2 495.3 916.6 492.9 918.8 489.4C920.9 485.8 922.3 483.4 923.2 481.9C924.2 480.4 925.6 478.0 927.8 474.4C930.6 469.6 931.4 468.3 932.3 467.0C932.8 466.2 933.5 465.1 933.8 464.4C934.2 463.7 934.9 462.5 935.3 461.8C938.5 457.0 940.6 457.4 909.8 457.2C884.0 457.1 884.0 457.1 883.5 456.5C882.8 455.6 882.8 422.0 883.6 421.3C884.2 420.7 997.2 420.5 998.2 421.1C999.0 421.6 998.9 422.2 997.8 423.9C997.4 424.7 996.3 426.6 995.5 428.0C994.1 430.6 992.5 433.4 989.2 439.0C988.3 440.6 987.0 442.9 986.4 444.1C985.7 445.4 984.9 446.8 984.5 447.4C984.1 447.9 983.3 449.4 982.7 450.7C982.0 452.0 981.1 453.5 980.6 454.2C980.2 454.8 979.3 456.4 978.6 457.8C978.0 459.1 977.1 460.6 976.7 461.1C976.4 461.7 975.4 463.4 974.6 464.9C973.1 467.6 971.6 470.2 968.2 476.0C967.3 477.6 966.0 479.9 965.4 481.1C964.7 482.4 963.9 483.8 963.5 484.4C963.1 484.9 962.3 486.4 961.7 487.7C961.0 489.0 960.1 490.5 959.6 491.2C959.2 491.8 958.3 493.4 957.6 494.8C957.0 496.1 956.1 497.6 955.7 498.1C955.4 498.7 954.4 500.4 953.6 501.9C952.0 504.7 950.2 507.9 947.2 513.0C946.3 514.6 945.3 516.4 945.0 517.0C944.7 517.6 943.8 519.1 943.1 520.4C941.7 522.8 941.4 523.9 942.2 524.5C942.5 524.8 947.3 524.9 970.3 525.0C997.4 525.1 998.0 525.1 998.4 525.6C999.4 526.9 998.6 528.0 996.1 528.6C980.7 532.5 979.9 554.0 995.2 558.0C996.2 558.3 997.4 558.6 997.8 558.8C999.1 559.3 999.3 561.3 998.2 562.1C997.5 562.6 877.0 562.7 876.2 562.2Z"/><path id="pz-dot" style="fill:var(--dot)" d="M539.3 394.8C526.8 392.8 517.6 378.5 521.4 367.0C527.8 347.3 555.6 345.3 564.7 363.9C572.6 379.9 557.9 397.7 539.3 394.8Z"/><circle id="pz-zd" style="fill:var(--dot)" cx="1000" cy="543.5" r="11.5"/>
+<path id="pz-p" fill="currentColor" fill-rule="evenodd" d="M65.9 629.9C64.9 628.9 64.9 422.3 65.9 421.4C66.5 420.8 66.5 420.8 85.1 420.8C107.3 420.8 104.8 420.2 105.0 424.9C105.2 429.8 105.4 429.9 109.8 426.9C126.7 415.5 149.3 414.7 169.5 424.8C174.6 427.3 175.9 428.1 180.4 431.3C188.9 437.4 198.4 449.5 202.9 459.9C211.8 480.6 211.7 502.6 202.6 523.0C201.6 525.4 201.0 526.4 198.3 531.5C194.4 538.7 184.2 549.2 176.0 554.6C155.1 568.2 125.3 569.3 110.3 557.0C107.0 554.3 105.7 553.9 105.2 555.5C105.1 555.9 105.0 572.6 105.0 592.7C105.0 629.3 105.0 629.3 104.4 629.9C103.4 630.9 66.8 630.9 65.9 629.9ZM142.6 525.6C176.6 518.6 178.5 468.2 145.1 458.6C127.3 453.5 109.2 463.7 104.8 481.2C98.1 507.9 117.6 530.8 142.6 525.6Z"/><path id="pz-a1" fill="currentColor" fill-rule="evenodd" d="M276.6 565.5C235.5 562.1 206.2 521.9 213.4 478.9C221.6 429.7 275.0 401.9 312.5 427.2C316.4 429.8 316.5 429.7 316.7 425.0C316.9 420.3 314.4 420.9 336.5 420.8C355.3 420.7 355.3 420.7 355.9 421.4C356.9 422.3 356.9 560.9 355.9 561.9C355.3 562.5 320.2 562.9 318.1 562.3C317.1 562.1 316.8 561.0 316.8 558.5C316.8 553.4 316.2 553.2 312.3 556.5C309.0 559.2 301.9 562.4 295.2 564.1C290.6 565.3 282.2 565.9 276.6 565.5ZM292.6 525.6C299.4 524.2 307.0 519.8 310.3 515.3C310.8 514.7 311.6 513.6 312.2 513.0C316.3 507.9 318.9 497.3 318.2 488.7C314.8 446.1 255.0 447.4 252.6 490.1C251.3 512.7 270.9 530.1 292.6 525.6Z"/><path id="pz-g" fill="currentColor" fill-rule="evenodd" d="M435.4 633.6C435.2 633.6 433.2 633.4 430.9 633.3C418.3 632.5 402.1 626.5 393.4 619.2C392.7 618.6 391.6 617.7 391.0 617.3C389.3 616.1 381.0 607.7 379.0 605.0C376.4 601.6 376.5 601.3 381.2 598.0C382.5 597.1 384.5 595.7 385.6 594.9C386.7 594.1 388.6 592.7 389.8 591.9C391.0 591.1 392.7 589.8 393.6 589.1C396.9 586.7 400.5 584.1 402.7 582.5C404.0 581.6 405.5 580.5 406.2 580.1C408.1 578.7 408.8 578.9 410.9 581.8C428.0 604.5 465.8 594.7 469.4 566.6C470.6 557.1 469.4 551.9 466.7 555.2C461.7 561.3 443.6 566.5 430.5 565.5C383.8 562.0 353.9 513.8 369.2 466.9C370.6 462.5 375.7 452.1 377.9 449.1C378.7 448.0 379.9 446.3 380.6 445.4C387.3 436.3 399.4 426.8 409.1 422.9C414.1 421.0 414.9 420.7 417.8 420.0C434.8 415.5 451.9 418.1 465.4 427.1C469.4 429.8 469.5 429.8 469.7 425.0C469.9 422.4 470.0 421.7 470.3 421.3C471.0 420.6 508.0 420.6 508.7 421.3C509.4 422.0 509.4 564.8 508.7 570.1C507.9 575.7 506.6 581.6 505.2 585.2C503.0 590.9 500.9 595.5 499.8 596.9C499.5 597.4 498.7 598.6 498.2 599.6C493.8 607.5 483.7 617.5 474.8 622.9C473.4 623.7 472.1 624.5 471.8 624.7C470.8 625.4 464.0 628.4 460.5 629.7C454.0 632.0 438.1 634.5 435.4 633.6ZM445.6 525.6C481.3 518.2 478.8 461.8 442.6 457.6C432.3 456.4 420.0 460.9 414.4 467.8C414.0 468.3 413.3 469.2 412.9 469.7C406.5 477.2 403.8 489.7 406.3 500.2C410.4 518.2 427.6 529.4 445.6 525.6Z"/><path id="pz-i" fill="currentColor" fill-rule="evenodd" d="M524.9 562.3C523.7 561.8 523.7 564.3 523.8 491.2C523.9 424.9 523.9 421.7 524.3 421.3C525.0 420.6 562.0 420.6 562.7 421.3C563.5 422.2 563.5 561.1 562.6 561.9C562.0 562.5 526.4 562.9 524.9 562.3Z"/><path id="pz-n" fill="currentColor" fill-rule="evenodd" d="M578.6 561.9C577.8 561.1 577.7 422.2 578.6 421.3C579.0 420.9 580.1 420.9 597.6 420.8C619.6 420.7 617.5 420.3 617.5 424.4C617.5 427.2 617.9 428.6 618.6 428.7C619.1 428.8 619.6 428.5 623.0 426.1C635.6 417.4 664.0 414.9 676.9 421.5C677.5 421.7 678.7 422.2 679.7 422.6C687.3 425.3 698.2 433.6 703.9 440.9C709.8 448.4 715.0 458.4 717.1 466.1C718.5 471.0 719.2 474.1 719.6 476.6C719.8 478.0 720.2 480.3 720.4 481.8C721.2 486.8 721.2 561.0 720.4 561.9C719.7 562.5 684.6 562.9 682.9 562.3C681.7 561.8 681.8 562.7 681.7 525.0C681.5 478.8 681.3 477.2 674.9 468.6C672.9 466.0 671.9 465.0 668.3 462.2C655.2 451.9 630.8 458.1 622.0 473.9C617.5 481.9 617.5 482.4 617.5 526.6C617.5 561.3 617.5 561.3 616.9 561.9C615.9 562.9 579.6 562.9 578.6 561.9Z"/><path id="pz-a2" fill="currentColor" fill-rule="evenodd" d="M791.5 565.5C786.6 565.1 777.3 562.9 773.8 561.4C772.7 560.9 771.4 560.4 770.9 560.3C768.4 559.4 763.1 556.3 756.8 551.9C749.1 546.5 738.9 533.8 735.3 525.2C734.9 524.5 734.3 523.1 733.8 522.1C723.9 502.5 726.6 469.8 739.6 450.4C749.0 436.5 760.6 427.0 774.6 421.8C783.4 418.5 795.5 416.9 802.7 418.0C813.3 419.6 823.0 423.3 828.5 427.7C831.4 430.1 832.2 429.3 832.2 424.4C832.3 420.4 830.1 420.8 852.0 420.8C870.5 420.8 870.5 420.8 871.1 421.4C872.1 422.3 872.1 560.9 871.1 561.9C870.5 562.5 870.5 562.5 852.0 562.5C830.0 562.5 832.4 563.0 832.2 558.4C832.0 553.7 831.7 553.6 827.9 556.3C824.6 558.8 822.2 560.2 820.6 560.8C819.9 561.0 818.5 561.5 817.6 562.0C811.3 564.7 800.3 566.2 791.5 565.5ZM808.2 525.6C825.1 521.6 834.8 507.6 833.6 489.1C832.8 478.2 827.4 467.8 820.1 463.2C809.3 456.3 797.5 455.5 786.6 460.7C759.6 473.9 762.6 515.9 791.2 524.7C796.0 526.2 803.9 526.7 808.2 525.6Z"/><path id="pz-z" fill="currentColor" fill-rule="evenodd" d="M876.2 562.2C875.5 561.9 875.7 561.0 876.5 559.7C876.9 559.0 877.5 557.9 877.9 557.2C878.2 556.5 878.9 555.4 879.4 554.8C879.8 554.2 880.5 553.0 880.9 552.3C881.2 551.6 881.9 550.4 882.4 549.8C882.8 549.2 883.5 548.0 883.9 547.3C884.2 546.6 884.9 545.4 885.4 544.8C885.8 544.2 886.5 543.0 886.9 542.3C887.2 541.6 887.9 540.4 888.4 539.8C888.8 539.2 889.4 538.1 889.7 537.5C890.1 536.9 890.8 535.6 891.4 534.8C892.4 533.2 893.0 532.2 896.0 527.1C898.1 523.5 899.6 521.1 900.5 519.6C901.4 518.1 902.9 515.7 905.0 512.1C907.1 508.6 908.6 506.2 909.5 504.6C910.0 503.8 911.1 502.1 911.9 500.8C912.7 499.4 913.7 497.7 914.3 496.9C915.2 495.3 916.6 492.9 918.8 489.4C920.9 485.8 922.3 483.4 923.2 481.9C924.2 480.4 925.6 478.0 927.8 474.4C930.6 469.6 931.4 468.3 932.3 467.0C932.8 466.2 933.5 465.1 933.8 464.4C934.2 463.7 934.9 462.5 935.3 461.8C938.5 457.0 940.6 457.4 909.8 457.2C884.0 457.1 884.0 457.1 883.5 456.5C882.8 455.6 882.8 422.0 883.6 421.3C884.2 420.7 997.2 420.5 998.2 421.1C999.0 421.6 998.9 422.2 997.8 423.9C997.4 424.7 996.3 426.6 995.5 428.0C994.1 430.6 992.5 433.4 989.2 439.0C988.3 440.6 987.0 442.9 986.4 444.1C985.7 445.4 984.9 446.8 984.5 447.4C984.1 447.9 983.3 449.4 982.7 450.7C982.0 452.0 981.1 453.5 980.6 454.2C980.2 454.8 979.3 456.4 978.6 457.8C978.0 459.1 977.1 460.6 976.7 461.1C976.4 461.7 975.4 463.4 974.6 464.9C973.1 467.6 971.6 470.2 968.2 476.0C967.3 477.6 966.0 479.9 965.4 481.1C964.7 482.4 963.9 483.8 963.5 484.4C963.1 484.9 962.3 486.4 961.7 487.7C961.0 489.0 960.1 490.5 959.6 491.2C959.2 491.8 958.3 493.4 957.6 494.8C957.0 496.1 956.1 497.6 955.7 498.1C955.4 498.7 954.4 500.4 953.6 501.9C952.0 504.7 950.2 507.9 947.2 513.0C946.3 514.6 945.3 516.4 945.0 517.0C944.7 517.6 943.8 519.1 943.1 520.4C941.7 522.8 941.4 523.9 942.2 524.5C942.5 524.8 947.3 524.9 970.3 525.0C997.4 525.1 998.0 525.1 998.4 525.6L998.4 562.1C997.5 562.6 877.0 562.7 876.2 562.2Z"/><path id="pz-dot" style="fill:var(--dot)" d="M539.3 394.8C526.8 392.8 517.6 378.5 521.4 367.0C527.8 347.3 555.6 345.3 564.7 363.9C572.6 379.9 557.9 397.7 539.3 394.8Z"/><circle id="pz-zd" style="fill:var(--dot)" cx="1000" cy="543.5" r="11.5"/>
 <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
 </defs></svg>
 <a class="skip" href="#top">Saltar al contenido</a>
 <div id="pg"></div>
 <header id="hd"><div class="w">
-  <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g><g class="d2"><use class="tr2" href="#pz-zd"/></g></svg></a>
+  <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g></svg></a>
   <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#beneficios">Beneficios</a><a href="#servicios">Opciones</a><a href="#proceso">Proceso</a><a href="#quien">Quién soy</a><a href="#faq">Preguntas</a></nav>
-  <a class="btn sm" data-wa href="#">Escribime</a>
+  <a class="btn sm" data-wa href="#">Escribinos</a>
   <button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú">☰</button>
 </div><nav class="mnav" id="mnav" aria-label="Menú móvil"></nav></header>
 <main id="top" tabindex="-1">
@@ -363,7 +379,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
     <span class="pill rv"><i></i>Páginas web para cafeterías y negocios de barrio</span>
     <h1 id="h1" aria-label="Tu negocio, con una página que trae clientes.">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
     <div class="rv">
-      <p class="lead">Diseño páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
+      <p class="lead">Diseñamos páginas a medida para cafeterías, comercios y emprendimientos: se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
       <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver cómo quedaría mi página</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
       <ul class="tags"><li>A medida, sin plantillas</li><li>Pensada para el celular</li><li>Hablás directo con quien la hace</li></ul>
     </div>
@@ -371,6 +387,8 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="stage" id="stage" aria-hidden="true"></div>
 </div></div>
 <div class="mq" aria-hidden="true"><div id="mq"></div></div>
+
+<div class="trust"><div class="w"><ul><li><b>Maqueta sin costo</b><span>La ves antes de decidir</span></li><li><b>Precio cerrado</b><span>Sin sorpresas al final</span></li><li><b>Trato directo</b><span>Hablás conmigo, sin intermediarios</span></li><li><b>Sin permanencia</b><span>En el cuidado mensual</span></li></ul></div></div>
 
 <section id="problema" class="lt"><div class="w">
   <div class="sh"><span class="eb">El problema</span><h2 class="rv">Tus clientes te buscan y <span class="g">no encuentran lo que necesitan.</span></h2><p class="sd rv">Si tu negocio solo vive en redes y mensajes sueltos, cada consulta depende de que alguien responda a tiempo.</p></div>
@@ -382,7 +400,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
     </ul>
     <figure class="ch rv" aria-label="Ejemplo de mensajes que llegan a un negocio">
       <div class="hd2">Mensajes directos <span>4 sin responder</span></div>
-      <div class="bd2"><div class="msg">¡Hola! ¿Qué horario tienen hoy?<small>hace 3 h</small></div><div class="msg">¿Tienen carta? ¿Me pasan los precios?<small>hace 2 h</small></div><div class="msg">¿Dónde quedan exactamente?<small>hace 1 h</small></div><div class="msg">¿Hacen pedidos o reservas?<small>hace 20 min</small></div></div>
+      <div class="bd2"><div class="msg">Hola! ¿Qué horario tienen hoy?<small>hace 3 h</small></div><div class="msg">¿Tienen carta? ¿Me pasan los precios?<small>hace 2 h</small></div><div class="msg">¿Dónde quedan exactamente?<small>hace 1 h</small></div><div class="msg">¿Hacen pedidos o reservas?<small>hace 20 min</small></div></div>
       <div class="ft2">Ejemplo de los mensajes que se repiten todos los días.</div>
     </figure>
   </div>
@@ -390,11 +408,11 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 </div></section>
 
 <section id="trabajos" class="dk2"><div class="w">
-  <div class="sh"><span class="eb">Trabajos</span><h2 class="rv">Páginas reales, <span class="g">funcionando hoy</span>.</h2><p class="sd rv">Elegí un proyecto para verlo en vivo, en computadora o en celular.</p></div>
+  <div class="sh"><span class="eb">Trabajos</span><h2 class="rv">Mirá cómo se ven <span class="g">de verdad</span>.</h2><p class="sd rv"><b>Tocá cualquiera de los 4 proyectos</b> para verlo en vivo, en compu o en celular. ¡Podés recorrerlos todos!</p></div>
   <div class="show" id="show">
     <div class="sel" id="sel" role="tablist" aria-label="Proyectos"><noscript><p><a href="https://asdasdd2.vercel.app/">Alfonsina y el Mar</a> · <a href="https://maquetagianno.vercel.app/">Gianno Cafetería</a> · <a href="https://pauliscafe.vercel.app/">Paulis</a> · <a href="https://acevedo-cafetin.vercel.app/">Acevedo Cafetín</a></p></noscript></div>
     <div class="dev">
-      <div class="tog" role="group" aria-label="Tipo de pantalla"><button data-m="d" aria-pressed="true">Computadora</button><button data-m="m" aria-pressed="false">Celular</button></div>
+      <div class="tog" role="group" aria-label="Tipo de pantalla"><button data-m="d" aria-pressed="true">Compu</button><button data-m="m" aria-pressed="false">Celular</button></div>
       <div class="frame d" id="frame"><div class="tb" aria-hidden="true"><b></b><b></b><b></b><span class="u" id="url"></span></div>
         <div class="scr" id="scr" role="tabpanel" aria-label="Vista previa del proyecto"><iframe id="ifr" loading="lazy" title="Vista previa del proyecto" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-popups allow-forms"></iframe><div class="fb" id="fb"></div></div></div>
       <div class="acts"><button type="button" class="nx" id="nx">Ver otro proyecto <i aria-hidden="true">→</i></button><a class="go" id="go" target="_blank" rel="noopener" href="#">Visitar esta página <span aria-hidden="true">↗</span></a></div>
@@ -406,11 +424,11 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="sh"><span class="eb">Qué ganás</span><h2 class="rv">Todo lo que tu negocio necesita, <span class="g">en un solo lugar</span>.</h2><p class="sd rv">Lo que ganás al tener tu propia página, comparado con tener solo redes.</p></div>
   <div class="bento rv" id="bento">
     <div class="bt l d"><i>01</i><h3>Se ve profesional</h3><p>Diseño cuidado, con tu identidad y tus fotos. Una página que transmite confianza desde el primer segundo.</p></div>
-    <div class="bt"><i>02</i><h3>Te escriben por WhatsApp</h3><p>Botones directos para que consultar sea simple e inmediato.</p></div>
+    <div class="bt"><i>02</i><h3>Te escriben por WhatsApp</h3><p>Botones directos para que consultar sea facilísimo.</p></div>
     <div class="bt"><i>03</i><h3>Perfecta en el celular</h3><p>Se diseña primero para el celular, donde te buscan.</p></div>
     <div class="bt l"><i>04</i><h3>Carta o catálogo a mano</h3><p>Tus productos y servicios, siempre ordenados y claros, para que tus clientes elijan sin preguntar.</p></div>
     <div class="bt h"><i>05</i><h3>Ubicación y horarios claros</h3><p>Mapa, dirección y horarios sin que tengan que preguntar.</p></div>
-    <div class="bt h d"><i>06</i><h3>Lista para Google</h3><p>Con SEO básico para que tu negocio aparezca en las búsquedas de Google.</p></div>
+    <div class="bt h d"><i>06</i><h3>Lista para Google</h3><p>Con SEO básico para que tu negocio pueda encontrarse.</p></div>
   </div>
   <div class="vsw rv"><table class="vs"><thead><tr><th><span class="sr">Característica</span></th><th>Solo redes</th><th>Con tu página</th></tr></thead><tbody>
 <tr><td>Es tuya y no depende de un algoritmo</td><td><span class="n" aria-label="No">✕</span></td><td><span class="y" aria-label="Sí">✓</span></td></tr>
@@ -422,56 +440,60 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 </div></section>
 
 <section id="servicios" class="dk"><div class="w">
-  <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">se adapta a tu negocio</span>.</h2><p class="sd rv">Tres opciones: cada una incluye todo lo de la anterior. Todas se hacen a medida y se pueden ampliar después.</p></div>
+  <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">le queda a tu negocio</span>.</h2><p class="sd rv">Tres opciones, cada una incluye todo lo de la anterior. Todas se hacen a medida y se pueden ampliar después.</p></div>
   <div class="cards rv">
-    <div class="cd"><small>01</small><span class="tg">Ideal para cafeterías y locales</span><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La opción esencial, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y computadora</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ejemplos: cafeterías, panaderías, restaurantes, locales y comercios de barrio.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
-    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><span class="tg">Ideal para tiendas y emprendimientos</span><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ejemplos: tiendas de ropa, decoración, accesorios y pastelerías que reciben pedidos.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
+    <div class="cd"><small>01</small><span class="tg">Ideal para cafeterías y locales</span><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><div class="for">Ejemplos: cafeterías, panaderías, restaurantes, locales y comercios de barrio.</div><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
+    <div class="cd f"><span class="bd">Recomendada</span><small>02</small><span class="tg">Ideal para tiendas y emprendimientos</span><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><div class="for">Ejemplos: tiendas de ropa, deco, accesorios y pastelerías que reciben pedidos.</div><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
     <div class="cd"><small>03</small><span class="tg">Ideal para servicios con turno</span><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><div class="for">Ejemplos: peluquerías, estudios, consultorios, canchas y talleres.</div><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
   <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
+  <div class="qz rv" id="qz"><div class="qh"><b>¿Cuál me conviene?</b><span>Respondé 2 preguntas y te digo qué opción te sirve.</span></div>
+    <div class="qq"><p>¿Querés vender tus productos online?</p><div class="qo" data-q="v"><button type="button" data-v="1">Sí</button><button type="button" data-v="0">No</button></div></div>
+    <div class="qq"><p>¿Tus clientes reservan o sacan turno?</p><div class="qo" data-q="t"><button type="button" data-v="1">Sí</button><button type="button" data-v="0">No</button></div></div>
+    <div class="qr" id="qr" hidden></div></div>
   <ul class="chips rv"><li>Menús digitales</li><li>Catálogos</li><li>WhatsApp</li><li>Formularios</li><li>Mapas</li><li>Reservas</li><li>Pedidos y ventas</li><li>Galerías</li></ul>
   <div class="care rv">
     <div>
       <span class="ck">Cuidado mensual</span>
       <h3>Tu página siempre al día, sin que tengas que pensar en ella.</h3>
-      <p>Un negocio cambia todos los meses: precios, horarios, carta, promociones. Con el plan me escribís por WhatsApp y yo me ocupo de todo. Cuesta menos que un café por día.</p>
+      <p>Un negocio cambia todos los meses: precios, horarios, carta, promos. Con el plan me escribís por WhatsApp y yo me ocupo de todo. Cuesta menos que un café por día.</p>
       <div class="cp"><strong id="plan-p"></strong><span>/mes · sin permanencia, cancelás cuando quieras</span></div>
       <a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Quiero el cuidado mensual</a>
     </div>
     <ul class="cl2">
-      <li><b>Cambios incluidos</b><span>Precios, textos, fotos, horarios y promociones: hasta 3 cambios por mes.</span></li>
+      <li><b>Cambios incluidos</b><span>Precios, textos, fotos, horarios y promos: hasta 3 cambios por mes.</span></li>
       <li><b>Carta o catálogo siempre actual</b><span>Cuando cambian tus productos o precios, tu página cambia con ellos.</span></li>
       <li><b>Soporte por WhatsApp</b><span>Hablás directo conmigo, sin tickets ni esperar a un equipo.</span></li>
       <li><b>Hosting y publicación</b><span>Tu página online, rápida y segura, sin pagar nada aparte.</span></li>
-      <li><b>Revisión mensual</b><span>Reviso la velocidad, la versión para celular, los enlaces y los botones de WhatsApp.</span></li>
-      <li><b>Mejoras sin costo extra</b><span>Pequeños ajustes de diseño para que tu página siempre se vea actual.</span></li>
+      <li><b>Revisión mensual</b><span>Controlo velocidad, celular, links y botones de WhatsApp.</span></li>
+      <li><b>Mejoras sin costo extra</b><span>Ajustes chicos de diseño para que siempre se vea actual.</span></li>
     </ul>
-    <div class="sc"><div><b>¿Subió el café?</b>Actualizo la carta con los nuevos precios.</div><div><b>¿Cierran por feriado?</b>Cambio los horarios para que nadie llegue y encuentre cerrado.</div><div><b>¿Nueva promoción de temporada?</b>La subo con foto y botón de WhatsApp.</div></div>
+    <div class="sc"><div><b>¿Subió el café?</b>Actualizo la carta con los nuevos precios.</div><div><b>¿Cierran por feriado?</b>Cambio los horarios para que nadie llegue y encuentre cerrado.</div><div><b>¿Nueva promo de temporada?</b>La subo con foto y botón de WhatsApp.</div></div>
   </div>
 </div></section>
 
 <section id="proceso" class="lt"><div class="w">
-  <div class="sh"><span class="eb">Cómo trabajo</span><h2 class="rv">Cinco pasos, <span class="g">sin vueltas</span>.</h2><p class="sd rv">Así trabajo, desde la primera charla hasta que tu página está en línea.</p></div>
+  <div class="sh"><span class="eb">Cómo trabajamos</span><h2 class="rv">Cinco pasos, <span class="g">sin vueltas</span>.</h2><p class="sd rv">Así trabajamos, desde la primera charla hasta que tu página está en línea.</p></div>
   <ol class="tl rv" id="tl">
-    <li data-n="1"><h3>Me contás sobre tu negocio</h3><p>Una charla corta por WhatsApp: qué hacés, a quién le vendés y qué querés lograr.</p></li>
-    <li data-n="2"><h3>Definimos qué necesita tu página</h3><p>Definimos juntos las secciones, el contenido y la opción que mejor te sirve.</p></li>
-    <li data-n="3"><h3>Diseño y desarrollo</h3><p>La armo con tu identidad, pensada primero para el celular.</p></li>
-    <li data-n="4"><h3>Revisamos los detalles</h3><p>La revisás y ajustamos lo que haga falta hasta que quedes conforme.</p></li>
-    <li data-n="5"><h3>Publico tu página</h3><p>La dejo en línea, lista para compartir en redes y WhatsApp.</p></li>
+    <li data-n="1"><h3>Nos contás sobre tu negocio</h3><p>Una charla corta por WhatsApp: qué hacés, a quién le vendés y qué querés lograr.</p></li>
+    <li data-n="2"><h3>Definimos qué necesita tu página</h3><p>Elegimos secciones, contenido y la opción que mejor te sirve.</p></li>
+    <li data-n="3"><h3>Diseñamos y desarrollamos</h3><p>La armamos con tu identidad, pensada primero para el celular.</p></li>
+    <li data-n="4"><h3>Revisamos los detalles</h3><p>La mirás y ajustamos lo que haga falta hasta que te guste.</p></li>
+    <li data-n="5"><h3>Publicamos tu página</h3><p>La dejamos en línea, lista para compartir en redes y WhatsApp.</p></li>
   </ol>
 </div></section>
 
 <section id="sobre" class="lt" style="padding-top:0"><div class="w about">
-  <div><span class="eb">Todas incluyen</span><h2 class="rv">Cada negocio tiene su <span class="g">identidad</span>.</h2><p class="sd rv">Nada de plantillas en serie: escucho qué necesita tu negocio y diseño tu página a medida, con trato cercano de principio a fin.</p></div>
-  <ul class="ok rv"><li>Diseño a medida, con tu logo, colores y fotos</li><li>Versión para celular y computadora</li><li>Publicación en línea, lista para compartir</li><li>Ajustes hasta que el resultado te deje conforme</li><li>Trato directo con quien la hace</li></ul>
+  <div><span class="eb">Todas incluyen</span><h2 class="rv">Cada negocio tiene su <span class="g">identidad</span>.</h2><p class="sd rv">Nada de plantillas en serie: escuchamos qué necesita tu negocio y diseñamos tu página a medida, con trato cercano de principio a fin.</p></div>
+  <ul class="ok rv"><li>Diseño a medida, con tu logo, colores y fotos</li><li>Versión celular y compu</li><li>Publicación en línea, lista para compartir</li><li>Ajustes hasta que te guste el resultado</li><li>Trato directo con quien la hace</li></ul>
 </div></section>
 
 <section id="quien" class="lt" style="padding-top:0"><div class="w">
   <div class="mec rv">
     <div class="mav"><div class="ring"></div><div class="av" id="av" aria-hidden="true">D</div><span class="fl f1">Páginas web</span><span class="fl f2">E-commerce</span><span class="fl f3">Meta Ads</span></div>
     <div class="mtx"><span class="eb">Quién la hace</span><h2>Soy Diego y la hago <span class="g">yo</span>.</h2>
-    <p>Vivo en Villa Luro y hago páginas web para cafeterías, locales y emprendimientos. Sin intermediarios ni equipos de por medio: me contás tu idea, la diseño, la publico y te acompaño después. Como también manejo e-commerce y Meta Ads, pienso tu página para que te traiga clientes, no solo para que se vea atractiva.</p>
-    <div class="ms"><div><b>4</b><span>negocios con su página</span></div><div><b>1 a 1</b><span>trato directo, sin intermediarios</span></div><div><b>CABA</b><span>con base en Villa Luro</span></div></div>
+    <p>Vivo en Villa Luro y hago páginas web para cafeterías, locales y emprendimientos. Sin intermediarios ni equipos de por medio: me contás tu idea, la diseño, la publico y te acompaño después. Como también manejo e-commerce y Meta Ads, pienso tu página para que te traiga clientes, no solo para que se vea linda.</p>
+    <div class="ms"><div><b>4</b><span>negocios con su página</span></div><div><b>1 a 1</b><span>trato directo, sin intermediarios</span></div><div><b>CABA</b><span>desde Villa Luro</span></div></div>
     <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver mi maqueta</a><a class="btn o" data-wa href="#">Escribime directo</a></div></div>
   </div>
 </div></section>
@@ -479,29 +501,29 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 <section id="resenas" class="lt" style="padding-top:0"><div class="w"><span class="eb">Lo que dicen</span><h2 class="rv">Negocios que ya <span class="g">tienen su página</span>.</h2><div class="rs rv" id="rs" style="margin-top:44px"></div></div></section>
 
 <section id="faq" class="lt" style="padding-top:0"><div class="w fq">
-  <div class="stk"><span class="eb">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2><p class="sd rv">Las dudas más comunes, resueltas antes de que las tengas.</p><a class="btn o" data-wa href="#">¿Otra duda? Escribime</a></div>
+  <div class="stk"><span class="eb">Preguntas frecuentes</span><h2 class="rv">Lo que suelen preguntar.</h2><p class="sd rv">Las dudas más comunes, resueltas antes de que las tengas.</p><a class="btn o" data-wa href="#">¿Otra duda? Escribinos</a></div>
   <div class="faq rv">
-    <details><summary>¿Cuánto cuesta?</summary><p id="fq-precio">Depende de lo que necesite tu negocio. Contame qué querés lograr y te paso un presupuesto claro, sin compromiso.</p></details>
+    <details><summary>¿Cuánto cuesta?</summary><p id="fq-precio">Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
     <details><summary>¿Qué es la maqueta sin costo?</summary><p>Antes de que decidas nada, te muestro cómo quedaría tu página con tu nombre, tus colores y tu información. Si te gusta, seguimos; si no, no pagás nada.</p></details>
-    <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo digo antes de empezar, para que sepas qué esperar.</p></details>
-    <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarme sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los uso; si no, te ayudo a ordenar lo que haga falta.</p></details>
-    <details><summary>¿Se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la computadora.</p></details>
+    <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
+    <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
+    <details><summary>¿Se ve bien en el celular?</summary><p>Sí. Todas las páginas se diseñan primero para el celular y después se adaptan a la compu.</p></details>
     <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
-    <details><summary>¿Y si después quiero cambiar algo?</summary><p>Se puede. Podés pedir cambios puntuales cuando quieras, o sumarte al plan de cuidado mensual, que incluye hasta 3 cambios por mes.</p></details>
-    <details><summary>¿Qué incluye el plan de cuidado mensual?</summary><p id="fq-plan">Hasta 3 cambios por mes (precios, textos, fotos, horarios o promociones), soporte directo por WhatsApp, hosting incluido y una revisión mensual de velocidad y funcionamiento. Es opcional y sin permanencia: si un mes no lo necesitás, lo cancelás.</p></details>
+    <details><summary>¿Y si después quiero cambiar algo?</summary><p>Se puede. Lo hablamos antes de empezar para que sepas cómo trabajamos los cambios una vez publicada.</p></details>
+    <details><summary>¿Qué incluye el plan de cuidado mensual?</summary><p id="fq-plan">Hasta 3 cambios por mes (precios, textos, fotos, horarios o promos), soporte directo por WhatsApp, hosting incluido y una revisión mensual de velocidad y funcionamiento. Es opcional y sin permanencia: si un mes no lo necesitás, lo cancelás.</p></details>
     <details><summary>¿Con quién hablo?</summary><p>Directo con la persona que diseña tu página, sin intermediarios y por el medio que prefieras.</p></details>
   </div>
 </div></section>
 
 <section class="ct" id="contacto"><div class="w cg">
-  <div class="rv"><h2>Tu negocio merece un <span class="g">buen lugar en internet</span>.</h2><p>Contame qué tenés en mente y te respondo por WhatsApp con ideas y un presupuesto sin compromiso.</p>
-    <ul class="cl"><li><a data-wa href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>Escribime por WhatsApp</a></li><li><a data-ig href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></span>@paginaz_ en Instagram</a></li></ul></div>
+  <div class="rv"><h2>Tu negocio merece un <span class="g">buen lugar en internet</span>.</h2><p>Contanos qué tenés en mente y te respondemos por WhatsApp con ideas y un presupuesto sin compromiso.</p>
+    <ul class="cl"><li><a data-wa href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>Escribinos por WhatsApp</a></li><li><a data-ig href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></span>@paginaz_ en Instagram</a></li></ul></div>
   <form class="fm rv" id="fm" novalidate>
-    <h3>Contame tu proyecto</h3>
-    <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Lucía"></label>
+    <h3>Contanos tu proyecto</h3>
+    <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Diego"></label>
     <label>Tu negocio<input name="b" placeholder="Nombre y rubro"></label>
     <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
-    <label>Contame más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
+    <label>Contanos más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
     <p class="er" id="er" role="alert" hidden></p><button class="btn" type="submit">Enviar por WhatsApp</button><small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
   </form>
 </div></section>
@@ -509,7 +531,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 
 <footer><div class="w">
   <div class="fg">
-    <div class="fbr"><a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g><g class="d2"><use class="tr2" href="#pz-zd"/></g></svg></a><p>Páginas web a medida para cafeterías, comercios y emprendimientos. Hablás directo con quien la hace.</p>
+    <div class="fbr"><a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g></svg></a><p>Páginas web a medida para cafeterías, comercios y emprendimientos. Hablás directo con quien la hace.</p>
       <div class="soc"><a class="so" data-ig href="#" aria-label="Instagram @paginaz_"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></a><a class="so" data-wa href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></a></div></div>
     <div><h4>Secciones</h4><ul><li><a href="#trabajos">Trabajos</a></li><li><a href="#beneficios">Beneficios</a></li><li><a href="#servicios">Opciones</a></li><li><a href="#proceso">Proceso</a></li><li><a href="#faq">Preguntas</a></li></ul></div>
     <div><h4>Contacto</h4><ul><li><a data-wa href="#">WhatsApp</a></li><li><a data-ig href="#">Instagram · @paginaz_</a></li><li><a href="#contacto">Formulario</a></li></ul></div>
@@ -517,17 +539,17 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
   <div class="fbot"><span>© 2026 PAGINAZ · Buenos Aires, Argentina</span><a href="#top">Volver arriba ↑</a></div>
 </div></footer>
 
-<a class="fab" id="fab" data-wa href="#" aria-label="Escribime por WhatsApp"><b class="ft">Escribime</b><i class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></i></a>
+<a class="fab" id="fab" data-wa href="#" aria-label="Escribinos por WhatsApp"><b class="ft">Escribinos</b><i class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></i></a>
 <button class="up" id="up" type="button" aria-label="Volver arriba"><svg class="rn" viewBox="0 0 52 52" aria-hidden="true"><circle id="upc" cx="26" cy="26" r="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" transform="rotate(-90 26 26)"/></svg><svg class="ar" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 14l6-6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 
 <script>
 document.documentElement.classList.add("js");
 /* ===== EDITÁ ACÁ ===== */
-var WA="5491135679728",MSG="¡Hola! Vi PAGINAZ y quiero hablar de mi proyecto de página web.",IG_USER="paginaz_";
+var WA="5491135679728",MSG="Hola! Vi PAGINAZ y quiero hablar de mi proyecto de página web.",IG_USER="paginaz_";
 /* Precios en pesos: cambialos acá cuando quieras */
 var PR={completa:"$100.000",ventas:"$220.000",total:"$350.000"},PLAN="$12.000",FOTO="";  /* FOTO: link o archivo de tu foto, ej: "diego.jpg" */
 var PRECIO="Las páginas arrancan desde "+PR.completa+" (Página Completa). El precio final depende de lo que necesite tu negocio y te lo paso antes de empezar, sin compromiso.";
-var PLAZO="La Página Completa suele estar lista en una semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
+var PLAZO="La Página Completa suele estar lista en 1 semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
 var PIXEL="";  /* ID de tu Pixel de Meta (solo números). Vacío = desactivado */
 /* Reseñas REALES de tus clientes. Mientras esté vacío, la sección no se muestra.
    Ej: {t:"Desde que tenemos la página nos escriben más por WhatsApp.",n:"Nombre",r:"Acevedo Cafetín"} */
@@ -537,14 +559,14 @@ var P=[
 {n:"Alfonsina y el Mar",t:"Café y libros",u:"https://asdasdd2.vercel.app/",d:"Café de especialidad, pastelería y libros. Carta por categorías, reseñas y cómo llegar.",bg:"#f6ead3",fg:"#3a2b25"},
 {n:"Gianno Cafetería",t:"Cafetería en Mataderos",u:"https://maquetagianno.vercel.app/",d:"Una cafetería con presencia cálida, carta digital y videos de Instagram integrados.",bg:"#e6d5c0",fg:"#2a1f19"},
 {n:"Paulis",t:"Pastelería y café",u:"https://pauliscafe.vercel.app/",d:"Pastelería, laminados y café, con la vitrina a la vista y contacto directo.",bg:"#efd3c4",fg:"#4a2a20"},
-{n:"Acevedo Cafetín",t:"Cafetín en Liniers",u:"https://acevedo-cafetin.vercel.app/",d:"Un cafetín de barrio con su carta y la ubicación para que lleguen fácil.",bg:"#d8dbc4",fg:"#2c3023"}
+{n:"Acevedo Cafetín",t:"Cafetín en Liniers",u:"https://acevedo-cafetin.vercel.app/",d:"Un cafetín de barrio con su carta y la ubicación para que lleguen sin vueltas.",bg:"#d8dbc4",fg:"#2c3023"}
 ];
 /* ===== fin ===== */
 var $=function(i){return document.getElementById(i)},calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var wUrl="https://wa.me/"+WA+"?text="+encodeURIComponent(MSG);
 document.querySelectorAll("[data-wa]").forEach(function(a){a.href=wUrl;a.target="_blank";a.rel="noopener"});
 document.querySelectorAll("[data-ig]").forEach(function(a){a.href="https://instagram.com/"+IG_USER;a.target="_blank";a.rel="noopener"});
-document.querySelectorAll("[data-svc]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("¡Hola! Me interesa la opción "+a.dataset.svc+" de PAGINAZ. ¿Podemos hablar?")});
+document.querySelectorAll("[data-svc]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Me interesa la opción "+a.dataset.svc+" de PAGINAZ. ¿Podemos hablar?")});
 if(PRECIO)$("fq-precio").textContent=PRECIO;if(PLAZO)$("fq-plazo").textContent=PLAZO;
 /* cinta */
 var mqT=["Páginas web a medida","Menús digitales","Catálogos y ventas","Turnos y reservas","Botón de WhatsApp","Hechas para el celular"];
@@ -597,7 +619,7 @@ var ct=$("contacto");document.querySelectorAll(".cd").forEach(function(c){trk(c,
 $("fm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,v=function(k){return(f.elements[k].value||"").trim()},er=$("er");
  f.elements.n.classList.toggle("bad",!v("n"));f.elements.b.classList.toggle("bad",!v("b"));
  if(!v("n")||!v("b")){er.textContent="Completá tu nombre y el de tu negocio para armar el mensaje.";er.hidden=false;(!v("n")?f.elements.n:f.elements.b).focus();return}
- er.hidden=true;window.open("https://wa.me/"+WA+"?text="+encodeURIComponent("¡Hola! Quiero una página web para mi negocio.\nMe llamo "+v("n")+".\nMi negocio: "+v("b")+".\nMe interesa: "+v("s")+"."+(v("m")?"\n"+v("m"):"")),"_blank","noopener")});
+ er.hidden=true;window.open("https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero una página web para mi negocio.\nMe llamo "+v("n")+".\nMi negocio: "+v("b")+".\nMe interesa: "+v("s")+"."+(v("m")?"\n"+v("m"):"")),"_blank","noopener")});
 /* numeración, menú, link activo, favicon */
 (function(){var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n});
  var navL=[].slice.call(document.querySelectorAll("nav.nv a")),mb=$("mb"),mn=$("mnav");
@@ -651,7 +673,7 @@ if(/Android|iPhone/i.test(navigator.userAgent)){document.querySelectorAll("[data
  pausar(mq,"div");pausar(h1g);
 })();
 /* --- confianza y medición --- */
-document.querySelectorAll("[data-demo]").forEach(function(a){a.href=wUrl.split("?text=")[0]+"?text="+encodeURIComponent("¡Hola! Quiero ver cómo quedaría mi página (la maqueta sin costo). Mi negocio es: ")});
+document.querySelectorAll("[data-demo]").forEach(function(a){a.href=wUrl.split("?text=")[0]+"?text="+encodeURIComponent("Hola! Quiero ver cómo quedaría mi página (la maqueta sin costo). Mi negocio es: ")});
 document.querySelectorAll("[data-pr]").forEach(function(e){var v=PR[e.dataset.pr];if(!v)return;var num=+v.replace(/\D/g,""),pre=v.replace(/[\d.,]/g,"");e.innerHTML="<span>Desde</span><strong>"+v+"</strong><em>pago único</em>";var st=e.querySelector("strong");
  if(calm||!num||!("IntersectionObserver" in window))return;
  new IntersectionObserver(function(x,o){if(!x[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function f(t){var k=Math.min(1,(t-t0)/900),q=1-Math.pow(1-k,3);st.textContent=pre+Math.round(num*q).toLocaleString("es-AR");if(k<1)requestAnimationFrame(f)})(t0)},{threshold:.6}).observe(e)});
@@ -662,6 +684,12 @@ if(FOTO){var av=$("av"),im=new Image();im.alt="Diego, de PAGINAZ";im.onload=func
  if(TESTI.length){var r=$("rs");TESTI.forEach(function(x){var c=document.createElement("div");c.className="rc";var p=document.createElement("p");p.textContent="“"+x.t+"”";var b=document.createElement("b");b.textContent=x.n;var s=document.createElement("small");s.textContent=x.r;c.appendChild(p);c.appendChild(b);c.appendChild(s);r.appendChild(c)})}
  else{sec.remove();var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n})}})();
 $("nx").addEventListener("click",function(){stopAuto();load((cur+1)%P.length)});
+/* selector de plan */
+(function(){var qz=$("qz"),a={},nm={completa:"Página Completa",ventas:"Página con Ventas",total:"Página Total"};
+ qz.addEventListener("click",function(e){var b=e.target.closest(".qo button");if(!b)return;var g=b.parentNode;[].forEach.call(g.children,function(x){x.classList.toggle("on",x===b)});a[g.dataset.q]=b.dataset.v;
+  if(a.v===undefined||a.t===undefined)return;
+  var k=a.t==="1"?"total":a.v==="1"?"ventas":"completa",r=$("qr");r.hidden=false;
+  r.innerHTML='<p>Te conviene la <b>'+nm[k]+'</b> · desde <strong>'+PR[k]+'</strong></p><a class="btn" data-wa target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent("Hola! Me interesa la opción "+nm[k]+" de PAGINAZ. ¿Podemos hablar?")+'">Pedir esta opción</a>'})})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
