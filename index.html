@@ -433,6 +433,158 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
 .redo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-top:22px;padding:22px 28px;border:1px dashed rgba(255,255,255,.32);border-radius:22px}
 .redo b{display:block;margin-bottom:2px;font:700 1.2rem var(--f1)}.redo span{color:#AEB9DA;font-size:.92rem;max-width:52ch;display:block}
 .redo .btn{background:#fff;color:var(--ac);box-shadow:none}
+/* ===== más compacto ===== */
+.care{padding:24px 28px;margin-top:18px}
+.care h3{margin:6px 0 4px;font-size:1.45rem}.care p{margin:0;max-width:46ch}
+.cm{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 28px}
+.cmp{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px}
+.cp{margin:0}.cp strong{font-size:2.2rem}
+.care.open .cl2{grid-column:1/-1;grid-template-columns:repeat(2,1fr);gap:16px 28px;padding-top:6px}
+.bento{grid-template-columns:repeat(4,1fr);gap:12px}
+.bt,.bt.l,.bt.h{grid-column:span 1;min-height:0;padding:22px}
+.bt i{margin-bottom:0}.bt h3{margin:16px 0 6px;font-size:1.1rem}.bt p{font-size:.85rem}
+@media(max-width:860px){.bento{grid-template-columns:1fr 1fr}.care.open .cl2{grid-template-columns:1fr}}
+@media(max-width:520px){.bento{grid-template-columns:1fr}}
+.way span{display:none}.way{padding:14px 20px}
+.pl li{padding:20px}
+/* ===== cabecera cápsula (ancho fijo: el logo no se mueve, solo se achica) ===== */
+html{scroll-padding-top:96px}
+header,header.s{position:fixed;left:0;right:0;top:calc(env(safe-area-inset-top,0px) + 10px);padding:0 14px;background:none;border:0;pointer-events:none}
+header .w,header .mnav{pointer-events:auto}
+header .w{max-width:1100px;height:64px;padding:0 10px 0 24px;gap:18px;background:#fff;border-radius:999px;box-shadow:0 16px 40px -16px rgba(0,0,0,.55);transition:height .35s var(--ez),box-shadow .35s}
+header.s .w{height:54px;box-shadow:0 10px 26px -12px rgba(0,0,0,.5)}
+header .logo{flex:none;width:96px}
+header .wml{height:28px;color:var(--ink);--dot:var(--ac);transform-origin:left center;transition:transform .35s var(--ez)}
+header.s .wml{transform:scale(.8)}
+header nav.nv{margin:0 auto;gap:26px}
+header nav.nv a{color:var(--mut)}
+header nav.nv a:hover,header nav.nv a.act{color:var(--ink)}
+header nav.nv a::after{background:var(--ac)}
+header .mb{border-color:var(--line);color:var(--ink)}
+header .mnav{left:14px;right:14px;top:calc(100% + 8px);padding:6px 22px 14px;border:0;border-radius:24px;background:#fff;color:var(--ink);box-shadow:0 24px 50px -20px rgba(0,0,0,.55)}
+.mnav a{border-bottom:1px solid var(--line)}.mnav a:last-child{border:0}
+.hero{padding-top:clamp(112px,14vw,170px)}
+@media(max-width:900px){header .w{padding:0 8px 0 18px}}
+/* --- proceso en celular: título centrado con su número --- */
+@media(max-width:860px){.tl li{display:flex;align-items:center;min-height:44px;padding:0;margin-bottom:22px}.tl li:last-child{margin-bottom:0}.tl h3{margin:0}}
+/* --- logo: icono + nombre; al bajar queda solo el icono, sin mover nada --- */
+header .logo{flex:none;width:150px;gap:10px}
+.li{display:grid;place-items:center;flex:none;width:36px;height:36px;border-radius:11px;background:var(--ac);color:#fff;transition:transform .4s var(--ez)}
+.li svg{width:16px;height:22px}
+.lw{display:block;margin:-6px 0;padding:6px 0;overflow:hidden;transition:opacity .3s,transform .4s var(--ez)}
+header .wml{height:24px;transform:none}
+header.s .wml{transform:none}
+header.s .lw{opacity:0;transform:translateX(-14px)}
+header.s .li{transform:scale(.84)}
+.hw{width:18px;height:18px}
+/* ===== cabecera como PasantIA: transparente arriba, cápsula al bajar, luego solo el ícono ===== */
+header .w{background:transparent;box-shadow:none;transition:background .35s,box-shadow .35s,height .35s var(--ez)}
+header.s .w{background:#fff;box-shadow:0 16px 40px -16px rgba(0,0,0,.55);height:60px}
+header .logo{width:auto;gap:0}
+.li{margin-right:10px;background:transparent;color:#fff;transition:background .35s,color .35s,margin .4s var(--ez)}
+header.s .li{background:var(--ac);transform:none}
+header .wml{color:#fff;--dot:#7C9BFF;transition:color .35s}
+header.s .wml{color:var(--ink);--dot:var(--ac)}
+.lw{max-width:160px;transition:max-width .45s var(--ez),opacity .3s}
+header.s .lw{opacity:1;transform:none}
+header.s2 .lw{max-width:0;opacity:0}
+header.s2 .li{margin-right:0}
+header nav.nv a{color:rgba(255,255,255,.72)}
+header nav.nv a:hover,header nav.nv a.act{color:#fff}
+header nav.nv a::after{background:#fff}
+header.s nav.nv a{color:var(--mut)}
+header.s nav.nv a:hover,header.s nav.nv a.act{color:var(--ink)}
+header.s nav.nv a::after{background:var(--ac)}
+header .btn.sm{background:#fff;color:var(--ac);box-shadow:none;transition:background .35s,color .35s,transform .3s var(--ez)}
+header.s .btn.sm{background:var(--ac);color:#fff}
+header .mb{border-color:rgba(255,255,255,.35);color:#fff;transition:border-color .35s,color .35s}
+header.s .mb{border-color:var(--line);color:var(--ink)}
+/* ===== cabecera: mejoras ===== */
+header .w{animation:hin .7s var(--ez) .1s both}
+@keyframes hin{from{opacity:0;transform:translateY(-16px)}}
+header.s2 .w{height:54px}
+header nav.nv{gap:4px}
+header nav.nv a{padding:8px 15px;border-radius:99px;transition:background .25s,color .25s}
+header nav.nv a::after{display:none}
+header nav.nv a:hover{background:rgba(255,255,255,.1)}
+header nav.nv a.act{background:rgba(255,255,255,.16)}
+header.s nav.nv a:hover{background:rgba(10,18,48,.06)}
+header.s nav.nv a.act{background:rgba(47,91,239,.12);color:var(--ac)}
+.mb{align-content:center;gap:5px}
+.mb span{display:block;width:18px;height:2px;border-radius:2px;background:currentColor;transition:transform .3s var(--ez),opacity .2s}
+.mb[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.mb[aria-expanded="true"] span:nth-child(2){opacity:0}
+.mb[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){
+header .mnav{display:grid;opacity:0;visibility:hidden;transform:translateY(-10px) scale(.98);transform-origin:top right;transition:opacity .25s,transform .3s var(--ez),visibility .3s}
+header .mnav.o{opacity:1;visibility:visible;transform:none}
+}
+.mnav a.mcta{justify-content:center;margin-top:12px;padding:14px;border:0;background:var(--ac);color:#fff;font-size:.95rem}
+@media(prefers-reduced-motion:reduce){header .w{animation:none}}
+/* ===== logo: p + aginaz, con efecto al bajar ===== */
+header .wml{height:26px}
+header .wml .lt{transition:transform .45s var(--ez),opacity .3s;transition-delay:calc(var(--i)*40ms)}
+header.s2 .wml .lt{transform:translateX(-260px) scale(.5);opacity:0;transition-delay:calc((6 - var(--i))*40ms)}
+header.s2 .lw{max-width:0;opacity:0;transition:max-width .5s var(--ez) .28s,opacity .2s .35s}
+header.s .li{animation:lpop2 .55s cubic-bezier(.3,1.7,.5,1)}
+@keyframes lpop2{from{transform:scale(.5) rotate(-25deg)}}
+header.s .w{animation:cdrop .55s var(--ez)}
+@keyframes cdrop{from{transform:translateY(-14px) scale(.96);opacity:.5}}
+/* --- logo: sin hueco entre la p y "aginaz" arriba de todo --- */
+header .li{margin-right:-5px}
+header.s .li{margin-right:10px}
+header.s2 .li{margin-right:0}
+/* --- logo: arriba de todo el cuadrado se ajusta a la p (sin aire); al bajar se agranda --- */
+header .li{width:18px;margin-right:5px;overflow:visible;transition:width .35s var(--ez),background .35s,color .35s,margin .4s var(--ez)}
+header.s .li{width:36px;margin-right:10px}
+header.s2 .li{margin-right:0}
+/* ===== logo: "paginaz" unido; al bajar las letras se retiran y queda el logo-ícono ===== */
+header .logo{display:grid;align-items:center;justify-items:start;width:auto;gap:0}
+header .li,header .lw{grid-area:1/1}
+header .li{width:36px;height:36px;margin:0;background:none;border-radius:0;opacity:0;transform:scale(.4) rotate(-30deg);animation:none;transition:opacity .3s,transform .5s cubic-bezier(.3,1.6,.5,1)}
+header .li svg{display:block;width:36px;height:36px}
+header.s .li{width:36px;margin:0;background:none;animation:none;transform:scale(.4) rotate(-30deg)}
+header.s2 .li{opacity:1;transform:none;transition-delay:.4s}
+header .lw{max-width:90px;opacity:1;transform:none}
+header.s .lw{max-width:90px;opacity:1}
+header.s2 .lw{max-width:0;opacity:0;transition:max-width .5s var(--ez) .35s,opacity .25s .4s}
+/* ===== barra: vidrio oscuro, borde de luz y progreso de lectura ===== */
+header .w{position:relative}
+header.s .w{background:rgba(11,21,51,.72);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 22px 50px -20px rgba(0,0,0,.75),0 10px 40px -18px rgba(47,91,239,.6)}
+header .w::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(135deg,rgba(255,255,255,.4),rgba(255,255,255,.04) 42%,rgba(124,155,255,.45));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:0;transition:opacity .35s}
+header.s .w::before{opacity:1}
+header .w::after{content:"";position:absolute;left:30px;right:30px;bottom:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--ac),var(--cy));transform:scaleX(var(--p,0));transform-origin:left;opacity:0;transition:opacity .35s;pointer-events:none}
+header.s .w::after{opacity:1}
+header.s .wml{color:#fff;--dot:var(--cy)}
+header.s nav.nv a{color:rgba(255,255,255,.72)}
+header.s nav.nv a:hover{color:#fff;background:rgba(255,255,255,.1)}
+header.s nav.nv a.act{color:#fff;background:rgba(255,255,255,.16)}
+header.s .btn.sm{background:linear-gradient(135deg,var(--ac),#22B8FF);color:#fff;box-shadow:0 8px 22px -8px rgba(47,91,239,.9)}
+header.s .mb{border-color:rgba(255,255,255,.3);color:#fff}
+header .li svg{border-radius:10px;box-shadow:0 0 0 1px rgba(255,255,255,.22),0 6px 16px -6px rgba(47,91,239,.8)}
+header .mnav{background:rgba(11,21,51,.95);color:#fff;-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+header .mnav a{border-bottom-color:rgba(255,255,255,.12)}
+#pg{display:none}
+/* ===== barra final: azul eléctrico, se esconde al bajar, pastilla que se desliza ===== */
+header{transition:transform .55s var(--ez),opacity .35s}
+header.hide{transform:translateY(-140%);opacity:0}
+header.s .w{background:linear-gradient(135deg,#3D6BFF 0%,#2F5BEF 45%,#2447C9 100%);-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.38),inset 0 -1px 0 rgba(0,0,0,.18),0 20px 46px -14px rgba(47,91,239,.8),0 4px 14px -4px rgba(0,0,0,.4)}
+header.s .w::before{display:none}
+header .w::after{background:linear-gradient(90deg,#fff,var(--cy))}
+header.s .wml{color:#fff;--dot:#A8F1FF}
+header.s .btn.sm{background:#fff;color:var(--ac);box-shadow:0 8px 20px -8px rgba(0,0,0,.5)}
+header.s .mb{border-color:rgba(255,255,255,.45)}
+header nav.nv{position:relative}
+header nav.nv a{position:relative;z-index:1}
+header.s nav.nv a.act,header.s nav.nv a:hover,header nav.nv a.act,header nav.nv a:hover{background:none}
+header.s nav.nv a{color:rgba(255,255,255,.78)}
+header.s nav.nv a:hover,header.s nav.nv a.act{color:#fff}
+.nvp{position:absolute;left:0;top:0;border-radius:99px;background:rgba(255,255,255,.14);opacity:0;pointer-events:none;transition:transform .45s var(--ez),width .45s var(--ez),height .3s,opacity .25s}
+header.s .nvp{background:rgba(255,255,255,.22)}
+/* ===== barra más liviana ===== */
+header .w{max-width:960px;height:58px}
+header.s .w{height:54px;box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 14px 34px -16px rgba(47,91,239,.7),0 3px 10px -4px rgba(0,0,0,.3)}
+header.s2 .w{height:52px}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -445,10 +597,10 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
 <a class="skip" href="#top">Saltar al contenido</a>
 <div id="pg"></div>
 <header id="hd"><div class="w">
-  <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g></svg></a>
+  <a class="logo" href="#top" aria-label="PAGINAZ, inicio"><span class="li" aria-hidden="true"><svg viewBox="0 0 100 100"><rect width="100" height="100" rx="26" fill="#182A45"/><g transform="translate(25 14) scale(.34) translate(-65 -418)" style="color:#fff"><use href="#pz-p"/></g><circle cx="73" cy="72" r="7.5" fill="#3D6BFF"/></svg></span><span class="lw"><svg class="wml pre" viewBox="60 345 953 295" role="img" aria-label="paginaz"><g class="lt" style="--i:0"><use href="#pz-p"/></g><g class="lt" style="--i:1"><use href="#pz-a1"/></g><g class="lt" style="--i:2"><use href="#pz-g"/></g><g class="lt" style="--i:3"><use href="#pz-i"/></g><g class="lt" style="--i:4"><use href="#pz-n"/></g><g class="lt" style="--i:5"><use href="#pz-a2"/></g><g class="lt" style="--i:6"><use href="#pz-z"/></g><g class="d1"><use class="tr" href="#pz-dot"/></g></svg></span></a>
   <nav class="nv" aria-label="Secciones"><a href="#trabajos">Trabajos</a><a href="#beneficios">Beneficios</a><a href="#servicios">Opciones</a><a href="#proceso">Proceso</a><a href="#quien">Quién soy</a><a href="#faq">Preguntas</a></nav>
-  <a class="btn sm" data-wa href="#">Escribinos</a>
-  <button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú">☰</button>
+  <a class="btn sm" data-wa href="#"><svg class="hw" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg>Escribinos</a>
+  <button class="mb" id="mb" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </div><nav class="mnav" id="mnav" aria-label="Menú móvil"></nav></header>
 <main id="top" tabindex="-1">
 <div class="hero"><div class="au a"></div><div class="au b"></div><div class="w hg">
@@ -463,8 +615,6 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
   </div>
   <div class="stage" id="stage" aria-hidden="true"></div>
 </div></div>
-
-<div class="trust"><div class="w"><ul><li><b>Maqueta sin costo</b><span>La ves antes de decidir</span></li><li><b>Precio cerrado</b><span>Sin sorpresas al final</span></li><li><b>Trato directo</b><span>Hablás conmigo, sin intermediarios</span></li><li><b>Sin permanencia</b><span>En el cuidado mensual</span></li></ul></div></div>
 
 <section id="problema" class="lt"><div class="w">
   <div class="sh"><span class="eb">El problema</span><h2 class="rv">Tus clientes te buscan y <span class="g">no encuentran lo que necesitan.</span></h2><p class="sd rv">Si tu negocio solo vive en redes y mensajes sueltos, cada consulta depende de que alguien responda a tiempo.</p></div>
@@ -502,23 +652,17 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
   </div></section>
 
 <section id="servicios" class="dk"><div class="w">
-  <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">le queda a tu negocio</span>.</h2><p class="sd rv">Tres opciones, cada una incluye todo lo de la anterior. Todas se hacen a medida y se pueden ampliar después.</p></div>
+  <div class="sh"><span class="eb">Opciones</span><h2 class="rv">Elegí la que mejor <span class="g">le queda a tu negocio</span>.</h2><p class="sd rv">Todas a medida, en pesos argentinos y pago único. Cada una incluye todo lo de la anterior.</p></div>
   <div class="cards rv">
     <div class="cd"><small>01</small><span class="tg">Ideal para cafeterías y locales</span><h3>Página Completa</h3><div class="pr" data-pr="completa"></div><p>La página de siempre, con todo lo que tu negocio necesita para mostrarse bien.</p><ul><li>Diseño a medida con tu identidad</li><li>Inicio, nosotros, carta o servicios y galería</li><li>Ubicación con mapa y horarios</li><li>WhatsApp e Instagram a un toque</li><li>Perfecta en celular y compu</li><li>SEO básico para aparecer en Google</li></ul><a class="btn" data-wa data-svc="Página Completa" href="#">Pedir presupuesto</a></div>
     <div class="cd f"><span class="bd">Recomendada</span><small>02</small><span class="tg">Ideal para tiendas y emprendimientos</span><h3>Página con Ventas</h3><div class="pr" data-pr="ventas"></div><p>Todo lo de la Completa, más un servicio de venta directa para que tus clientes compren sin intermediarios.</p><ul><li class="pl2">Todo lo de la Página Completa</li><li>Catálogo de productos con fotos y precios</li><li>Carrito y pedidos online</li><li>Cobro online</li><li>Pedidos también por WhatsApp</li></ul><a class="btn" data-wa data-svc="Página con Ventas" href="#">Pedir presupuesto</a></div>
     <div class="cd"><small>03</small><span class="tg">Ideal para servicios con turno</span><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
-  <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
-  <div class="redo rv"><div><b>¿Ya tenés una página?</b><span>La puedo rediseñar o mejorar para que te traiga más clientes. Primero te la reviso gratis.</span></div><a class="btn" data-wa data-igr href="#">Pedir revisión gratis</a></div>
+    <div class="redo rv"><div><b>¿Ya tenés una página?</b><span>La puedo rediseñar o mejorar para que te traiga más clientes. Primero te la reviso gratis.</span></div><a class="btn" data-wa data-igr href="#">Pedir revisión gratis</a></div>
   <div class="qs rv" id="qs"><div class="qtop"><b>¿Cuál me conviene?</b><span id="qp">Paso 1 de 3</span></div><div class="qbar"><i id="qb"></i></div><div class="qbody" id="qbody"></div></div>
     <div class="care rv">
-    <div>
-      <span class="ck">Cuidado mensual</span>
-      <h3>Tu página siempre al día, sin que tengas que pensar en ella.</h3>
-      <p>Precios, horarios, carta, promos: me escribís por WhatsApp y yo me ocupo. Cuesta menos que un café por día.</p>
-      <div class="cp"><strong id="plan-p"></strong><span>/mes · sin permanencia, cancelás cuando quieras</span></div>
-      <a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Quiero el cuidado mensual</a> <button type="button" class="cx" id="cx">Ver qué incluye ↓</button>
-    </div>
+    <div class="cm"><div class="cmt"><span class="ck">Cuidado mensual</span><h3>Tu página siempre al día.</h3><p>Cambios por WhatsApp, soporte y hosting incluidos. Sin permanencia.</p></div>
+      <div class="cmp"><div class="cp"><strong id="plan-p"></strong><span>/mes</span></div><a class="btn" data-wa data-svc="Plan de cuidado mensual" href="#">Quiero el cuidado</a><button type="button" class="cx" id="cx">Ver qué incluye ↓</button></div></div>
     <ul class="cl2">
       <li><b>Cambios incluidos</b><span>Precios, textos, fotos, horarios y promos: hasta 3 cambios por mes.</span></li>
       <li><b>Carta o catálogo siempre actual</b><span>Cuando cambian tus productos o precios, tu página cambia con ellos.</span></li>
@@ -547,8 +691,7 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
     <div class="mav"><div class="ring"></div><div class="av" id="av" aria-hidden="true">D</div><span class="fl f1">Páginas web</span><span class="fl f2">E-commerce</span><span class="fl f3">Meta Ads</span></div>
     <div class="mtx"><span class="eb">Quién la hace</span><h2>Soy Diego y la hago <span class="g">yo</span>.</h2>
     <p>Hago páginas para cafeterías, locales y emprendimientos desde Buenos Aires. Sin intermediarios: me contás tu idea, la diseño, la publico y te acompaño después.</p>
-    <ul class="mp"><li><b>Hablás conmigo</b><span>sin equipos ni intermediarios</span></li><li><b>Primero la maqueta</b><span>la ves antes de decidir</span></li><li><b>Pensada para vender</b><span>también manejo e-commerce y Meta Ads</span></li></ul>
-    <div class="mbub"><small>Diego</small>Hola, soy Diego. Contame de tu negocio y te muestro cómo quedaría tu página.</div>
+        <div class="mbub"><small>Diego</small>Hola, soy Diego. Contame de tu negocio y te muestro cómo quedaría tu página.</div>
     <div class="cta"><a class="btn" data-wa data-demo href="#">Responder por WhatsApp</a></div></div>
   </div>
 </div></section>
@@ -562,10 +705,8 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
     <details><summary>¿Qué es la maqueta sin costo?</summary><p>Antes de que decidas nada, te muestro cómo quedaría tu página con tu nombre, tus colores y tu información. Si te gusta, seguimos; si no, no pagás nada.</p></details>
     <details><summary>¿Y si ya tengo una página?</summary><p>La puedo rediseñar o mejorar. Primero la reviso gratis: me pasás el link (o tu Instagram, si todavía no tenés página) y te cuento qué mejorarías para que te traiga más clientes. Si querés avanzar, te paso el precio después de verla. No te obliga a nada.</p></details>
     <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
-    <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
-        <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
-    <details><summary>¿Y si después quiero cambiar algo?</summary><p>Se puede. Lo hablamos antes de empezar para que sepas cómo trabajamos los cambios una vez publicada.</p></details>
-          </div>
+            <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
+              </div>
 </div></section>
 
 <section class="ct" id="contacto"><div class="w cg">
@@ -679,8 +820,8 @@ $("fm").addEventListener("submit",function(e){e.preventDefault();var f=e.target,
 (function(){var n=0;document.querySelectorAll(".eb").forEach(function(e){n++;e.dataset.k=(n<10?"0":"")+n});
  var navL=[].slice.call(document.querySelectorAll("nav.nv a")),mb=$("mb"),mn=$("mnav");
  mn.innerHTML=navL.map(function(a){return '<a href="'+a.getAttribute("href")+'">'+a.textContent+'</a>'}).join("")+'<a href="#contacto">Contacto</a>';
- function cl(){mn.classList.remove("o");mb.setAttribute("aria-expanded","false");mb.textContent="☰"}
- mb.addEventListener("click",function(){var o=mn.classList.toggle("o");mb.setAttribute("aria-expanded",o);mb.textContent=o?"✕":"☰"});
+ function cl(){mn.classList.remove("o");mb.setAttribute("aria-expanded","false")}
+ mb.addEventListener("click",function(){var o=mn.classList.toggle("o");mb.setAttribute("aria-expanded",o)});
  mn.addEventListener("click",function(e){if(e.target.closest("a"))cl()});addEventListener("keydown",function(e){if(e.key==="Escape")cl()});
  document.addEventListener("click",function(e){if(!e.target.closest("header"))cl()});matchMedia("(min-width:901px)").addEventListener("change",cl);
  var ao=new IntersectionObserver(function(x){x.forEach(function(e){if(e.isIntersecting)navL.forEach(function(l){l.classList.toggle("act",l.getAttribute("href")==="#"+e.target.id)})})},{rootMargin:"-40% 0px -55% 0px"});navL.forEach(function(l){var s=document.querySelector(l.getAttribute("href"));if(s)ao.observe(s)});
@@ -690,7 +831,7 @@ var hd=$("hd"),fab=$("fab"),up=$("up"),upc=$("upc"),pg=$("pg"),tl=$("tl"),lis=[]
 function mh(){DH=document.documentElement.scrollHeight-innerHeight}
 function onScroll(){var y=scrollY,hh=hero.offsetHeight*.8,ctTop=ct.getBoundingClientRect().top,tr=tl.getBoundingClientRect(),r=DH>0?Math.min(1,y/DH):0;
  var p=Math.max(0,Math.min(1,(innerHeight*.8-tr.top)/(tr.height+innerHeight*.1))),fv=y>hh&&ctTop>innerHeight*.6;
- hd.classList.toggle("s",y>8);pg.style.transform="scaleX("+r+")";
+ hd.classList.toggle("s",y>8);hd.classList.toggle("s2",y>140);pg.style.transform="scaleX("+r+")";hd.style.setProperty("--p",r);
  fab.classList.toggle("v",fv);up.classList.toggle("v",y>600);up.classList.toggle("low",!fv);upc.style.strokeDashoffset=150.8*(1-r);
  tl.style.setProperty("--p",p);lis.forEach(function(li,i){li.classList.toggle("on",p>=i/lis.length)});
  if(fv&&!opened){opened=true;fab.classList.add("open");setTimeout(function(){fab.classList.remove("open")},5500)}}
@@ -773,6 +914,15 @@ $("cx").addEventListener("click",function(){var o=this.closest(".care").classLis
 /* formas de empezar */
 document.querySelectorAll("[data-igr]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero la revisión gratis de mi página actual. El link es: ")});
 document.querySelectorAll("[data-call]").forEach(function(a){a.href=CAL||"https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero agendar una llamada de 15 minutos para hablar de mi página. ¿Qué días y horarios tenés?")});
+(function(){var m=$("mnav");if(m)m.insertAdjacentHTML("beforeend",'<a class="btn mcta" href="'+wUrl+'" target="_blank" rel="noopener">Escribinos por WhatsApp</a>')})();
+(function(){var nv=document.querySelector("nav.nv");if(!nv)return;var p=document.createElement("span");p.className="nvp";p.setAttribute("aria-hidden","true");nv.insertBefore(p,nv.firstChild);
+ function act(){return nv.querySelector("a.act")}
+ function to(a){if(!a){p.style.opacity=0;return}p.style.opacity=1;p.style.width=a.offsetWidth+"px";p.style.height=a.offsetHeight+"px";p.style.transform="translate("+a.offsetLeft+"px,"+a.offsetTop+"px)"}
+ [].forEach.call(nv.querySelectorAll("a"),function(a){a.addEventListener("mouseenter",function(){to(a)});a.addEventListener("focus",function(){to(a)})});
+ nv.addEventListener("mouseleave",function(){to(act())});
+ function sc(){var a=act(),c=$("cur");if(c)c.textContent=a?a.textContent:"Inicio"}
+ new MutationObserver(function(){to(act());sc()}).observe(nv,{subtree:true,attributes:true,attributeFilter:["class"]});
+ addEventListener("resize",function(){to(act())});addEventListener("load",function(){to(act())});to(act())})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact");if(e.target.closest("[data-call]"))fbq("track","Schedule")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
