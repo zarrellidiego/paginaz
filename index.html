@@ -429,6 +429,10 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
 .way:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
 .way b{font:700 1rem var(--f1)}.way b::after{content:" →";color:var(--cy)}
 .way span{color:#AEB9DA;font-size:.85rem;line-height:1.4}
+/* --- ya tengo página --- */
+.redo{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 24px;margin-top:22px;padding:22px 28px;border:1px dashed rgba(255,255,255,.32);border-radius:22px}
+.redo b{display:block;margin-bottom:2px;font:700 1.2rem var(--f1)}.redo span{color:#AEB9DA;font-size:.92rem;max-width:52ch;display:block}
+.redo .btn{background:#fff;color:var(--ac);box-shadow:none}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -505,6 +509,7 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
     <div class="cd"><small>03</small><span class="tg">Ideal para servicios con turno</span><h3>Página Total</h3><div class="pr" data-pr="total"></div><p>Todo lo anterior, más un servicio de turnos y reservas para atender y vender desde un solo lugar.</p><ul><li class="pl2">Todo lo de la Página con Ventas</li><li>Turnos o reservas online</li><li>Gestión de pedidos y turnos</li><li>Funciones a medida según tu negocio</li></ul><a class="btn" data-wa data-svc="Página Total (ventas y turnos)" href="#">Pedir presupuesto</a></div>
   </div>
   <p class="pnote rv">Precios en pesos argentinos, pago único. El valor final depende de lo que necesite tu negocio y te lo paso antes de empezar.</p>
+  <div class="redo rv"><div><b>¿Ya tenés una página?</b><span>La puedo rediseñar o mejorar para que te traiga más clientes. Primero te la reviso gratis.</span></div><a class="btn" data-wa data-igr href="#">Pedir revisión gratis</a></div>
   <div class="qs rv" id="qs"><div class="qtop"><b>¿Cuál me conviene?</b><span id="qp">Paso 1 de 3</span></div><div class="qbar"><i id="qb"></i></div><div class="qbody" id="qbody"></div></div>
     <div class="care rv">
     <div>
@@ -555,7 +560,7 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
   <div class="faq rv">
     <details><summary>¿Cuánto cuesta?</summary><p id="fq-precio">Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
     <details><summary>¿Qué es la maqueta sin costo?</summary><p>Antes de que decidas nada, te muestro cómo quedaría tu página con tu nombre, tus colores y tu información. Si te gusta, seguimos; si no, no pagás nada.</p></details>
-    <details><summary>¿Qué es la revisión gratis del Instagram?</summary><p>Me pasás el usuario de tu negocio y te cuento, sin costo, qué le falta para que una página te traiga más clientes: información, orden, botones y cómo se ve. No te obliga a nada.</p></details>
+    <details><summary>¿Y si ya tengo una página?</summary><p>La puedo rediseñar o mejorar. Primero la reviso gratis: me pasás el link (o tu Instagram, si todavía no tenés página) y te cuento qué mejorarías para que te traiga más clientes. Si querés avanzar, te paso el precio después de verla. No te obliga a nada.</p></details>
     <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
     <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
         <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
@@ -567,14 +572,14 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
   <div class="rv"><h2>Tu negocio merece un <span class="g">buen lugar en internet</span>.</h2><p>Contanos qué tenés en mente y te respondemos por WhatsApp con ideas y un presupuesto sin compromiso.</p>
     <div class="ways">
       <a class="way" data-wa data-demo href="#"><b>Ver mi maqueta</b><span>Te muestro cómo quedaría tu página, sin costo</span></a>
-      <a class="way" data-wa data-igr href="#"><b>Revisión gratis de tu Instagram</b><span>Pasame tu usuario y te digo qué le falta a tu página</span></a>
+      <a class="way" data-wa data-igr href="#"><b>Revisión gratis de tu página actual</b><span>Pasame el link y te digo qué mejorar para que traiga más clientes</span></a>
       <a class="way" data-call target="_blank" rel="noopener" href="#"><b>Llamada de 15 minutos</b><span>Elegí día y horario y lo charlamos</span></a>
     </div></div>
   <form class="fm rv" id="fm" novalidate>
     <h3>Contanos tu proyecto</h3>
     <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Diego"></label>
     <label>Tu negocio<input name="b" placeholder="Nombre y rubro"></label>
-    <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Quiero la revisión gratis de mi Instagram</option><option>Quiero una llamada de 15 minutos</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
+    <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Quiero la revisión gratis de mi página actual</option><option>Quiero una llamada de 15 minutos</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
     <label>Contanos más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
     <p class="er" id="er" role="alert" hidden></p><button class="btn" type="submit">Enviar por WhatsApp</button><small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
   </form>
@@ -766,7 +771,7 @@ $("cx").addEventListener("click",function(){var o=this.closest(".care").classLis
  var io=new IntersectionObserver(function(x,o){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");o.unobserve(e.target)}})},{threshold:.4,rootMargin:"0px 0px -8% 0px"});
  hs.forEach(function(h){io.observe(h)})})();
 /* formas de empezar */
-document.querySelectorAll("[data-igr]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero la revisión gratis de mi Instagram. Mi usuario es @")});
+document.querySelectorAll("[data-igr]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero la revisión gratis de mi página actual. El link es: ")});
 document.querySelectorAll("[data-call]").forEach(function(a){a.href=CAL||"https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero agendar una llamada de 15 minutos para hablar de mi página. ¿Qué días y horarios tenés?")});
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact");if(e.target.closest("[data-call]"))fbq("track","Schedule")});
