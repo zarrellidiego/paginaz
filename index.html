@@ -422,6 +422,13 @@ h2.sw .g{background:none;color:inherit}
 h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
 .dk h2.sw .g .wd2>span,.dk2 h2.sw .g .wd2>span,.mec h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac2),var(--cy));-webkit-background-clip:text;background-clip:text}
 @media(prefers-reduced-motion:reduce){h2.sw .wd2>span{animation:none!important;transform:none!important}}
+/* --- formas de empezar --- */
+.ways{display:grid;gap:12px;margin-top:28px;max-width:440px}
+.way{display:grid;gap:3px;padding:16px 20px;border:1px solid var(--ld);border-radius:18px;background:rgba(255,255,255,.04);text-decoration:none;transition:transform .25s var(--ez),border-color .25s,background .25s}
+.way:first-child{border-color:rgba(124,155,255,.55)}
+.way:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.08)}
+.way b{font:700 1rem var(--f1)}.way b::after{content:" →";color:var(--cy)}
+.way span{color:#AEB9DA;font-size:.85rem;line-height:1.4}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -548,6 +555,7 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
   <div class="faq rv">
     <details><summary>¿Cuánto cuesta?</summary><p id="fq-precio">Depende de lo que necesite tu negocio. Contanos qué querés lograr y te pasamos un presupuesto claro, sin compromiso.</p></details>
     <details><summary>¿Qué es la maqueta sin costo?</summary><p>Antes de que decidas nada, te muestro cómo quedaría tu página con tu nombre, tus colores y tu información. Si te gusta, seguimos; si no, no pagás nada.</p></details>
+    <details><summary>¿Qué es la revisión gratis del Instagram?</summary><p>Me pasás el usuario de tu negocio y te cuento, sin costo, qué le falta para que una página te traiga más clientes: información, orden, botones y cómo se ve. No te obliga a nada.</p></details>
     <details><summary>¿Cuánto tarda?</summary><p id="fq-plazo">Depende del tipo de página y de cuándo tengamos tu contenido. Te lo decimos antes de empezar, para que sepas qué esperar.</p></details>
     <details><summary>¿Qué necesito para empezar?</summary><p>Solo contarnos sobre tu negocio. Si ya tenés logo, fotos o un Instagram, los usamos; si no, te ayudamos a ordenar lo que haga falta.</p></details>
         <details><summary>¿Puedo vender o recibir turnos?</summary><p>Sí. Con la Página con Ventas mostrás tu catálogo y recibís pedidos y pagos online. Con la Página Total sumás turnos o reservas, y atendés todo desde un solo lugar.</p></details>
@@ -557,12 +565,16 @@ h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-
 
 <section class="ct" id="contacto"><div class="w cg">
   <div class="rv"><h2>Tu negocio merece un <span class="g">buen lugar en internet</span>.</h2><p>Contanos qué tenés en mente y te respondemos por WhatsApp con ideas y un presupuesto sin compromiso.</p>
-    <ul class="cl"><li><a data-wa href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg></span>Escribinos por WhatsApp</a></li><li><a data-ig href="#"><span class="ci"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-ig"/></svg></span>@paginaz_ en Instagram</a></li></ul></div>
+    <div class="ways">
+      <a class="way" data-wa data-demo href="#"><b>Ver mi maqueta</b><span>Te muestro cómo quedaría tu página, sin costo</span></a>
+      <a class="way" data-wa data-igr href="#"><b>Revisión gratis de tu Instagram</b><span>Pasame tu usuario y te digo qué le falta a tu página</span></a>
+      <a class="way" data-call target="_blank" rel="noopener" href="#"><b>Llamada de 15 minutos</b><span>Elegí día y horario y lo charlamos</span></a>
+    </div></div>
   <form class="fm rv" id="fm" novalidate>
     <h3>Contanos tu proyecto</h3>
     <label>Tu nombre<input name="n" autocomplete="name" placeholder="Ej: Diego"></label>
     <label>Tu negocio<input name="b" placeholder="Nombre y rubro"></label>
-    <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
+    <label>¿Qué necesitás?<select name="s"><option>Quiero la maqueta de mi página (sin costo)</option><option>Quiero la revisión gratis de mi Instagram</option><option>Quiero una llamada de 15 minutos</option><option>Página Completa</option><option>Página con Ventas</option><option>Página Total (ventas y turnos)</option><option>No sé todavía, quiero que me asesoren</option></select></label>
     <label>Contanos más (opcional)<textarea name="m" rows="2" placeholder="Qué querés mostrar, si ya tenés logo o fotos…"></textarea></label>
     <p class="er" id="er" role="alert" hidden></p><button class="btn" type="submit">Enviar por WhatsApp</button><small>Se abre WhatsApp con tu mensaje listo para enviar.</small>
   </form>
@@ -591,6 +603,7 @@ var PR={completa:"$100.000",ventas:"$220.000",total:"$350.000"},PLAN="$12.000",F
 var PRECIO="Las páginas arrancan desde "+PR.completa+" (Página Completa). El precio final depende de lo que necesite tu negocio y te lo paso antes de empezar, sin compromiso.";
 var PLAZO="La Página Completa suele estar lista en 1 semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
 var PIXEL="";  /* ID de tu Pixel de Meta (solo números). Vacío = desactivado */
+var CAL="";  /* Link de tu agenda (Cal.com o Calendly). Vacío = la llamada se pide por WhatsApp */
 /* Reseñas REALES de tus clientes. Mientras esté vacío, la sección no se muestra.
    Ej: {t:"Desde que tenemos la página nos escriben más por WhatsApp.",n:"Nombre",r:"Acevedo Cafetín"} */
 var TESTI=[];
@@ -752,8 +765,11 @@ $("cx").addEventListener("click",function(){var o=this.closest(".care").classLis
   h.classList.add("sw")});
  var io=new IntersectionObserver(function(x,o){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");o.unobserve(e.target)}})},{threshold:.4,rootMargin:"0px 0px -8% 0px"});
  hs.forEach(function(h){io.observe(h)})})();
+/* formas de empezar */
+document.querySelectorAll("[data-igr]").forEach(function(a){a.href="https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero la revisión gratis de mi Instagram. Mi usuario es @")});
+document.querySelectorAll("[data-call]").forEach(function(a){a.href=CAL||"https://wa.me/"+WA+"?text="+encodeURIComponent("Hola! Quiero agendar una llamada de 15 minutos para hablar de mi página. ¿Qué días y horarios tenés?")});
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
- document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
+ document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact");if(e.target.closest("[data-call]"))fbq("track","Schedule")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
 </script>
 </body>
