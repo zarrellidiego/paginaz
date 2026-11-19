@@ -406,6 +406,22 @@ section{padding:clamp(56px,7vw,96px) 0}
 .care:not(.open) .cl2,.care:not(.open) .sc{display:none}
 .cx{margin-left:10px;padding:13px 6px;border:0;background:none;color:#C9D3EE;font:700 .9rem var(--f2);text-decoration:underline;cursor:pointer}
 @media(max-width:860px){.pl{grid-template-columns:1fr}.tl li{padding:0 0 28px}}
+/* --- Quién soy: más humano --- */
+.mp{list-style:none;margin:0 0 22px;padding:0;display:grid;gap:10px}
+.mp li{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px}
+.mp li::before{content:"✓";color:var(--cy);font-weight:800}
+.mp b{font:700 1rem var(--f1)}.mp span{color:#8FA0D0;font-size:.9rem}
+.mbub{max-width:340px;margin:0 0 20px;padding:13px 18px 14px;border:1px solid var(--ld);border-radius:18px 18px 18px 4px;background:rgba(255,255,255,.1);font-size:.95rem;line-height:1.45}
+.mbub small{display:block;margin-bottom:3px;font:700 .72rem var(--f2);color:var(--cy)}
+/* --- títulos de sección: entran palabra por palabra --- */
+.wd2{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .16em 0;margin:0 -.1em -.16em 0}
+.wd2>span{display:inline-block}
+h2.sw:not(.vis) .wd2>span{transform:translateY(110%)}
+h2.sw.vis .wd2>span{animation:wup .7s var(--ez) both;animation-delay:calc(var(--i)*55ms)}
+h2.sw .g{background:none;color:inherit}
+h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac),#2AA6FF);-webkit-background-clip:text;background-clip:text;color:transparent}
+.dk h2.sw .g .wd2>span,.dk2 h2.sw .g .wd2>span,.mec h2.sw .g .wd2>span{background:linear-gradient(100deg,var(--ac2),var(--cy));-webkit-background-clip:text;background-clip:text}
+@media(prefers-reduced-motion:reduce){h2.sw .wd2>span{animation:none!important;transform:none!important}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -518,9 +534,10 @@ section{padding:clamp(56px,7vw,96px) 0}
   <div class="mec rv">
     <div class="mav"><div class="ring"></div><div class="av" id="av" aria-hidden="true">D</div><span class="fl f1">Páginas web</span><span class="fl f2">E-commerce</span><span class="fl f3">Meta Ads</span></div>
     <div class="mtx"><span class="eb">Quién la hace</span><h2>Soy Diego y la hago <span class="g">yo</span>.</h2>
-    <p>Vivo en Villa Luro y hago páginas para cafeterías, locales y emprendimientos. Sin intermediarios: me contás tu idea, la diseño, la publico y te acompaño después.</p>
-    <div class="ms"><div><b>4</b><span>negocios con su página</span></div><div><b>1 a 1</b><span>trato directo, sin intermediarios</span></div><div><b>CABA</b><span>desde Villa Luro</span></div></div>
-    <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver mi maqueta</a><a class="btn o" data-wa href="#">Escribime directo</a></div></div>
+    <p>Hago páginas para cafeterías, locales y emprendimientos desde Buenos Aires. Sin intermediarios: me contás tu idea, la diseño, la publico y te acompaño después.</p>
+    <ul class="mp"><li><b>Hablás conmigo</b><span>sin equipos ni intermediarios</span></li><li><b>Primero la maqueta</b><span>la ves antes de decidir</span></li><li><b>Pensada para vender</b><span>también manejo e-commerce y Meta Ads</span></li></ul>
+    <div class="mbub"><small>Diego</small>Hola, soy Diego. Contame de tu negocio y te muestro cómo quedaría tu página.</div>
+    <div class="cta"><a class="btn" data-wa data-demo href="#">Responder por WhatsApp</a></div></div>
   </div>
 </div></section>
 
@@ -728,6 +745,13 @@ $("nx").addEventListener("click",function(){stopAuto();load((cur+1)%P.length)});
   $("qre").addEventListener("click",function(){A={};step=0;render()})}
  render()})();
 $("cx").addEventListener("click",function(){var o=this.closest(".care").classList.toggle("open");this.textContent=o?"Ocultar ↑":"Ver qué incluye ↓"});
+/* títulos de sección palabra por palabra */
+(function(){var hs=document.querySelectorAll("main section h2");if(!("IntersectionObserver" in window)||calm)return;
+ hs.forEach(function(h){var n=0;h.setAttribute("aria-label",h.textContent.replace(/\s+/g," ").trim());h.classList.remove("rv");
+  (function sp(el){[].slice.call(el.childNodes).forEach(function(c){if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w))f.appendChild(document.createTextNode(" "));else{var a=document.createElement("span");a.className="wd2";a.setAttribute("aria-hidden","true");var b=document.createElement("span");b.style.setProperty("--i",n++);b.textContent=w;a.appendChild(b);f.appendChild(a)}});el.replaceChild(f,c)}else if(c.nodeType===1)sp(c)})})(h);
+  h.classList.add("sw")});
+ var io=new IntersectionObserver(function(x,o){x.forEach(function(e){if(e.isIntersecting){e.target.classList.add("vis");o.unobserve(e.target)}})},{threshold:.4,rootMargin:"0px 0px -8% 0px"});
+ hs.forEach(function(h){io.observe(h)})})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
