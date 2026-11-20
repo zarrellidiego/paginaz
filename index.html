@@ -11,7 +11,7 @@
 <meta property="og:image" content="https://TU-LINK/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:image" content="https://TU-LINK/og.png">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"PAGINAZ","description":"Páginas web a medida para cafeterías, comercios y emprendimientos.","areaServed":"AR","availableLanguage":"es","sameAs":["https://instagram.com/paginaz_"],"address":{"@type":"PostalAddress","addressLocality":"Villa Luro, Buenos Aires","addressCountry":"AR"},"priceRange":"$100.000 - $300.000"}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
 <meta name="twitter:title" content="PAGINAZ · Páginas web a medida que te traen clientes">
 <meta name="twitter:description" content="Páginas web a medida para cafeterías, locales y emprendimientos.">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -94,7 +94,7 @@ nav.nv a:hover,nav.nv a.act{color:#fff}nav.nv a:hover::after,nav.nv a.act::after
 .tags{display:flex;flex-wrap:wrap;gap:10px 22px;margin:34px 0 0;padding:0;list-style:none;font-size:.9rem;font-weight:600;color:#C9D3EE}
 .tags li::before{content:"✓";margin-right:8px;color:var(--cy);font-weight:800}
 .wd{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .1em .16em 0;margin:0 -.1em -.16em 0}
-.wd>span{display:inline-block;animation:wup .75s var(--ez) both;animation-delay:calc(var(--i)*45ms + .1s)}@keyframes wup{from{transform:translateY(110%)}}
+.wd>span{display:inline-block;animation:wup .55s var(--ez) both;animation-delay:calc(var(--i)*30ms + .05s)}@keyframes wup{from{transform:translateY(110%)}}
 .stage{position:relative;aspect-ratio:1/1.05;max-width:500px;margin-left:auto;width:100%}
 .fc{position:absolute;width:60%;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 40px 70px -30px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.12);transform:translate3d(calc(var(--px,0)*var(--d)*1px),calc(var(--py,0)*var(--d)*1px),0) rotate(var(--r));transition:transform .25s ease-out;animation:bob var(--s) ease-in-out infinite alternate;will-change:transform}
 @keyframes bob{to{translate:0 -14px}}
@@ -268,7 +268,7 @@ header{-webkit-backdrop-filter:none;backdrop-filter:none}
 .js .rv.in{will-change:auto}
 /* --- título fluido: el degradé va en cada palabra (no en el contenedor) --- */
 .hero h1 .g{background:none;color:inherit;animation:none}
-.hero h1 .g .wd>span{background:linear-gradient(100deg,var(--ac2),var(--cy));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wup .75s var(--ez) both,shine 6s ease-in-out infinite alternate;animation-delay:calc(var(--i)*45ms + .1s),0s}
+.hero h1 .g .wd>span{background:linear-gradient(100deg,var(--ac2),var(--cy));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wup .55s var(--ez) both,shine 6s ease-in-out 2 alternate;animation-delay:calc(var(--i)*30ms + .05s),0s}
 @media(prefers-reduced-motion:reduce){.hero h1 .g .wd>span{animation:none}}
 /* --- confianza: precios, plan, quién soy, reseñas --- */
 .pr{margin:2px 0 12px;font:800 1.9rem/1 var(--f1);letter-spacing:-.03em}.pr span{margin-right:4px;font:700 .72rem var(--f2);letter-spacing:.14em;text-transform:uppercase;color:var(--ac2)}.pr em{margin-left:4px;font:600 .8rem var(--f2);font-style:normal;color:#8FA0D0}.cd.f .pr span,.cd.f .pr em{color:#DCE6FF}
@@ -598,8 +598,11 @@ header.s2 .w{height:52px}
 .js .rv{transition:opacity .8s var(--ez),transform .8s var(--ez),filter .45s ease}
 @media(max-width:600px){.js .pass{filter:blur(4px)}}
 @media(prefers-reduced-motion:reduce){.js .pass{filter:none}}
+/* --- inicio: entra al instante --- */
+.hf{animation:heroin .6s var(--ez) .05s both}.hf2{animation-delay:.3s}
+@keyframes heroin{from{opacity:0;transform:translateY(14px)}}
+@media(prefers-reduced-motion:reduce){.hf{animation:none}}
 </style>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -618,10 +621,9 @@ header.s2 .w{height:52px}
 <main id="top" tabindex="-1">
 <div class="hero"><div class="au a"></div><div class="au b"></div><div class="w hg">
   <div>
-    <span class="pill rv"><i></i>Primero la ves, después decidís</span>
+    <span class="pill hf"><i></i>Primero la ves, después decidís</span>
     <h1 id="h1" aria-label="Tu negocio, con una página que trae clientes.">Tu negocio, con una página que <span class="g">trae clientes</span>.</h1>
-    <div class="rv">
-      <p class="lead">Páginas a medida que se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
+    <div class="hf hf2"><p class="lead">Páginas a medida que se ven profesionales, andan perfecto en el celular y te consultan directo a tu WhatsApp.</p>
       <div class="cta"><a class="btn" data-wa data-demo href="#">Quiero ver cómo quedaría mi página</a><a class="btn o" href="#trabajos">Ver páginas que hicimos</a></div>
       
     </div>
@@ -764,6 +766,7 @@ var PRECIO="Las páginas arrancan desde "+PR.completa+" (Página Completa). El p
 var PLAZO="La Página Completa suele estar lista en 1 semana; con Ventas, entre 2 y 3 semanas; la Total, entre 3 y 4. Depende de cuándo tengamos tu contenido.";
 var PIXEL="";  /* ID de tu Pixel de Meta (solo números). Vacío = desactivado */
 var CAL="";  /* Link de tu agenda (Cal.com o Calendly). Vacío = la llamada se pide por WhatsApp */
+var ANALYTICS=false;  /* true = activa Vercel Analytics (primero activalo en el panel de Vercel, pestaña Analytics) */
 /* Reseñas REALES de tus clientes. Mientras esté vacío, la sección no se muestra.
    Ej: {t:"Desde que tenemos la página nos escriben más por WhatsApp.",n:"Nombre",r:"Acevedo Cafetín"} */
 var TESTI=[];
@@ -942,6 +945,7 @@ document.querySelectorAll("[data-call]").forEach(function(a){a.href=CAL||"https:
  var els=document.querySelectorAll(".sh,.cd,.bt,.pl li,.tl li,.faq details,.mec,.qs,.care,.redo,.combo,.fm,.rc");
  var io=new IntersectionObserver(function(x){x.forEach(function(e){e.target.classList.toggle("pass",!e.isIntersecting&&e.boundingClientRect.bottom<innerHeight*.5)})},{rootMargin:"-24% 0px 0px 0px"});
  els.forEach(function(e){io.observe(e)})})();
+if(ANALYTICS){var sa=document.createElement("script");sa.defer=true;sa.src="/_vercel/insights/script.js";document.head.appendChild(sa)}
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact");if(e.target.closest("[data-call]"))fbq("track","Schedule")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
