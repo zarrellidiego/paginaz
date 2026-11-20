@@ -589,6 +589,15 @@ header.s2 .w{height:52px}
 .combo{margin:24px 0 0;text-align:center;color:#AEB9DA;font-size:.98rem}
 .combo b{color:#fff}.combo strong{color:#fff}
 .combo a{margin-left:4px;color:var(--cy);font-weight:700;text-decoration:none;border-bottom:2px solid var(--cy)}
+/* ===== desenfoque al pasar: lo que sale por arriba se desenfoca ===== */
+.js .pass{filter:blur(5px)}
+.cd{transition:transform .4s var(--ez),border-color .3s,filter .45s ease}
+.bt{transition:transform .4s var(--ez),box-shadow .4s,filter .45s ease}
+.faq details{transition:box-shadow .3s,border-color .3s,filter .45s ease}
+.pl li,.tl li,.sh,.rc{transition:filter .45s ease}
+.js .rv{transition:opacity .8s var(--ez),transform .8s var(--ez),filter .45s ease}
+@media(max-width:600px){.js .pass{filter:blur(4px)}}
+@media(prefers-reduced-motion:reduce){.js .pass{filter:none}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -928,6 +937,11 @@ document.querySelectorAll("[data-call]").forEach(function(a){a.href=CAL||"https:
  function sc(){var a=act(),c=$("cur");if(c)c.textContent=a?a.textContent:"Inicio"}
  new MutationObserver(function(){to(act());sc()}).observe(nv,{subtree:true,attributes:true,attributeFilter:["class"]});
  addEventListener("resize",function(){to(act())});addEventListener("load",function(){to(act())});to(act())})();
+/* desenfoque en lo que va pasando (sale por arriba) */
+(function(){if(calm||!("IntersectionObserver" in window))return;
+ var els=document.querySelectorAll(".sh,.cd,.bt,.pl li,.tl li,.faq details,.mec,.qs,.care,.redo,.combo,.fm,.rc");
+ var io=new IntersectionObserver(function(x){x.forEach(function(e){e.target.classList.toggle("pass",!e.isIntersecting&&e.boundingClientRect.bottom<innerHeight*.5)})},{rootMargin:"-24% 0px 0px 0px"});
+ els.forEach(function(e){io.observe(e)})})();
 if(PIXEL){!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init",PIXEL);fbq("track","PageView");
  document.addEventListener("click",function(e){if(e.target.closest("[data-wa]"))fbq("track","Contact");if(e.target.closest("[data-call]"))fbq("track","Schedule")});
  $("fm").addEventListener("submit",function(){fbq("track","Lead")})}
