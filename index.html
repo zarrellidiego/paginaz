@@ -602,6 +602,16 @@ header.s2 .w{height:52px}
 .hf{animation:heroin .6s var(--ez) .05s both}.hf2{animation-delay:.3s}
 @keyframes heroin{from{opacity:0;transform:translateY(14px)}}
 @media(prefers-reduced-motion:reduce){.hf{animation:none}}
+/* --- celular: el logo no se achica al ícono (sobra lugar), se queda "paginaz" --- */
+@media(max-width:900px){
+header.s2 .wml .lt{transform:none;opacity:1;transition-delay:0s}
+header.s2 .lw{max-width:90px;opacity:1}
+header.s2 .li{opacity:0;transform:scale(.4) rotate(-30deg);transition-delay:0s}
+}
+/* --- compu: la cápsula se ajusta a su contenido (sin huecos a los costados) --- */
+@media(min-width:901px){
+header.s .w{width:max-content;max-width:calc(100vw - 28px);gap:26px;padding:0 10px 0 22px}
+}
 </style>
 </head>
 <body>
